@@ -1,0 +1,6 @@
+{
+  "name": "The BioGlobal - B2B Cosmetic Manufacturing & Private Label Solutions",
+  "description": "Leading third-party cosmetic manufacturer specializing in custom formulation, private labeling, and bulk production for skincare, haircare, and personal care brands.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

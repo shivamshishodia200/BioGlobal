@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-forest: #1D3C34;
+  --color-brand-forest-dark: #142B25;
+  --color-brand-forest-light: #2A4A41;
+  --color-brand-leaf: #708E50;
+  --color-brand-leaf-hover: #5E7D40;
+  --color-brand-leaf-light: #86A55B;
+  --color-brand-leaf-flourish: #7EA058;
+  --color-brand-sage: #E4EEE3;
+  --color-brand-sage-card: #D3E4D1;
+  --color-brand-sage-border: #C5DAC3;
+  --color-brand-ivory: #FAF9F5;
+  --color-brand-gold: #DFBD89;
+  --color-brand-gold-hover: #C8A46E;
+}
+
+@layer base {
+  :root {
+    /* Brand Theme Colors Extracted Directly From TheBioGlobal Logo */
+    --color-brand-forest: #1D3C34;     /* Deep Pine/Forest from "The" & "Global" */
+    --color-brand-forest-dark: #142B25;
+    --color-brand-leaf: #708E50;       /* Fresh Olive/Sage from "Bio" & Leaf */
+    --color-brand-leaf-hover: #5E7D40;
+    --color-brand-leaf-light: #86A55B;
+    --color-brand-sage-bg: #E4EEE3;    /* Harmonious Soft Sage Tint */
+    --color-brand-sage-card: #D3E4D1;
+    --color-brand-ivory: #FAF9F5;
+    --color-brand-gold: #DFBD89;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1D3C34;
+    background-color: #FAF9F5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    color: #1D3C34;
+  }
+
+  ::selection {
+    background-color: #708E50;
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbars matching Brand Logo colors */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #E4EEE3;
+}
+::-webkit-scrollbar-thumb {
+  background: #708E50;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5E7D40;
+}
+
+/* Stamp seal look */
+.stamp-seal {
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
+/* Vertical infinite marquee animations */
+@keyframes marqueeUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes marqueeDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee-up {
+  animation: marqueeUp 24s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-down {
+  animation: marqueeDown 24s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .animate-marquee-up,
+.marquee-container:hover .animate-marquee-down {
+  animation-play-state: paused;
+}
+
