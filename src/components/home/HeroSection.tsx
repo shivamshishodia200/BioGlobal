@@ -296,7 +296,7 @@ export const HeroSection: React.FC = () => {
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wide border border-[#C5DAC3] shadow-2xs"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
-                <span>14+ Years of Manufacturing Excellence</span>
+                <span>20+ Years of Manufacturing Excellence</span>
               </div>
 
               {/* Primary Main Heading with GSAP Staggered Line Reveal */}
@@ -456,7 +456,7 @@ export const HeroSection: React.FC = () => {
                         Monthly Vol.
                       </p>
                       <p className="text-xs font-bold text-[#1D3C34] mt-0.5">
-                        60 Lac Units
+                        2 Lac Units
                       </p>
                     </div>
                     <div className="p-2 rounded-xl bg-[#FAF9F5] border border-stone-200/80">
@@ -464,7 +464,7 @@ export const HeroSection: React.FC = () => {
                         Plant Area
                       </p>
                       <p className="text-xs font-bold text-[#1D3C34] mt-0.5">
-                        60,000 Sq. Ft.
+                        5500 Sq. Ft.
                       </p>
                     </div>
                   </div>

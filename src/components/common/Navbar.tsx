@@ -97,7 +97,7 @@ export const Navbar: React.FC = () => {
             <span className="text-stone-500">|</span>
             <div className="flex items-center gap-1 text-amber-300 font-medium">
               <Award className="w-3.5 h-3.5 text-amber-400" />
-              <span>14+ Years Manufacturing Excellence</span>
+              <span>20+ Years Manufacturing Excellence</span>
             </div>
           </div>
         </div>

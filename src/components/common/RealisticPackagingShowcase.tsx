@@ -198,11 +198,11 @@ export const RealisticPackagingShowcase: React.FC<{ className?: string }> = ({ c
           </div>
           <div className="p-2 rounded-xl bg-[#FAF9F5] border border-stone-200/70">
             <p className="text-[10px] text-stone-500 uppercase font-semibold">Monthly Vol.</p>
-            <p className="text-xs font-bold text-[#1D3C34]">60 Lac Units</p>
+            <p className="text-xs font-bold text-[#1D3C34]">2 Lac Units</p>
           </div>
           <div className="p-2 rounded-xl bg-[#FAF9F5] border border-stone-200/70">
             <p className="text-[10px] text-stone-500 uppercase font-semibold">Plant Area</p>
-            <p className="text-xs font-bold text-[#1D3C34]">60,000 Sq. Ft.</p>
+            <p className="text-xs font-bold text-[#1D3C34]">5500 Sq. Ft.</p>
           </div>
         </div>
       </div>

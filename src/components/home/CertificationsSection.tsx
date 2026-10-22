@@ -41,15 +41,6 @@ const SEALS: CertificationSeal[] = [
     details: 'Validated cleanrooms with strict particulate and bioburden monitoring.',
   },
   {
-    id: 'halal',
-    name: '100% HALAL CERTIFIED',
-    color: 'border-rose-600/60 text-rose-800 bg-rose-50/50',
-    inner: 'HALAL',
-    body: 'Halal Certified Production',
-    subtext: 'Formulated free from non-permissible ingredients and cross-contamination.',
-    details: 'Strict segregation protocols for export to Middle East & Southeast Asia.',
-  },
-  {
     id: 'cruelty',
     name: 'CRUELTY FREE & VEGAN',
     color: 'border-cyan-600/70 text-cyan-800 bg-cyan-50/50',

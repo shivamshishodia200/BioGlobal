@@ -44,7 +44,7 @@ const LEFT_FEATURES: FeatureItem[] = [
   },
   {
     id: 'l3',
-    title: '14+ Years Compounding Mastery',
+    title: '20+ Years Compounding Mastery',
     desc: 'Our veteran cosmetic chemists bring over a decade of cosmetic formulation expertise and luxury finish to every formula, bottle, and carton.',
     icon: Award,
     tag: 'Veteran Chemists',
@@ -93,9 +93,9 @@ export const UniqueFeaturesSection: React.FC = () => {
   const [activeHighlight, setActiveHighlight] = useState<string | null>(null);
 
   const bottomStats = [
-    { label: 'Formulation Experience', value: '14+ Years' },
-    { label: 'Facility Area', value: '60,000 Sq. Ft.' },
-    { label: 'Approved Formulations', value: '1,200+' },
+    { label: 'Formulation Experience', value: '20+ Years' },
+    { label: 'Facility Area', value: '5500 Sq. Ft.' },
+    { label: 'Approved Formulations', value: '150+' },
     { label: 'Quality Verification', value: '100% Batch Tested' },
   ];
 

@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
             </div>
 
             <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal max-w-md">
-              The BioGlobal is a leading cosmetic products manufacturer. With an expertise of over 14 years and a legacy of building trust, we provide internationally accredited cosmetic solutions that suit the best for your brand.
+              The BioGlobal is a leading cosmetic products manufacturer. With an expertise of over 20+ years and a legacy of building trust, we provide internationally accredited cosmetic solutions that suit the best for your brand.
             </p>
 
             {/* Social Icons in 4 Circular White Buttons */}

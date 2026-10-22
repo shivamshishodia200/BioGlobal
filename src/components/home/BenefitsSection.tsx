@@ -6,7 +6,7 @@ const BENEFITS = [
   {
     icon: Truck,
     title: 'Short Lead Time',
-    desc: 'With a capacity of 60,00,000 pieces per month, we can provide you with a fast turnaround time.',
+    desc: 'With a capacity of 2,00,000 pieces per month, we can provide you with a fast turnaround time.',
     highlight: '21 - 28 Days Average Dispatch',
   },
   {

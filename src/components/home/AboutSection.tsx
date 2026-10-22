@@ -193,7 +193,7 @@ export const AboutSection: React.FC = () => {
 
           <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
             The BioGlobal is a leading manufacturer specializing in 6 primary categories: Cosmetic Products, Skin Care,
-            Hair Care, Bath Care, Body Care, and Baby Care. With over 14 years of expertise and a legacy of trust, we deliver
+            Hair Care, Bath Care, Body Care, and Baby Care. With over 20+ years of expertise and a legacy of trust, we deliver
             internationally accredited solutions tailored to elevate your brand.
           </p>
         </motion.div>
@@ -423,22 +423,6 @@ export const AboutSection: React.FC = () => {
                         <span>{currentTab.highlightTag}</span>
                       </div>
 
-                      {/* Bottom Packaging Caption Card Overlay */}
-                      <div className="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-stone-200/90 shadow-lg">
-                        <div className="flex items-center justify-between gap-3">
-                          <div className="min-w-0">
-                            <span className="text-[10px] uppercase font-bold text-[#708E50] tracking-wider block">
-                              Turnkey Packaging Solution
-                            </span>
-                            <p className="text-xs sm:text-sm font-bold text-stone-900 truncate">
-                              {currentTab.packType}
-                            </p>
-                          </div>
-                          <span className="px-2.5 py-1 rounded-md bg-[#E4EEE3] text-[#1D3C34] text-xs font-bold flex-shrink-0 border border-[#C5DAC3]">
-                            MOQ: {currentTab.moq}
-                          </span>
-                        </div>
-                      </div>
                     </div>
 
                     {/* Manufacturing & Lead Time Credential Badges */}
