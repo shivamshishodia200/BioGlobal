@@ -97,3 +97,26 @@ export interface InquiryResponse {
   message: string;
   error?: string;
 }
+
+export interface ShowcaseItem {
+  id: string;
+  categoryId: string;
+  categoryName: string;
+  tagline: string;
+  description: string;
+  productExamples: string[];
+  image: string;
+  imageAlt: string;
+  slug: string;
+  moq: string;
+  tag: string;
+}
+
+export interface ManufacturingHighlight {
+  id: string;
+  title: string;
+  displayText: string;
+  text: string;
+  iconName: 'Package' | 'FlaskConical' | 'Factory';
+}
+
