@@ -70,7 +70,7 @@ export const FaqSection: React.FC = () => {
   return (
     <section 
       id="faqs"
-      className="py-20 lg:py-28 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
+      className="py-12 sm:py-14 lg:py-16 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
       aria-labelledby="faq-section-heading"
     >
       {/* Inject Structured Data */}
@@ -86,7 +86,7 @@ export const FaqSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="text-left max-w-3xl mb-12 space-y-3.5"
+          className="text-left max-w-3xl mb-8 space-y-2.5 sm:space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3]">
             <HelpCircle className="w-3.5 h-3.5 text-[#708E50]" />
@@ -95,17 +95,17 @@ export const FaqSection: React.FC = () => {
 
           <h2 
             id="faq-section-heading"
-            className="font-serif text-3xl sm:text-4xl lg:text-5xl text-stone-900 leading-tight"
+            className="font-serif text-2xl sm:text-3xl lg:text-[40px] text-stone-900 leading-tight"
           >
             Everything You Need to Know About{' '}
             <span className="italic text-[#708E50]">Manufacturing With Us</span>
           </h2>
 
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
             Explore answers to commonly asked questions about our cosmetic manufacturing services, minimum order quantities, formulation development, packaging solutions, quality practices, and production processes.
           </p>
 
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
             Whether you are launching your first private label beauty product or expanding an established cosmetic range, these answers can help you understand the manufacturing journey and prepare for a more informed conversation with our team.
           </p>
 

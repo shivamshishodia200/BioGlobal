@@ -23,24 +23,24 @@ export const CategoriesShowcase: React.FC = () => {
     <section
       id="categories"
       aria-labelledby="categories-showcase-heading"
-      className="py-20 lg:py-28 bg-white border-b border-stone-200/60 overflow-hidden relative"
+      className="py-12 sm:py-14 lg:py-16 bg-white border-b border-stone-200/60 overflow-hidden relative"
     >
       {/* Soft Ambient Background Halos */}
       <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#86A55B]/10 rounded-full blur-3xl pointer-events-none -z-0" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#DFBD89]/15 rounded-full blur-3xl pointer-events-none -z-0" />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-12 sm:space-y-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-6 sm:space-y-8">
         
         {/* ======================================================== */}
         {/* SECTION HEADER                                           */}
         {/* ======================================================== */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-5">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7 }}
-            className="max-w-3xl space-y-3.5"
+            className="max-w-3xl space-y-2.5 sm:space-y-3"
           >
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -51,7 +51,7 @@ export const CategoriesShowcase: React.FC = () => {
             {/* Main Heading (H2) */}
             <h2
               id="categories-showcase-heading"
-              className="font-serif font-light text-3xl sm:text-4xl lg:text-5xl text-stone-900 leading-tight tracking-tight"
+              className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-stone-900 leading-tight tracking-tight"
             >
               Discover Manufacturing Possibilities Across Every Beauty Category
             </h2>

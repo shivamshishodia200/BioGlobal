@@ -174,7 +174,7 @@ export const CategoryBannerSection: React.FC = () => {
   return (
     <section
       aria-labelledby="category-banner-heading"
-      className="bg-[#E4EEE3]/80 py-16 lg:py-24 overflow-hidden border-b border-[#C5DAC3]/70 relative"
+      className="bg-[#E4EEE3]/80 py-12 sm:py-14 lg:py-16 overflow-hidden border-b border-[#C5DAC3]/70 relative"
     >
       {/* Soft Ambient Background Glows */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#86A55B]/15 rounded-full blur-3xl pointer-events-none -z-0" />
@@ -191,7 +191,7 @@ export const CategoryBannerSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="lg:col-span-6 space-y-6"
+            className="lg:col-span-6 space-y-4 sm:space-y-5"
           >
             {/* Category Eyebrow Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/85 text-[#1D3C34] text-xs font-semibold backdrop-blur-md border border-[#C5DAC3] shadow-2xs">
@@ -285,7 +285,7 @@ export const CategoryBannerSection: React.FC = () => {
           {/* ======================================================== */}
           {/* Right Column: Dual-Column Vertical Infinite Marquee      */}
           {/* ======================================================== */}
-          <div className="lg:col-span-6 relative h-[600px] sm:h-[660px] lg:h-[700px] overflow-hidden rounded-3xl">
+          <div className="lg:col-span-6 relative h-[480px] sm:h-[520px] lg:h-[540px] overflow-hidden rounded-3xl">
             {/* Top and Bottom Smooth Fade Gradients for Seamless Entrance/Exit */}
             <div className="absolute top-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-b from-[#E4EEE3] via-[#E4EEE3]/90 to-transparent z-20 pointer-events-none" />
             <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-t from-[#E4EEE3] via-[#E4EEE3]/90 to-transparent z-20 pointer-events-none" />

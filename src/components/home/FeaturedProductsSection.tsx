@@ -49,7 +49,7 @@ export const FeaturedProductsSection: React.FC = () => {
   return (
     <section 
       id="featured-formulations"
-      className="py-20 lg:py-28 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
+      className="py-12 sm:py-14 lg:py-16 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
       aria-labelledby="featured-formulations-heading"
     >
       {/* Ambient Halos */}
@@ -63,7 +63,7 @@ export const FeaturedProductsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl mb-10 space-y-3.5"
+          className="text-left max-w-3xl mb-8 space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -74,7 +74,7 @@ export const FeaturedProductsSection: React.FC = () => {
           {/* Main Heading H2 */}
           <h2 
             id="featured-formulations-heading"
-            className="font-serif font-light text-3xl sm:text-4xl lg:text-5xl text-stone-900 leading-tight tracking-tight"
+            className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-stone-900 leading-tight tracking-tight"
           >
             Discover Formulations Designed for Your Next Beauty Collection
           </h2>
@@ -85,14 +85,14 @@ export const FeaturedProductsSection: React.FC = () => {
           </p>
 
           {/* Section Description */}
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal">
             Explore a selection of cosmetic and personal care formulation concepts that reflect the versatility of our manufacturing capabilities. From advanced skincare serums and moisturizing creams to specialized hair care and cleansing products, The BioGlobal supports businesses seeking distinctive product collections tailored to their brand identity, target audience, and commercial goals.
           </p>
         </motion.div>
 
         {/* Filter Pills with Segmented Background */}
         <div 
-          className="flex items-center justify-start gap-2 flex-wrap mb-10"
+          className="flex items-center justify-start gap-2 flex-wrap mb-8"
           role="tablist"
           aria-label="Filter formulations by category"
         >
@@ -231,7 +231,7 @@ export const FeaturedProductsSection: React.FC = () => {
         )}
 
         {/* Section Dual CTAs */}
-        <div className="mt-14 flex flex-col sm:flex-row items-center justify-start gap-4">
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-start gap-3.5">
           {/* Primary CTA */}
           <Link
             to="/products"

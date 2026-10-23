@@ -50,9 +50,9 @@ export const ManufacturingProcess: React.FC = () => {
     <section
       id="how-it-works"
       aria-labelledby="manufacturing-process-heading"
-      className="py-12 sm:py-16 lg:py-20 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
+      className="py-10 sm:py-12 lg:py-14 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-8 sm:space-y-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-6 sm:space-y-8">
         
         {/* ======================================================== */}
         {/* SECTION HEADER                                           */}

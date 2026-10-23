@@ -106,22 +106,22 @@ export const TestimonialsSection: React.FC = () => {
 
   return (
     <section 
-      id="testimonials-section"
-      className="py-20 lg:py-28 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
+      id="testimonials-section" 
+      className="py-12 sm:py-14 lg:py-16 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
       aria-labelledby="testimonials-heading"
     >
       {/* Background Ambient Accents */}
       <div className="absolute top-1/4 right-10 w-96 h-96 bg-[#86A55B]/10 rounded-full blur-3xl pointer-events-none -z-0" />
       <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#DFBD89]/15 rounded-full blur-3xl pointer-events-none -z-0" />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-6 sm:space-y-8">
         {/* Section Header (Part 1) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl space-y-3.5"
+          className="text-left max-w-3xl space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -132,7 +132,7 @@ export const TestimonialsSection: React.FC = () => {
           {/* Main Heading H2 */}
           <h2 
             id="testimonials-heading"
-            className="font-serif font-light text-3xl sm:text-4xl lg:text-5xl text-stone-900 leading-tight tracking-tight"
+            className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-stone-900 leading-tight tracking-tight"
           >
             Meaningful Partnerships. Shared Success.
           </h2>

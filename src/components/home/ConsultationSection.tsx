@@ -25,7 +25,7 @@ export const ConsultationSection: React.FC = () => {
   return (
     <section 
       id="consultation-section" 
-      className="py-20 lg:py-28 bg-[#1D3C34] text-white relative overflow-hidden"
+      className="py-12 sm:py-14 lg:py-16 bg-[#1D3C34] text-white relative overflow-hidden"
       aria-labelledby="consultation-heading"
     >
       {/* Background Decorative Ambient Halos */}
@@ -33,14 +33,14 @@ export const ConsultationSection: React.FC = () => {
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#DFBD89]/10 rounded-full blur-3xl pointer-events-none -z-0" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Column: Heading, B2B Narrative & Expertise Highlights (Part 1 & 2) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 space-y-4 sm:space-y-5"
           >
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-[#DFBD89] text-xs font-semibold uppercase tracking-wider border border-white/15 shadow-2xs">
@@ -51,7 +51,7 @@ export const ConsultationSection: React.FC = () => {
             {/* Main Heading H2 */}
             <h2 
               id="consultation-heading"
-              className="font-serif font-light text-3xl sm:text-4xl lg:text-5xl text-white leading-tight tracking-tight"
+              className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-white leading-tight tracking-tight"
             >
               Your Next Beauty Product Starts With a Conversation
             </h2>

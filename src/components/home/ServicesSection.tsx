@@ -23,9 +23,9 @@ export const ServicesSection: React.FC = () => {
   return (
     <section
       aria-labelledby="services-heading"
-      className="bg-white py-20 lg:py-28 border-b border-stone-200/60 overflow-hidden relative"
+      className="bg-white py-12 sm:py-14 lg:py-16 border-b border-stone-200/60 overflow-hidden relative"
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-12 sm:space-y-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-6 sm:space-y-8">
         
         {/* ======================================================== */}
         {/* SECTION HEADER                                           */}
@@ -35,7 +35,7 @@ export const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl space-y-4"
+          className="text-left max-w-3xl space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs">
@@ -46,7 +46,7 @@ export const ServicesSection: React.FC = () => {
           {/* Main Heading */}
           <h2
             id="services-heading"
-            className="font-serif font-light text-3xl sm:text-4xl lg:text-[44px] text-stone-900 tracking-tight leading-tight"
+            className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-stone-900 tracking-tight leading-tight"
           >
             Tailored Manufacturing Solutions for Every Beauty Brand
           </h2>

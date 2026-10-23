@@ -280,7 +280,7 @@ export const HeroSection: React.FC = () => {
   return (
     <section
       ref={heroRef}
-      className="relative bg-[#FAF9F5] pt-12 sm:pt-16 lg:pt-20 pb-16 lg:pb-24 border-b border-stone-200/70 overflow-hidden select-none"
+      className="relative bg-[#FAF9F5] pt-8 sm:pt-12 lg:pt-14 pb-10 sm:pb-12 lg:pb-14 border-b border-stone-200/70 overflow-hidden select-none"
     >
       {/* Decorative Ambient Background Soft Glows */}
       <div
@@ -293,9 +293,9 @@ export const HeroSection: React.FC = () => {
       />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Column: Heading, Description, CTA Buttons, and Value Bullets */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-5">
             <div className="space-y-4">
               {/* Category Eyebrow Pill Badge */}
               <div

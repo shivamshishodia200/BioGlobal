@@ -27,11 +27,11 @@ export const TrustedCompaniesSection: React.FC = () => {
   return (
     <section
       aria-labelledby="trusted-partnerships-heading"
-      className="bg-white py-16 lg:py-20 border-b border-stone-200/60 overflow-hidden relative"
+      className="bg-white py-10 sm:py-12 lg:py-14 border-b border-stone-200/60 overflow-hidden relative"
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         {/* Header Block: Eyebrow, Main Heading, Supporting Statement, and Description */}
-        <div className="text-center max-w-4xl mx-auto space-y-4 mb-10 sm:mb-12">
+        <div className="text-center max-w-4xl mx-auto space-y-3 mb-6 sm:mb-8">
           {/* 1. Section Eyebrow */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}

@@ -131,7 +131,7 @@ export const UniqueFeaturesSection: React.FC = () => {
   return (
     <section
       aria-labelledby="unique-features-heading"
-      className="bg-white py-20 lg:py-28 border-b border-stone-200/60 overflow-hidden relative"
+      className="bg-white py-12 sm:py-14 lg:py-16 border-b border-stone-200/60 overflow-hidden relative"
     >
       {/* Ambient background glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#86A55B]/10 rounded-full blur-3xl pointer-events-none -z-0" />
@@ -146,7 +146,7 @@ export const UniqueFeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl mb-12 lg:mb-16 space-y-3.5"
+          className="text-left max-w-3xl mb-8 sm:mb-10 space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold border border-[#C5DAC3] shadow-2xs">
@@ -157,7 +157,7 @@ export const UniqueFeaturesSection: React.FC = () => {
           {/* Main Heading */}
           <h2
             id="unique-features-heading"
-            className="font-serif font-light text-3xl sm:text-4xl lg:text-5xl text-stone-900 tracking-tight leading-tight"
+            className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-stone-900 tracking-tight leading-tight"
           >
             More Than Manufacturing. A Commitment to Your Brand's Success.
           </h2>
@@ -411,9 +411,9 @@ export const UniqueFeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-14 pt-8 border-t border-stone-200/80"
+          className="mt-8 pt-6 border-t border-stone-200/80"
         >
-          <div className="bg-[#FAF9F5] border border-stone-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-left">
+          <div className="bg-[#FAF9F5] border border-stone-200/90 rounded-2xl p-5 sm:p-7 shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 text-left">
             <div className="space-y-1.5 max-w-2xl">
               <span className="text-[10px] font-bold uppercase tracking-widest text-[#708E50] block">
                 Collaborate With Our Experts

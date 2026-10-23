@@ -225,8 +225,8 @@ export const AboutSection: React.FC = () => {
     CAPABILITY_CATEGORIES[0];
 
   return (
-    <section className="bg-white py-16 lg:py-24 border-b border-stone-200/60 overflow-hidden relative">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-16 lg:space-y-20">
+    <section className="bg-white py-10 sm:py-12 lg:py-16 border-b border-stone-200/60 overflow-hidden relative">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-10 sm:space-y-12">
         
         {/* ======================================================== */}
         {/* PART 1 — OUR STORY                                       */}
@@ -299,13 +299,13 @@ export const AboutSection: React.FC = () => {
         {/* ======================================================== */}
         {/* PART 2 — MANUFACTURING CAPABILITIES                      */}
         {/* ======================================================== */}
-        <div className="pt-6 border-t border-stone-200/60">
+        <div className="pt-4 border-t border-stone-200/60">
           {/* Section Subheading (Left-Aligned) */}
-          <div className="max-w-3xl mb-8 space-y-2.5 text-left">
+          <div className="max-w-3xl mb-6 space-y-2 text-left">
             <span className="text-xs uppercase tracking-widest text-[#708E50] font-bold block">
               EXPLORE OUR EXPERTISE
             </span>
-            <h2 className="font-serif font-light text-3xl sm:text-4xl lg:text-[42px] text-stone-900 tracking-tight">
+            <h2 className="font-serif font-light text-2xl sm:text-3xl lg:text-[38px] text-stone-900 tracking-tight">
               You Name It. We Make It.
             </h2>
             <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed">
@@ -318,7 +318,7 @@ export const AboutSection: React.FC = () => {
           </div>
 
           {/* Six Category Tabs (Accessible Segmented Scroller) */}
-          <div className="flex items-center justify-start mb-8 sm:mb-10">
+          <div className="flex items-center justify-start mb-6">
             <div
               role="tablist"
               aria-label="Manufacturing product categories"

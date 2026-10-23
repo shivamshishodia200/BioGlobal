@@ -76,20 +76,20 @@ export const WhyChooseSection: React.FC = () => {
   return (
     <section
       aria-labelledby="why-choose-heading"
-      className="bg-[#E4EEE3] py-20 lg:py-28 border-b border-[#C5DAC3]/70 overflow-hidden relative"
+      className="bg-[#E4EEE3] pt-12 sm:pt-14 lg:pt-16 pb-6 sm:pb-8 border-b-0 overflow-hidden relative"
     >
       {/* Background Soft Pattern Elements */}
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-white/40 rounded-full blur-2xl pointer-events-none -z-0" />
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#86A55B]/15 rounded-full blur-2xl pointer-events-none -z-0" />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-10 sm:space-y-12 relative z-10 text-left">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-6 sm:space-y-8 relative z-10 text-left">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl space-y-3.5 text-left"
+          className="max-w-3xl space-y-2.5 sm:space-y-3 text-left"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs backdrop-blur-xs">
@@ -100,13 +100,13 @@ export const WhyChooseSection: React.FC = () => {
           {/* Main Heading */}
           <h2
             id="why-choose-heading"
-            className="font-serif font-light text-3xl sm:text-4xl lg:text-[44px] text-stone-900 tracking-tight leading-tight"
+            className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-stone-900 tracking-tight leading-tight"
           >
             The Expertise Behind Exceptional Beauty Brands
           </h2>
 
           {/* Section Description */}
-          <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-normal">
+          <p className="text-stone-700 text-xs sm:text-sm sm:leading-relaxed font-normal">
             At The BioGlobal, we combine extensive cosmetic manufacturing
             experience with formulation expertise, production capabilities, and
             a commitment to quality. Our approach helps emerging and established
@@ -117,7 +117,7 @@ export const WhyChooseSection: React.FC = () => {
         </motion.div>
 
         {/* 6 White Credential Cards in a Responsive 3-Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 text-left">
           {CREDENTIALS.map((stat, idx) => {
             const Icon = stat.icon;
             return (
@@ -132,10 +132,10 @@ export const WhyChooseSection: React.FC = () => {
                   ease: 'easeOut',
                 }}
                 whileHover={{
-                  y: -6,
+                  y: -5,
                   boxShadow: '0 20px 35px rgba(29, 60, 52, 0.10)',
                 }}
-                className="bg-white rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-xs border border-white/90 transition-all duration-300 relative group overflow-hidden"
+                className="bg-white rounded-2xl p-5 sm:p-6 flex flex-col justify-between shadow-xs border border-white/90 transition-all duration-300 relative group overflow-hidden"
               >
                 {/* Top Row: Icon Container & Optional Unit Badge */}
                 <div className="flex items-center justify-between mb-5">

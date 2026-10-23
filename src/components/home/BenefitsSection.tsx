@@ -63,16 +63,16 @@ export const BenefitsSection: React.FC = () => {
   return (
     <section
       aria-labelledby="benefits-heading"
-      className="bg-[#E4EEE3] pt-6 pb-20 lg:pb-28 border-b border-[#C5DAC3]/70 overflow-hidden relative"
+      className="bg-[#E4EEE3] pt-4 sm:pt-6 pb-12 sm:pb-14 lg:pb-16 border-b border-[#C5DAC3]/70 overflow-hidden relative"
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-10 sm:space-y-12 relative z-10 text-left">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-6 sm:space-y-8 relative z-10 text-left">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl space-y-3.5 text-left"
+          className="max-w-3xl space-y-2.5 sm:space-y-3 text-left"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs backdrop-blur-xs">
@@ -83,13 +83,13 @@ export const BenefitsSection: React.FC = () => {
           {/* Main Heading */}
           <h2
             id="benefits-heading"
-            className="font-serif font-light text-3xl sm:text-4xl lg:text-[44px] text-stone-900 tracking-tight leading-tight"
+            className="font-serif font-light text-2xl sm:text-3xl lg:text-[40px] text-stone-900 tracking-tight leading-tight"
           >
             A Manufacturing Partnership Built Around Your Growth
           </h2>
 
           {/* Section Description */}
-          <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-normal">
+          <p className="text-stone-700 text-xs sm:text-sm sm:leading-relaxed font-normal">
             Choosing the right manufacturing partner is essential to building a
             successful beauty brand. At The BioGlobal, we combine formulation
             expertise, flexible production solutions, cost-conscious
@@ -102,7 +102,7 @@ export const BenefitsSection: React.FC = () => {
         </motion.div>
 
         {/* 4 White Benefit Cards with Hover Elevation and Clear Badges */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 text-left">
           {BENEFITS.map((item, idx) => {
             const Icon = item.icon;
             return (
@@ -117,10 +117,10 @@ export const BenefitsSection: React.FC = () => {
                   ease: 'easeOut',
                 }}
                 whileHover={{
-                  y: -8,
+                  y: -6,
                   boxShadow: '0 20px 35px rgba(29, 60, 52, 0.12)',
                 }}
-                className="bg-white rounded-2xl p-6 sm:p-7 flex flex-col justify-between shadow-xs border border-white/90 transition-all duration-300 group relative"
+                className="bg-white rounded-2xl p-5 sm:p-6 flex flex-col justify-between shadow-xs border border-white/90 transition-all duration-300 group relative"
               >
                 <div className="space-y-4 flex-grow">
                   {/* Top Row: Icon Container and Key Benefit Pill */}
@@ -162,10 +162,10 @@ export const BenefitsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="pt-4"
+          className="pt-1"
         >
-          <div className="bg-white/90 backdrop-blur-xs rounded-2xl p-6 sm:p-8 border border-white/90 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left max-w-4xl mx-auto">
-            <div className="space-y-1.5">
+          <div className="bg-white/90 backdrop-blur-xs rounded-2xl p-4 sm:p-6 border border-white/90 shadow-xs flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left max-w-4xl mx-auto">
+            <div className="space-y-1">
               <h3 className="font-serif font-semibold text-lg sm:text-xl text-stone-900 tracking-tight">
                 Your Ideas Deserve a Manufacturing Partner That Understands Your
                 Business.
