@@ -81,11 +81,17 @@ export interface ProcessStep {
   iconName?: string;
 }
 
-export interface FAQItem {
+export interface FaqItem {
+  id: string;
   question: string;
   answer: string;
-  category: 'General' | 'Manufacturing' | 'Formulation' | 'Ordering';
+  category?: string;
+  keywords?: string[];
+  sortOrder: number;
+  isPublished: boolean;
 }
+
+export type FAQItem = FaqItem;
 
 export interface ClientTestimonial {
   id: string;
