@@ -46,8 +46,8 @@ export const HomePage: React.FC = () => {
       {/* 9. Our 6-Step Manufacturing Process (Spec-To-Product Interactive Stepper) */}
       <ManufacturingProcess />
 
-      {/* 10. Interactive B2B Batch & Quotation Calculator */}
-      <BatchEstimatorSection />
+      {/* 10. Interactive B2B Batch & Quotation Calculator (Hidden as requested) */}
+      {/* <BatchEstimatorSection /> */}
 
       {/* 11. Primary Product Categories Showcase (All 6 Primary Categories) */}
       <CategoriesShowcase />
