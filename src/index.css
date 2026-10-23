@@ -102,3 +102,28 @@
   animation-play-state: paused;
 }
 
+/* Horizontal infinite marquee animations */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft 38s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container-h:hover .animate-marquee-left {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-left {
+    animation: none;
+  }
+}
+
