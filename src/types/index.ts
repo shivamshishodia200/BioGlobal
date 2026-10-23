@@ -87,16 +87,30 @@ export interface FAQItem {
   category: 'General' | 'Manufacturing' | 'Formulation' | 'Ordering';
 }
 
-export interface TestimonialItem {
+export interface ClientTestimonial {
   id: string;
-  clientName: string;
-  designation: string;
-  brandName: string;
   quote: string;
-  productType: string;
-  location: string;
-  rating: number;
+  clientName: string;
+  clientRole?: string;
+  designation?: string;
+  companyName?: string;
+  brandName?: string;
+  companyLogo?: string;
+  clientPhoto?: string;
+  serviceCategory?: string;
+  productType?: string;
+  location?: string;
+  editorialTheme?: 'Low Minimum Order Quantity' | 'Formulation Development & Quality' | 'Manufacturing Coordination & Support';
+  rating?: number;
+  reviewDate?: string;
+  sourceUrl?: string;
+  isVerified: boolean;
+  isApproved: boolean;
+  isPublished: boolean;
+  displayOrder?: number;
 }
+
+export type TestimonialItem = ClientTestimonial;
 
 export interface B2BInquiryPayload {
   fullName: string;

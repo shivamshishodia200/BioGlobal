@@ -275,6 +275,32 @@ function b2bApiPlugin(): Plugin {
           return;
         }
 
+        // 0b. GET /api/testimonials
+        if (url === '/api/testimonials' && req.method === 'GET') {
+          const fullUrl = new URL(req.url || '', `http://${req.headers.host || 'localhost'}`);
+          const publishedParam = fullUrl.searchParams.get('published');
+
+          // Eligible verified client testimonials only (Part 8 & 10)
+          const allTestimonials: any[] = [];
+
+          let filtered = allTestimonials;
+          if (publishedParam === 'true') {
+            filtered = filtered.filter((t) => t.isPublished && t.isVerified);
+          }
+
+          res.statusCode = 200;
+          res.setHeader('Content-Type', 'application/json');
+          res.end(
+            JSON.stringify({
+              success: true,
+              count: filtered.length,
+              testimonials: filtered,
+              hasVerifiedReviews: filtered.length > 0,
+            })
+          );
+          return;
+        }
+
         // 1. GET /api/manufacturing/categories
         if (url === '/api/manufacturing/categories' && req.method === 'GET') {
           res.statusCode = 200;
