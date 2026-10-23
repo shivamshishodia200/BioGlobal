@@ -111,8 +111,8 @@ export const WhyChooseSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* 6 White Credential Cards in a Responsive 3-Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 text-left">
+        {/* 6 White Credential Cards in a Single Line (lg:grid-cols-6) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 lg:gap-3 xl:gap-4 text-left">
           {CREDENTIALS.map((stat, idx) => {
             const Icon = stat.icon;
             return (
@@ -130,38 +130,38 @@ export const WhyChooseSection: React.FC = () => {
                   y: -5,
                   boxShadow: '0 20px 35px rgba(29, 60, 52, 0.10)',
                 }}
-                className="bg-white rounded-2xl p-5 sm:p-6 flex flex-col justify-between shadow-xs border border-white/90 transition-all duration-300 relative group overflow-hidden"
+                className="bg-white rounded-2xl p-4 sm:p-5 lg:p-4 xl:p-5 flex flex-col justify-between h-full shadow-xs border border-white/90 transition-all duration-300 relative group overflow-hidden"
               >
                 {/* Top Row: Icon Container & Optional Unit Badge */}
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-12 h-12 rounded-xl bg-[#E4EEE3] flex items-center justify-center text-[#1D3C34] group-hover:bg-[#1D3C34] transition-colors duration-300">
-                    <Icon className="w-6 h-6 text-[#708E50] group-hover:text-[#86A55B] transition-colors duration-300" />
+                <div className="flex items-center justify-between mb-3.5 xl:mb-4 gap-1">
+                  <div className="w-10 h-10 xl:w-11 xl:h-11 rounded-xl bg-[#E4EEE3] flex items-center justify-center text-[#1D3C34] group-hover:bg-[#1D3C34] transition-colors duration-300 shrink-0">
+                    <Icon className="w-5 h-5 xl:w-5.5 xl:h-5.5 text-[#708E50] group-hover:text-[#86A55B] transition-colors duration-300" />
                   </div>
 
                   {stat.unit && (
-                    <span className="text-[11px] font-semibold text-stone-500 bg-[#FAF9F5] border border-stone-200/80 px-2.5 py-1 rounded-lg">
+                    <span className="text-[10px] xl:text-[11px] font-semibold text-stone-500 bg-[#FAF9F5] border border-stone-200/80 px-2 py-0.5 rounded-md shrink-0">
                       {stat.unit}
                     </span>
                   )}
                 </div>
 
                 {/* Content: Stat Number, Heading, and Description */}
-                <div className="space-y-2 flex-grow">
-                  <span className="font-serif font-bold text-3xl sm:text-4xl text-[#1D3C34] tracking-tight block">
+                <div className="space-y-1.5 xl:space-y-2 flex-grow">
+                  <span className="font-serif font-bold text-2xl xl:text-3xl text-[#1D3C34] tracking-tight block">
                     <AnimatedCounter value={stat.value} />
                   </span>
 
-                  <h3 className="font-serif font-semibold text-lg text-stone-900 tracking-tight group-hover:text-[#1D3C34] transition-colors">
+                  <h3 className="font-serif font-semibold text-sm xl:text-base text-stone-900 tracking-tight group-hover:text-[#1D3C34] transition-colors leading-snug">
                     {stat.title}
                   </h3>
 
-                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                  <p className="text-stone-600 text-[11px] xl:text-xs leading-relaxed font-normal">
                     {stat.description}
                   </p>
                 </div>
 
                 {/* Bottom Active Accent Indicator Line */}
-                <div className="w-10 h-1 bg-[#86A55B]/40 group-hover:w-20 group-hover:bg-[#708E50] rounded-full transition-all duration-300 mt-6" />
+                <div className="w-8 h-1 bg-[#86A55B]/40 group-hover:w-16 group-hover:bg-[#708E50] rounded-full transition-all duration-300 mt-4 xl:mt-5" />
               </motion.div>
             );
           })}
