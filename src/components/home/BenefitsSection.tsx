@@ -72,7 +72,7 @@ export const BenefitsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl space-y-2.5 sm:space-y-3 text-left"
+          className="w-full space-y-2.5 sm:space-y-3 text-left"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs backdrop-blur-xs">
@@ -89,15 +89,8 @@ export const BenefitsSection: React.FC = () => {
           </h2>
 
           {/* Section Description */}
-          <p className="text-stone-700 text-xs sm:text-sm sm:leading-relaxed font-normal">
-            Choosing the right manufacturing partner is essential to building a
-            successful beauty brand. At The BioGlobal, we combine formulation
-            expertise, flexible production solutions, cost-conscious
-            manufacturing, and dedicated technical support to help simplify
-            your product development journey. Whether you are launching your
-            first private label collection or expanding an established cosmetic
-            portfolio, our collaborative approach is designed to support your
-            goals at every stage.
+          <p className="text-stone-700 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            Choosing the right manufacturing partner is essential to building a successful beauty brand with flexible production, cost-conscious manufacturing, and technical support. Whether launching your first private label line or scaling an existing cosmetic range, our collaborative approach supports your goals at every stage.
           </p>
         </motion.div>
 

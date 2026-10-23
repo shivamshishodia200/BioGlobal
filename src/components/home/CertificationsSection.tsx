@@ -51,7 +51,7 @@ export const CertificationsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl space-y-2.5 sm:space-y-3"
+          className="text-left w-full space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -73,14 +73,9 @@ export const CertificationsSection: React.FC = () => {
           </p>
 
           {/* Section Description */}
-          <div className="space-y-3 text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
-            <p>
-              At The BioGlobal, quality is an important part of our approach to cosmetic formulation and manufacturing. From ingredient selection and production planning to product documentation and quality-related processes, we focus on supporting consistency, transparency, and responsible manufacturing practices.
-            </p>
-            <p className="text-stone-500 text-xs sm:text-sm">
-              Our aim is to help beauty businesses make informed product decisions through clear specifications, collaborative development, and a commitment to manufacturing quality.
-            </p>
-          </div>
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            At The BioGlobal, quality assurance governs every stage of formulation compounding, cleanroom batch manufacturing, and product testing. Our documented specifications and verified operational standards provide beauty businesses with dependable manufacturing confidence.
+          </p>
         </motion.div>
 
         {/* Four Quality & Certification Cards (Part 2) */}

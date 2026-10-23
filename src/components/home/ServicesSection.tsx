@@ -35,7 +35,7 @@ export const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl space-y-2.5 sm:space-y-3"
+          className="text-left w-full space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs">
@@ -57,16 +57,8 @@ export const ServicesSection: React.FC = () => {
           </p>
 
           {/* Description */}
-          <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
-            Every successful beauty brand needs manufacturing solutions that
-            match its vision, market positioning, and growth ambitions. At The
-            BioGlobal, we provide comprehensive third-party cosmetic
-            manufacturing, private label solutions, and customized formulation
-            development to help businesses bring distinctive beauty and
-            personal care products to market. From concept development and
-            formulation selection to manufacturing and packaging coordination,
-            our approach focuses on quality, collaboration, and commercially
-            practical solutions.
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            Every successful beauty brand requires manufacturing solutions tailored to its market positioning, formulation standards, and commercial growth ambitions. At The BioGlobal, we provide third-party manufacturing, private label collections, and custom R&amp;D to bring distinctive personal care products to life.
           </p>
         </motion.div>
 

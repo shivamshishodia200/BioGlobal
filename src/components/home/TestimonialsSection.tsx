@@ -121,7 +121,7 @@ export const TestimonialsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl space-y-2.5 sm:space-y-3"
+          className="text-left w-full space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -143,14 +143,9 @@ export const TestimonialsSection: React.FC = () => {
           </p>
 
           {/* Section Description */}
-          <div className="space-y-3 text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
-            <p>
-              At The BioGlobal, we believe strong manufacturing partnerships are built through communication, dependable support, and a shared commitment to product quality.
-            </p>
-            <p className="text-stone-500 text-xs sm:text-sm">
-              From emerging beauty brands exploring their first private label collections to established businesses expanding their manufacturing capabilities, we aim to support clients through thoughtful formulation development, coordinated production, and collaborative service.
-            </p>
-          </div>
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            At The BioGlobal, strong manufacturing partnerships are built on transparent communication, dependable support, and verified product quality. We empower beauty brands with collaborative formulation guidance, turnkey filling, and reliable production.
+          </p>
         </motion.div>
 
         {/* CASE A: Verified Testimonials Carousel (Part 6) */}

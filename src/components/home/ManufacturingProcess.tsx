@@ -62,7 +62,7 @@ export const ManufacturingProcess: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="text-left max-w-3xl space-y-3"
+          className="text-left w-full space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -84,8 +84,8 @@ export const ManufacturingProcess: React.FC = () => {
           </p>
 
           {/* Description */}
-          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal">
-            Turning a beauty product concept into a market-ready formulation requires thoughtful planning, technical expertise, and coordinated manufacturing. Our structured six-step process guides brands through consultation, product development, sampling, manufacturing, quality checks, and final packaging.
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            Turning a beauty product concept into a market-ready formulation requires thoughtful planning, technical expertise, and coordinated production. Our structured six-step process guides brands through consultation, formula development, bench sampling, batch manufacturing, quality audits, and packaging.
           </p>
         </motion.div>
 

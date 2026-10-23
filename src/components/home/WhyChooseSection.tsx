@@ -89,7 +89,7 @@ export const WhyChooseSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl space-y-2.5 sm:space-y-3 text-left"
+          className="w-full space-y-2.5 sm:space-y-3 text-left"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs backdrop-blur-xs">
@@ -106,13 +106,8 @@ export const WhyChooseSection: React.FC = () => {
           </h2>
 
           {/* Section Description */}
-          <p className="text-stone-700 text-xs sm:text-sm sm:leading-relaxed font-normal">
-            At The BioGlobal, we combine extensive cosmetic manufacturing
-            experience with formulation expertise, production capabilities, and
-            a commitment to quality. Our approach helps emerging and established
-            beauty brands develop distinctive products, streamline manufacturing
-            requirements, and build collections that align with their business
-            goals.
+          <p className="text-stone-700 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            At The BioGlobal, we combine extensive cosmetic manufacturing experience with formulation expertise, certified production, and a commitment to quality. Our approach helps emerging and established beauty brands develop distinctive products and build collections that align with their business goals.
           </p>
         </motion.div>
 

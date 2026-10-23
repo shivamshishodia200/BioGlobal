@@ -146,7 +146,7 @@ export const UniqueFeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl mb-8 sm:mb-10 space-y-2.5 sm:space-y-3"
+          className="text-left w-full mb-8 sm:mb-10 space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold border border-[#C5DAC3] shadow-2xs">
@@ -168,18 +168,8 @@ export const UniqueFeaturesSection: React.FC = () => {
           </p>
 
           {/* Section Description */}
-          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal">
-            Every exceptional beauty product begins with the right combination of
-            expertise, innovation, and attention to detail. At The BioGlobal, we
-            bring together formulation knowledge, manufacturing capabilities, and
-            collaborative support to help brands build distinctive products with
-            confidence.
-            <span className="block mt-2">
-              From early-stage product concepts to expanding beauty
-              collections, our solutions are designed to support consistent
-              product development, practical manufacturing decisions, and
-              lasting business partnerships.
-            </span>
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            Every exceptional beauty product begins with the right combination of formulation science, certified manufacturing, and meticulous quality control. From early-stage product concepts to expanding personal care collections, our solutions provide consistent development and dependable B2B support.
           </p>
         </motion.div>
 

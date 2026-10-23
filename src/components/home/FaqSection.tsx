@@ -86,7 +86,7 @@ export const FaqSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="text-left max-w-3xl mb-8 space-y-2.5 sm:space-y-3"
+          className="text-left w-full mb-8 space-y-2.5 sm:space-y-3"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3]">
             <HelpCircle className="w-3.5 h-3.5 text-[#708E50]" />
@@ -101,12 +101,8 @@ export const FaqSection: React.FC = () => {
             <span className="italic text-[#708E50]">Manufacturing With Us</span>
           </h2>
 
-          <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-            Explore answers to commonly asked questions about our cosmetic manufacturing services, minimum order quantities, formulation development, packaging solutions, quality practices, and production processes.
-          </p>
-
-          <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-            Whether you are launching your first private label beauty product or expanding an established cosmetic range, these answers can help you understand the manufacturing journey and prepare for a more informed conversation with our team.
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed max-w-5xl lg:max-w-6xl">
+            Explore concise answers to common questions about our cosmetic manufacturing services, minimum order quantities, and custom formulation development. Whether launching your first private label SKU or expanding an existing beauty range, these answers help you plan your next production steps.
           </p>
 
           <p className="text-xs sm:text-sm font-semibold tracking-wide uppercase text-[#708E50] pt-1">

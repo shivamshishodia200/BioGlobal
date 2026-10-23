@@ -40,7 +40,7 @@ export const CategoriesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7 }}
-            className="max-w-3xl space-y-2.5 sm:space-y-3"
+            className="max-w-4xl space-y-2.5 sm:space-y-3"
           >
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -62,13 +62,8 @@ export const CategoriesShowcase: React.FC = () => {
             </p>
 
             {/* Description */}
-            <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
-              From innovative skincare solutions to everyday personal care
-              essentials, The BioGlobal supports a diverse range of cosmetic and
-              beauty product concepts. Explore our six specialized manufacturing
-              categories and discover opportunities to build a product collection
-              that reflects your brand's vision, market positioning, and customer
-              expectations.
+            <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-3xl lg:max-w-4xl">
+              From advanced skincare formulations to everyday personal care essentials, The BioGlobal supports a diverse spectrum of cosmetic concepts. Explore our six specialized categories to build a market-ready product line aligned with your brand vision.
             </p>
           </motion.div>
 

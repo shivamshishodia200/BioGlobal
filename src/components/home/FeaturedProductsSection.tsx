@@ -63,7 +63,7 @@ export const FeaturedProductsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-left max-w-3xl mb-8 space-y-2.5 sm:space-y-3"
+          className="text-left w-full mb-8 space-y-2.5 sm:space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -85,8 +85,8 @@ export const FeaturedProductsSection: React.FC = () => {
           </p>
 
           {/* Section Description */}
-          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal">
-            Explore a selection of cosmetic and personal care formulation concepts that reflect the versatility of our manufacturing capabilities. From advanced skincare serums and moisturizing creams to specialized hair care and cleansing products, The BioGlobal supports businesses seeking distinctive product collections tailored to their brand identity, target audience, and commercial goals.
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-5xl lg:max-w-6xl">
+            Explore approved cosmetic and personal care formulation concepts that reflect the versatility and precision of our manufacturing infrastructure. From advanced active serums to restorative hair care and daily cleansers, we help brands launch market-ready collections tailored to commercial goals.
           </p>
         </motion.div>
 
