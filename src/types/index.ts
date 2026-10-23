@@ -120,3 +120,13 @@ export interface ManufacturingHighlight {
   iconName: 'Package' | 'FlaskConical' | 'Factory';
 }
 
+export interface UniqueFeature {
+  id: string;
+  title: string;
+  shortTitle: string;
+  description: string;
+  highlight: string;
+  iconName: string;
+}
+
+
