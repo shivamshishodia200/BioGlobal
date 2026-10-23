@@ -308,12 +308,8 @@ export const AboutSection: React.FC = () => {
             <h2 className="font-serif font-light text-2xl sm:text-3xl lg:text-[38px] text-stone-900 tracking-tight">
               You Name It. We Make It.
             </h2>
-            <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed max-w-4xl">
-              From advanced skincare serums to everyday personal care essentials,
-              The BioGlobal offers versatile cosmetic manufacturing solutions
-              across six specialized product categories. Explore our
-              formulation capabilities and discover how we can help transform
-              your product ideas into market-ready beauty collections.
+            <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed max-w-5xl lg:max-w-6xl">
+              From advanced skincare serums to everyday personal care essentials, The BioGlobal offers versatile cosmetic manufacturing solutions across six specialized categories. Explore our formulation capabilities to help transform your product ideas into market-ready beauty collections.
             </p>
           </div>
 
