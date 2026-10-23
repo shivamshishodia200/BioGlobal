@@ -54,12 +54,18 @@ export interface ManufacturingService {
 
 export interface ProcessStep {
   step: number;
+  id?: string;
   title: string;
+  shortTitle?: string;
   subtitle: string;
   description: string;
   timeline: string;
   details: string[];
+  activities?: string[];
+  output?: string;
   image?: string;
+  imageCaption?: string;
+  iconName?: string;
 }
 
 export interface FAQItem {

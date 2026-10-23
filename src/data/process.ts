@@ -1,83 +1,166 @@
 import { ProcessStep } from '../types';
+import skincareImg from '../assets/capabilities/skincare.jpg';
+import haircareImg from '../assets/capabilities/haircare.jpg';
+import cosmeticLabImg from '../assets/capabilities/cosmetic_lab_rd.jpg';
+import bodycareImg from '../assets/capabilities/bodycare.jpg';
 import cosmeticFacilityImg from '../assets/capabilities/cosmetic_manufacturing_facility.jpg';
+import soapcareImg from '../assets/capabilities/soapcare.jpg';
 
 export const MANUFACTURING_PROCESS: ProcessStep[] = [
   {
     step: 1,
+    id: 'step-consultation',
     title: 'Initial Consultation',
-    subtitle: 'Understanding Your Brand Vision & Market Goals',
-    description: 'We meet via video conference or at our facility to discuss your target demographic, desired active ingredients, product format, price targets, and launch timelines.',
-    timeline: 'Day 1 - 3',
-    image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80',
+    shortTitle: 'Initial Consultation',
+    subtitle: 'Understanding Your Vision & Business Requirements',
+    timeline: 'Days 1–3',
+    description:
+      'Every product begins with a conversation. Our team works with you to understand your brand vision, target customers, product category, formulation preferences, packaging expectations, and manufacturing requirements. This initial discussion helps establish clear development objectives and identifies suitable next steps for your project.',
+    activities: [
+      'Understand Brand Goals',
+      'Identify Product Categories',
+      'Discuss Target Customers',
+      'Review Preliminary Order Requirements',
+    ],
     details: [
-      'Define formulation category & aesthetic profile',
-      'Establish target packaging specifications & budget',
-      'Select Private Label or Bespoke Custom Formulation path'
-    ]
+      'Understand Brand Goals',
+      'Identify Product Categories',
+      'Discuss Target Customers',
+      'Review Preliminary Order Requirements',
+    ],
+    output: 'Initial Product & Manufacturing Brief',
+    image: skincareImg,
+    imageCaption: 'Brand Vision & Scoping',
+    iconName: 'MessageSquare',
   },
   {
     step: 2,
-    title: 'Product Concept & Requirements',
-    subtitle: 'Technical Brief & Ingredient Architecture',
-    description: 'Our R&D scientists draft a formal Product Development Brief outlining proposed active concentrations, carrier bases, preservatives, and required regulatory claim substantiation.',
-    timeline: 'Week 1',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80',
+    id: 'step-concept-planning',
+    title: 'Product Concept & Planning',
+    shortTitle: 'Concept & Planning',
+    subtitle: 'Turning Your Ideas Into Clear Specifications',
+    timeline: 'Days 4–7',
+    description:
+      'Once your product requirements are understood, we help define the key elements of your cosmetic product concept. This includes discussing ingredient preferences, formulation characteristics, packaging formats, target pricing considerations, and intended product positioning. A structured product brief creates a practical foundation for formulation development and manufacturing planning.',
+    activities: [
+      'Define Product Specifications',
+      'Discuss Ingredient Preferences',
+      'Explore Packaging Options',
+      'Review Target Cost Requirements',
+    ],
     details: [
-      'Ingredient feasibility & allergen screening',
-      'Compatibility assessment with intended container',
-      'Formal quotation & minimum order quantity (MOQ) agreement'
-    ]
+      'Define Product Specifications',
+      'Discuss Ingredient Preferences',
+      'Explore Packaging Options',
+      'Review Target Cost Requirements',
+    ],
+    output: 'Product Concept & Development Requirements',
+    image: haircareImg,
+    imageCaption: 'Product Specification Architecture',
+    iconName: 'ClipboardList',
   },
   {
     step: 3,
-    title: 'Formulation & Development',
-    subtitle: 'Laboratory Bench Trials & Compounding',
-    description: 'In our state-of-the-art laboratory, cosmetic chemists formulate small-batch prototypes optimizing skin-feel, spreadability, fragrance notes, and pH balance.',
-    timeline: 'Week 2 - 3',
-    image: 'https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=800&q=80',
+    id: 'step-formulation-rd',
+    title: 'Formulation & R&D',
+    shortTitle: 'Formulation & R&D',
+    subtitle: 'Developing Formulations Around Your Brand Vision',
+    timeline: 'Weeks 2–3',
+    description:
+      "Our formulation development process focuses on selecting suitable cosmetic ingredients and creating product concepts aligned with your requirements. Depending on the product, this may involve evaluating textures, consistency, fragrance preferences, ingredient compatibility, and intended cosmetic characteristics. Prototype formulations can be refined through technical review and collaborative feedback before moving toward sample approval.",
+    activities: [
+      'Ingredient Selection',
+      'Prototype Development',
+      'Texture & Fragrance Refinement',
+      'Technical Formulation Review',
+    ],
     details: [
-      'Lab-scale emulsification & sensory evaluation',
-      'Accelerated preliminary stability testing',
-      'Preparation of review-ready lab sample vials'
-    ]
+      'Ingredient Selection',
+      'Prototype Development',
+      'Texture & Fragrance Refinement',
+      'Technical Formulation Review',
+    ],
+    output: 'Product Formulation Prototype',
+    image: cosmeticLabImg,
+    imageCaption: 'Prototype Formulation Lab',
+    iconName: 'FlaskConical',
   },
   {
     step: 4,
-    title: 'Sample Approval & Testing',
-    subtitle: 'Client Evaluation & Stability Sign-off',
-    description: 'Physical sample sets are delivered to your team for texture, application, and olfactory approval. Once approved, the formula undergoes 3-month accelerated stability & preservative challenge testing.',
-    timeline: 'Client Review Window',
-    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80',
+    id: 'step-sampling-approval',
+    title: 'Sampling, Feedback & Approval',
+    shortTitle: 'Sampling & Approval',
+    subtitle: 'Refining the Product Before Production',
+    timeline: 'Weeks 3–4',
+    description:
+      'Product sampling provides an opportunity to evaluate the proposed formulation before proceeding with bulk manufacturing. Depending on the product and agreed development scope, clients can review relevant product characteristics such as texture, fragrance, appearance, consistency, and packaging compatibility. Feedback is considered during the refinement process, and the approved product specifications establish the basis for the next manufacturing stage.',
+    activities: [
+      'Sample Preparation',
+      'Product Evaluation',
+      'Client Feedback',
+      'Final Specification Approval',
+    ],
     details: [
-      'Up to 3 complimentary revision rounds on formulation',
-      'Microbial challenge testing (USP 51 equivalent)',
-      'Packaging compatibility & leak stress analysis'
-    ]
+      'Sample Preparation',
+      'Product Evaluation',
+      'Client Feedback',
+      'Final Specification Approval',
+    ],
+    output: 'Approved Product Sample & Specifications',
+    image: bodycareImg,
+    imageCaption: 'Sensory Evaluation & Sign-Off',
+    iconName: 'PackageCheck',
   },
   {
     step: 5,
+    id: 'step-manufacturing-quality',
     title: 'Manufacturing & Quality Checks',
-    subtitle: 'Controlled Cleanroom Batch Compounding',
-    description: 'Production shifts to our ISO 22716 certified cleanrooms. Industrial homogenizers mix the bulk batch under computerized temperature and vacuum parameters, followed by in-line quality assays.',
-    timeline: 'Week 4 - 6',
-    image: cosmeticFacilityImg,
+    shortTitle: 'Manufacturing & Quality',
+    subtitle: 'From Approved Formulation to Organized Production',
+    timeline: 'Weeks 4–6',
+    description:
+      'Following approval of the required product specifications and production arrangements, manufacturing activities are coordinated according to the agreed requirements. The process includes applicable material handling, batch preparation, production monitoring, and quality-related checks intended to support consistency and compliance with relevant manufacturing procedures. Our focus is on organized production and clear coordination throughout the manufacturing stage.',
+    activities: [
+      'Production Scheduling',
+      'Raw Material Coordination',
+      'Batch Manufacturing',
+      'Applicable Quality Checks',
+    ],
     details: [
-      'De-aeration and high-shear vacuum homogenization',
-      'In-process viscosity, specific gravity & pH checks',
-      'Lot microbiology quarantine until release approval'
-    ]
+      'Production Scheduling',
+      'Raw Material Coordination',
+      'Batch Manufacturing',
+      'Applicable Quality Checks',
+    ],
+    output: 'Manufactured Product Batch',
+    image: cosmeticFacilityImg,
+    imageCaption: 'Controlled Batch Compounding',
+    iconName: 'Factory',
   },
   {
     step: 6,
+    id: 'step-packaging-dispatch',
     title: 'Packaging & Dispatch',
-    subtitle: 'Automated Filling, Labeling & Global Logistics',
-    description: 'The batch is filled in sterile automated lines, capped, batch-coded with laser lot stamps, sealed, boxed, and packed onto stretch-wrapped pallets for secure global shipment.',
-    timeline: 'Week 6 - 8',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    shortTitle: 'Packaging & Dispatch',
+    subtitle: 'Preparing Your Products for the Market',
+    timeline: 'Weeks 6–8',
+    description:
+      'Once the required production and quality procedures are complete, finished products proceed through agreed filling, labeling, packaging, and final order preparation activities. Packaging and dispatch are coordinated according to approved product specifications, packaging availability, order requirements, and agreed logistics arrangements. The final stage brings your product development journey closer to a market-ready beauty collection.',
+    activities: [
+      'Product Filling & Packing',
+      'Labeling & Presentation',
+      'Final Order Preparation',
+      'Dispatch Coordination',
+    ],
     details: [
-      'High-speed automated piston filling & induction seal',
-      'Tamper-evident carton packaging & Barcoding',
-      'Final Certificate of Analysis (CoA) & Bill of Lading delivery'
-    ]
-  }
+      'Product Filling & Packing',
+      'Labeling & Presentation',
+      'Final Order Preparation',
+      'Dispatch Coordination',
+    ],
+    output: 'Finished Products Prepared for Dispatch',
+    image: soapcareImg,
+    imageCaption: 'Filling, Packing & Dispatch Logistics',
+    iconName: 'Truck',
+  },
 ];
