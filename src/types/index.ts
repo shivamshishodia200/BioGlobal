@@ -27,20 +27,26 @@ export interface CategoryInfo {
 export interface Product {
   id: string;
   name: string;
+  slug?: string;
   category: ProductCategory;
+  categoryId?: string;
   categorySlug: string;
   tagline: string;
   description: string;
+  shortDescription?: string;
   image: string;
   keyActives: string[];
+  ingredients?: string[];
   benefits: string[];
   idealFor: string;
   minOrderQuantity: string;
+  minimumOrderQuantity?: number | string | null;
   leadTime: string;
   packagingOptions: string[];
   certifications: string[];
   shelfLife: string;
   isFeatured?: boolean;
+  isPublished?: boolean;
 }
 
 export interface ManufacturingService {

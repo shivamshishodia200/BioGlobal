@@ -92,7 +92,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                   <span>Key Active Ingredients</span>
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
-                  {product.keyActives.map((act, i) => (
+                  {(product.ingredients || product.keyActives || []).map((act, i) => (
                     <span 
                       key={i} 
                       className="px-2.5 py-1 rounded-md bg-[#E4EEE3] text-[#1D3C34] text-xs font-medium border border-[#C5DAC3]"
@@ -107,7 +107,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
               <div className="pt-2 border-t border-stone-100">
                 <h4 className="text-xs font-bold text-stone-900 uppercase tracking-wider mb-2 flex items-center gap-1.5">
                   <CheckCircle className="w-3.5 h-3.5 text-[#708E50]" />
-                  <span>Clinical & Aesthetic Benefits</span>
+                  <span>Formulation & Performance Attributes</span>
                 </h4>
                 <ul className="grid grid-cols-1 gap-1 text-xs text-stone-600">
                   {product.benefits.map((ben, i) => (
