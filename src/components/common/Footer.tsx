@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Check } from 'lucide-react';
+import { Facebook, Twitter, Linkedin } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 import { useQuoteModal } from '../../context/QuoteModalContext';
 
@@ -11,31 +11,19 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) => {
   const { openQuoteModal } = useQuoteModal();
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-    setSubscribed(true);
-    setTimeout(() => {
-      setEmail('');
-      setSubscribed(false);
-    }, 4000);
-  };
 
   return (
     <footer className="bg-[#E4EEE3] text-stone-800 pt-16 pb-8 border-t border-[#C5DAC3]/70">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-stone-800/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-stone-800/10">
           {/* Col 1: White Logo Box + Description + Socials */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-6 space-y-6">
             {/* White Logo Card from Proveda style */}
             <div className="bg-white rounded-2xl p-4 inline-block shadow-2xs border border-stone-200/80">
               <BrandLogo size="md" />
             </div>
 
-            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal max-w-md">
+            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal max-w-lg">
               The BioGlobal is a leading cosmetic products manufacturer. With an expertise of over 20+ years and a legacy of building trust, we provide internationally accredited cosmetic solutions that suit the best for your brand.
             </p>
 
@@ -81,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
           </div>
 
           {/* Col 2: NAVIGATIONS */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="text-xs uppercase font-medium tracking-[0.25em] text-stone-600">
               NAVIGATIONS
             </h4>
@@ -100,7 +88,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
           </div>
 
           {/* Col 3: POLICIES */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-3 space-y-4">
             <h4 className="text-xs uppercase font-medium tracking-[0.25em] text-stone-600">
               POLICIES
             </h4>
@@ -126,29 +114,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
                 </button>
               </li>
             </ul>
-          </div>
-
-          {/* Col 4: SUBSCRIBE TO NEWSLETTER */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="text-xs uppercase font-medium tracking-[0.25em] text-stone-600">
-              SUBSCRIBE TO NEWSLETTER
-            </h4>
-            <form onSubmit={handleSubscribe} className="space-y-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                className="w-full px-4 py-3 bg-white rounded-md text-xs sm:text-sm text-stone-900 border border-stone-200 focus:outline-none shadow-2xs"
-                required
-              />
-              <button
-                type="submit"
-                className="px-8 py-2.5 bg-[#1D3C34] hover:bg-[#142B25] text-white rounded-md text-xs sm:text-sm font-semibold shadow-2xs transition-colors cursor-pointer"
-              >
-                {subscribed ? 'Subscribed!' : 'Subscribe'}
-              </button>
-            </form>
           </div>
         </div>
 

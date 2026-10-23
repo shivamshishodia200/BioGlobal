@@ -12,7 +12,6 @@ import { BatchEstimatorSection } from '../components/home/BatchEstimatorSection'
 import { CategoriesShowcase } from '../components/home/CategoriesShowcase';
 import { FeaturedProductsSection } from '../components/home/FeaturedProductsSection';
 import { ConsultationSection } from '../components/home/ConsultationSection';
-import { CertificationsSection } from '../components/home/CertificationsSection';
 import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { FaqSection } from '../components/home/FaqSection';
 
@@ -57,9 +56,6 @@ export const HomePage: React.FC = () => {
 
       {/* 13. Consultation Briefing Form (Let's Build Your Next Beauty Product Together) */}
       <ConsultationSection />
-
-      {/* 14. Certifications Circular Stamp Seals with Rotating Rings & Modal */}
-      <CertificationsSection />
 
       {/* 15. Testimonials: Our Customer Says */}
       <TestimonialsSection />

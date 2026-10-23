@@ -6,9 +6,6 @@ import {
   Quote, 
   ChevronLeft, 
   ChevronRight, 
-  MessagesSquare, 
-  FlaskConical, 
-  Handshake, 
   ArrowRight,
   ShieldCheck,
   User,
@@ -16,7 +13,6 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { ClientTestimonial } from '../../types';
-import { TRUST_VALUES } from '../../data/testimonials';
 import { fetchPublishedTestimonials } from '../../services/testimonialsApi';
 
 export const TestimonialsSection: React.FC = () => {
@@ -91,18 +87,7 @@ export const TestimonialsSection: React.FC = () => {
     touchStartX.current = null;
   };
 
-  const getPillarIcon = (name: string) => {
-    switch (name) {
-      case 'MessagesSquare':
-        return <MessagesSquare className="w-5 h-5 text-[#1D3C34]" />;
-      case 'FlaskConical':
-        return <FlaskConical className="w-5 h-5 text-[#708E50]" />;
-      case 'Handshake':
-        return <Handshake className="w-5 h-5 text-[#DFBD89]" />;
-      default:
-        return <MessagesSquare className="w-5 h-5 text-[#1D3C34]" />;
-    }
-  };
+
 
   return (
     <section 
@@ -303,42 +288,7 @@ export const TestimonialsSection: React.FC = () => {
           </motion.div>
         )}
 
-        {/* Three Trust Supporting Value Points (Part 5) */}
-        <div className="pt-6">
-          <div className="text-left mb-8">
-            <span className="text-xs uppercase tracking-widest text-[#708E50] font-bold block mb-1">
-              Our Collaboration Philosophy
-            </span>
-            <h3 className="font-serif text-xl sm:text-2xl font-light text-stone-900">
-              Principles Guiding Every Client Relationship
-            </h3>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-7">
-            {TRUST_VALUES.map((val, idx) => (
-              <motion.div
-                key={val.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className="bg-white rounded-2xl p-6 sm:p-7 border border-stone-200/90 shadow-2xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between hover:-translate-y-1"
-              >
-                <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF9F5] border border-stone-200/80 flex items-center justify-center shrink-0 shadow-2xs">
-                    {getPillarIcon(val.iconName)}
-                  </div>
-                  <h4 className="font-serif text-lg font-bold text-stone-900 leading-snug">
-                    {val.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
-                    {val.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
