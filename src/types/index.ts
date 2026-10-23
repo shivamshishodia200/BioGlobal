@@ -299,5 +299,28 @@ export interface ManufacturingQuoteRequestPayload {
   estimatedTotal?: number;
 }
 
+export interface AboutStatistic {
+  id: string;
+  value: string;
+  label: string;
+  description: string;
+}
+
+export interface AboutCapability {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  highlights: string[];
+  image?: string;
+}
+
+export interface CompanyValue {
+  id: string;
+  title: string;
+  description: string;
+}
+
+
 
 
