@@ -35,7 +35,7 @@ export const ServicesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto space-y-4"
+          className="text-left max-w-3xl space-y-4"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs">
@@ -358,7 +358,7 @@ export const ServicesSection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="pt-4"
         >
-          <div className="bg-[#E4EEE3] rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#C5DAC3] shadow-xs flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+          <div className="bg-[#E4EEE3] rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#C5DAC3] shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-left">
             <div className="space-y-1.5 max-w-2xl">
               <span className="text-[10px] font-bold uppercase tracking-widest text-[#708E50] block">
                 Expert Guidance
@@ -374,7 +374,7 @@ export const ServicesSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-3 flex-shrink-0">
+            <div className="flex flex-wrap items-center justify-start gap-3 flex-shrink-0">
               <Link
                 to="/consultation"
                 className="px-6 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl inline-flex items-center gap-2 cursor-pointer"

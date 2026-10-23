@@ -51,7 +51,7 @@ export const CertificationsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto space-y-4"
+          className="text-left max-w-3xl space-y-3.5"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -167,7 +167,7 @@ export const CertificationsSection: React.FC = () => {
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#708E50]/20 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#DFBD89]/15 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 max-w-4xl mx-auto text-center space-y-5">
+          <div className="relative z-10 max-w-3xl text-left space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#DFBD89] text-xs font-semibold uppercase tracking-wider">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#DFBD89]" />
               <span>MANUFACTURING ASSURANCE</span>
@@ -177,7 +177,7 @@ export const CertificationsSection: React.FC = () => {
               Committed to Quality at Every Stage
             </h3>
 
-            <p className="text-stone-200 text-sm sm:text-base leading-relaxed font-light max-w-3xl mx-auto">
+            <p className="text-stone-200 text-sm sm:text-base leading-relaxed font-light">
               Our approach to cosmetic manufacturing emphasizes clear product requirements, carefully considered formulation choices, appropriate production processes, and collaborative client communication. We believe dependable manufacturing partnerships are supported by transparency, consistency, and continuous attention to quality.
             </p>
 
@@ -185,7 +185,7 @@ export const CertificationsSection: React.FC = () => {
               "Quality is more than a statement. It is a commitment reflected in how products are planned, developed, and manufactured."
             </p>
 
-            <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="pt-4 flex flex-col sm:flex-row items-center justify-start gap-4">
               <Link
                 to="/consultation"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl bg-[#DFBD89] hover:bg-[#D4AF74] text-[#1D3C34] font-semibold text-xs sm:text-sm shadow-sm transition-all"

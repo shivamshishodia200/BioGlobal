@@ -62,7 +62,7 @@ export const ManufacturingProcess: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto space-y-3"
+          className="text-left max-w-3xl space-y-3"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -347,7 +347,7 @@ export const ManufacturingProcess: React.FC = () => {
         {/* MANDATORY TIMELINE DISCLAIMER NOTE                      */}
         {/* ======================================================== */}
         <div className="text-center pt-1">
-          <p className="text-[11px] text-stone-500 max-w-2xl mx-auto leading-relaxed italic">
+          <p className="text-[11px] text-stone-500 max-w-2xl leading-relaxed italic text-left">
             * Timelines are indicative and may vary depending on formulation
             complexity, product approval, packaging availability, and
             manufacturing requirements.
@@ -364,7 +364,7 @@ export const ManufacturingProcess: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="pt-1"
         >
-          <div className="bg-[#E4EEE3] rounded-2xl p-4 sm:p-6 lg:p-7 border border-[#C5DAC3] shadow-xs flex flex-col lg:flex-row items-center justify-between gap-5 text-center lg:text-left">
+          <div className="bg-[#E4EEE3] rounded-2xl p-4 sm:p-6 lg:p-7 border border-[#C5DAC3] shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5 text-left">
             <div className="space-y-1 max-w-xl">
               <span className="text-[9px] font-bold uppercase tracking-widest text-[#708E50] block">
                 Take the Next Step
@@ -377,7 +377,7 @@ export const ManufacturingProcess: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-2.5 flex-shrink-0">
+            <div className="flex flex-wrap items-center justify-start gap-2.5 flex-shrink-0">
               <Link
                 to="/consultation"
                 className="px-4 py-2.5 rounded-lg bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs transition-all shadow-xs inline-flex items-center gap-1.5 cursor-pointer group"

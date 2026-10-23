@@ -65,14 +65,14 @@ export const BenefitsSection: React.FC = () => {
       aria-labelledby="benefits-heading"
       className="bg-[#E4EEE3] pt-6 pb-20 lg:pb-28 border-b border-[#C5DAC3]/70 overflow-hidden relative"
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 text-center space-y-12 sm:space-y-16 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 space-y-10 sm:space-y-12 relative z-10 text-left">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.7 }}
-          className="max-w-3xl mx-auto space-y-4"
+          className="max-w-3xl space-y-3.5 text-left"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs backdrop-blur-xs">

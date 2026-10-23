@@ -86,7 +86,7 @@ export const FaqSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16 space-y-4"
+          className="text-left max-w-3xl mb-12 space-y-3.5"
         >
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3]">
             <HelpCircle className="w-3.5 h-3.5 text-[#708E50]" />
@@ -229,7 +229,7 @@ export const FaqSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-stone-200 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left"
+          className="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-stone-200 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-left"
         >
           <div className="space-y-2 max-w-xl">
             <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#708E50]">

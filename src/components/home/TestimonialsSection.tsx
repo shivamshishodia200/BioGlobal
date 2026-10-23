@@ -121,7 +121,7 @@ export const TestimonialsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto space-y-4"
+          className="text-left max-w-3xl space-y-3.5"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -310,8 +310,8 @@ export const TestimonialsSection: React.FC = () => {
 
         {/* Three Trust Supporting Value Points (Part 5) */}
         <div className="pt-6">
-          <div className="text-center mb-8">
-            <span className="text-xs uppercase tracking-widest text-stone-500 font-bold block mb-1">
+          <div className="text-left mb-8">
+            <span className="text-xs uppercase tracking-widest text-[#708E50] font-bold block mb-1">
               Our Collaboration Philosophy
             </span>
             <h3 className="font-serif text-xl sm:text-2xl font-light text-stone-900">

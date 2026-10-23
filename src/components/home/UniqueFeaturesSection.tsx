@@ -146,7 +146,7 @@ export const UniqueFeaturesSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-4xl mx-auto mb-14 lg:mb-18 space-y-3.5"
+          className="text-left max-w-3xl mb-12 lg:mb-16 space-y-3.5"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold border border-[#C5DAC3] shadow-2xs">
@@ -168,7 +168,7 @@ export const UniqueFeaturesSection: React.FC = () => {
           </p>
 
           {/* Section Description */}
-          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal max-w-3xl mx-auto">
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal">
             Every exceptional beauty product begins with the right combination of
             expertise, innovation, and attention to detail. At The BioGlobal, we
             bring together formulation knowledge, manufacturing capabilities, and
@@ -413,7 +413,7 @@ export const UniqueFeaturesSection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="mt-14 pt-8 border-t border-stone-200/80"
         >
-          <div className="bg-[#FAF9F5] border border-stone-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xs flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+          <div className="bg-[#FAF9F5] border border-stone-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-left">
             <div className="space-y-1.5 max-w-2xl">
               <span className="text-[10px] font-bold uppercase tracking-widest text-[#708E50] block">
                 Collaborate With Our Experts
@@ -428,7 +428,7 @@ export const UniqueFeaturesSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-3.5 flex-shrink-0">
+            <div className="flex flex-wrap items-center justify-start gap-3.5 flex-shrink-0">
               <Link
                 to="/consultation"
                 className="px-6 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl inline-flex items-center gap-2 cursor-pointer group"

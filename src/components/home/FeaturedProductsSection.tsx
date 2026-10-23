@@ -63,7 +63,7 @@ export const FeaturedProductsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.7 }}
-          className="text-center max-w-3xl mx-auto mb-12 space-y-4"
+          className="text-left max-w-3xl mb-10 space-y-3.5"
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
@@ -92,7 +92,7 @@ export const FeaturedProductsSection: React.FC = () => {
 
         {/* Filter Pills with Segmented Background */}
         <div 
-          className="flex items-center justify-center gap-2 flex-wrap mb-12"
+          className="flex items-center justify-start gap-2 flex-wrap mb-10"
           role="tablist"
           aria-label="Filter formulations by category"
         >
@@ -231,7 +231,7 @@ export const FeaturedProductsSection: React.FC = () => {
         )}
 
         {/* Section Dual CTAs */}
-        <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+        <div className="mt-14 flex flex-col sm:flex-row items-center justify-start gap-4">
           {/* Primary CTA */}
           <Link
             to="/products"

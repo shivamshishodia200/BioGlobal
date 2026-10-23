@@ -236,26 +236,36 @@ export const AboutSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-center max-w-4xl mx-auto space-y-5"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start"
         >
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
-            <span>A LEGACY OF EXPERTISE &amp; INNOVATION</span>
+          {/* Left Column (5 Cols): Eyebrow, Heading, Tagline & CTA */}
+          <div className="lg:col-span-5 space-y-5 text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
+              <span>A LEGACY OF EXPERTISE &amp; INNOVATION</span>
+            </div>
+
+            <h2 className="font-serif font-light text-3xl sm:text-4xl lg:text-[44px] text-stone-900 tracking-tight leading-[1.18]">
+              Where Beauty Innovation Meets Manufacturing Excellence
+            </h2>
+
+            <p className="text-xs sm:text-sm uppercase tracking-widest font-bold text-[#708E50]">
+              Your Brand Vision. Our Manufacturing Expertise.
+            </p>
+
+            <div className="pt-2">
+              <Link
+                to="/about"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl group"
+              >
+                <span>Discover Our Manufacturing Expertise</span>
+                <ArrowRight className="w-4 h-4 text-[#86A55B] group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
           </div>
 
-          {/* Main Heading */}
-          <h2 className="font-serif font-light text-3xl sm:text-4xl lg:text-5xl text-stone-900 tracking-tight leading-tight">
-            Where Beauty Innovation Meets Manufacturing Excellence
-          </h2>
-
-          {/* Highlighted Statement */}
-          <p className="text-xs sm:text-sm uppercase tracking-widest font-bold text-[#708E50]">
-            Your Brand Vision. Our Manufacturing Expertise.
-          </p>
-
-          {/* Company Introduction Paragraphs */}
-          <div className="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed font-normal max-w-3xl mx-auto pt-1">
+          {/* Right Column (7 Cols): Left-Aligned Narrative Story Paragraphs */}
+          <div className="lg:col-span-7 bg-[#FAF9F5] rounded-3xl p-6 sm:p-8 lg:p-10 border border-stone-200/80 shadow-xs space-y-4 text-left text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
             <p>
               At <strong>The BioGlobal</strong>, we believe every successful
               beauty brand begins with a powerful idea—and the right
@@ -273,9 +283,9 @@ export const AboutSection: React.FC = () => {
               private label solutions designed to help brands build
               distinctive, competitive product portfolios.
             </p>
-            <p>
+            <p className="pt-2 border-t border-stone-200/70 text-xs sm:text-sm text-stone-500">
               Our capabilities cover six essential categories:{' '}
-              <em>
+              <em className="text-stone-700 font-medium">
                 Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care,
                 and Baby Care
               </em>
@@ -284,32 +294,21 @@ export const AboutSection: React.FC = () => {
               consistency, and commercially practical manufacturing solutions.
             </p>
           </div>
-
-          {/* CTA Button */}
-          <div className="pt-3">
-            <Link
-              to="/about"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl group"
-            >
-              <span>Discover Our Manufacturing Expertise</span>
-              <ArrowRight className="w-4 h-4 text-[#86A55B] group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
         </motion.div>
 
         {/* ======================================================== */}
         {/* PART 2 — MANUFACTURING CAPABILITIES                      */}
         {/* ======================================================== */}
         <div className="pt-6 border-t border-stone-200/60">
-          {/* Section Subheading */}
-          <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 space-y-3">
+          {/* Section Subheading (Left-Aligned) */}
+          <div className="max-w-3xl mb-8 space-y-2.5 text-left">
             <span className="text-xs uppercase tracking-widest text-[#708E50] font-bold block">
               EXPLORE OUR EXPERTISE
             </span>
             <h2 className="font-serif font-light text-3xl sm:text-4xl lg:text-[42px] text-stone-900 tracking-tight">
               You Name It. We Make It.
             </h2>
-            <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed max-w-2xl mx-auto">
+            <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed">
               From advanced skincare serums to everyday personal care essentials,
               The BioGlobal offers versatile cosmetic manufacturing solutions
               across six specialized product categories. Explore our
@@ -319,7 +318,7 @@ export const AboutSection: React.FC = () => {
           </div>
 
           {/* Six Category Tabs (Accessible Segmented Scroller) */}
-          <div className="flex items-center justify-center mb-10 sm:mb-12">
+          <div className="flex items-center justify-start mb-8 sm:mb-10">
             <div
               role="tablist"
               aria-label="Manufacturing product categories"
