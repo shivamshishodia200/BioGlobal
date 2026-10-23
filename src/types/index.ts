@@ -173,6 +173,33 @@ export interface UniqueFeature {
   iconName: string;
 }
 
+export interface QualityCredential {
+  id: string;
+  title: string;
+  reference: string;
+  description: string;
+  shortDescription: string;
+  iconName: 'ShieldCheck' | 'ClipboardCheck' | 'HeartHandshake' | 'Leaf';
+  credentialType: 'certification' | 'audit' | 'practice' | 'capability';
+  verificationStatus: 'verified' | 'documented_practice' | 'capability' | 'unverified' | 'expired';
+  verificationLabel: string;
+  isVerifiedCertificate: boolean;
+  colorScheme: {
+    badgeBg: string;
+    badgeText: string;
+    borderColor: string;
+    iconBg: string;
+    iconText: string;
+  };
+  keyPractices: string[];
+  scopeNote?: string;
+  ctaText?: string;
+  certificateNumber?: string;
+  issuedBy?: string;
+  validUntil?: string;
+  publicDocumentUrl?: string;
+}
+
 export type ManufacturingSolutionId = 'private_label' | 'custom_formulation' | 'third_party';
 export type PackagingOptionId = 'standard' | 'premium' | 'custom';
 
