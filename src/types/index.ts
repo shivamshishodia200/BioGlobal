@@ -41,10 +41,15 @@ export interface ManufacturingService {
   title: string;
   subtitle: string;
   description: string;
-  iconName: string;
-  image: string;
+  badge: string;
   features: string[];
-  deliverables: string[];
+  valueProposition: string;
+  image: string;
+  imageAlt: string;
+  ctaText: string;
+  ctaLink: string;
+  iconName?: string;
+  deliverables?: string[];
 }
 
 export interface ProcessStep {

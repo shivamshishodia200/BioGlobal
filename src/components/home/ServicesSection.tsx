@@ -1,239 +1,400 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 import { useQuoteModal } from '../../context/QuoteModalContext';
-import { X, Sparkles, CheckCircle2, ArrowRight, ShieldCheck, Globe, Package, TrendingUp } from 'lucide-react';
-
-interface ServiceDetail {
-  id: string;
-  title: string;
-  isTeal: boolean;
-  desc: string;
-  features: string[];
-  moq: string;
-  leadTime: string;
-  link?: string;
-  serviceType: string;
-}
-
-const SERVICES_LIST: ServiceDetail[] = [
-  {
-    id: 'private-labelling',
-    title: 'Private Labelling',
-    isTeal: false,
-    desc: 'Customize our high-quality products with your own brand name and packaging. This allows you to build your brand identity while offering your customers exceptional Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care, and Baby Care formulations.',
-    features: ['Custom label & box printing', 'Turnkey formula selection', 'Barcode & batch coding', 'Regulatory compliance assistance'],
-    moq: '1,000 units per SKU',
-    leadTime: '21 - 28 Days',
-    link: '/private-label-manufacturing',
-    serviceType: 'Private Label Manufacturing',
-  },
-  {
-    id: 'international-business',
-    title: 'International Business',
-    isTeal: true,
-    desc: 'We work with customers all over the world. If you want to expand your business internationally or reach new markets, we are here to help with global export documentation, shipping logistics, and customs clearance.',
-    features: ['Export dossiers & Certificate of Free Sale (CFS)', 'COA & MSDS documentation', 'International freight forwarding', 'Compliant multilingual labeling'],
-    moq: 'Negotiable for export',
-    leadTime: '30 - 45 Days',
-    link: '/third-party-manufacturing',
-    serviceType: 'Third-Party Cosmetic Manufacturing',
-  },
-  {
-    id: 'bulk-ordering',
-    title: 'Bulk Ordering',
-    isTeal: true,
-    desc: 'We make it easy to order products in large quantities. This is great if you want to keep plenty of stock on hand and save money simultaneously through economies of scale and direct factory pricing.',
-    features: ['Bulk liquid/semi-solid drum supply (50kg - 1000kg)', 'High-volume automated filling', 'Tiered volume discounts', 'Scheduled phased delivery'],
-    moq: '500kg or 5,000 finished units',
-    leadTime: '18 - 25 Days',
-    serviceType: 'Bulk Manufacturing',
-  },
-  {
-    id: 'marketing-support',
-    title: 'Marketing Support',
-    isTeal: false,
-    desc: 'We can help you promote your brand and reach your audience better. Our team can share marketing ideas, product positioning strategies, 3D render assets, and packaging concepts to help you stand out in a crowded market.',
-    features: ['3D photorealistic packaging mockups', 'Key active ingredient marketing claims', 'Dermatological study summaries', 'Market trend & benchmarking data'],
-    moq: 'Included with manufacturing contract',
-    leadTime: 'Available upon onboarding',
-    serviceType: 'Skin Care Consultation',
-  },
-];
+import { MANUFACTURING_SERVICES } from '../../data/services';
+import {
+  Sparkles,
+  CheckCircle2,
+  ArrowRight,
+  Factory,
+  MessageSquare,
+  FlaskConical,
+  ArrowUpRight,
+} from 'lucide-react';
 
 export const ServicesSection: React.FC = () => {
   const { openQuoteModal } = useQuoteModal();
-  const [selectedService, setSelectedService] = useState<ServiceDetail | null>(null);
+
+  const thirdParty = MANUFACTURING_SERVICES[0];
+  const privateLabel = MANUFACTURING_SERVICES[1];
+  const customRd = MANUFACTURING_SERVICES[2];
 
   return (
-    <section className="bg-white py-20 lg:py-28 border-b border-stone-200/60 overflow-hidden relative">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Heading and Description */}
-          <motion.div
-            initial={{ opacity: 0, x: -35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-5 space-y-5"
+    <section
+      aria-labelledby="services-heading"
+      className="bg-white py-20 lg:py-28 border-b border-stone-200/60 overflow-hidden relative"
+    >
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10 space-y-12 sm:space-y-16">
+        
+        {/* ======================================================== */}
+        {/* SECTION HEADER                                           */}
+        {/* ======================================================== */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-50px' }}
+          transition={{ duration: 0.7 }}
+          className="text-center max-w-3xl mx-auto space-y-4"
+        >
+          {/* Eyebrow */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
+            <span>OUR MANUFACTURING SOLUTIONS</span>
+          </div>
+
+          {/* Main Heading */}
+          <h2
+            id="services-heading"
+            className="font-serif font-light text-3xl sm:text-4xl lg:text-[44px] text-stone-900 tracking-tight leading-tight"
           >
-            <span className="text-xs uppercase tracking-widest text-[#708E50] font-bold block">
-              Our Services
-            </span>
+            Tailored Manufacturing Solutions for Every Beauty Brand
+          </h2>
 
-            <h2 className="font-sans font-light text-4xl sm:text-5xl text-stone-900 leading-tight tracking-tight">
-              Personalized Solutions Just for You
-            </h2>
+          {/* Supporting Tagline */}
+          <p className="text-xs sm:text-sm uppercase tracking-widest font-bold text-[#708E50]">
+            Your Vision. Our Expertise. Endless Possibilities.
+          </p>
 
-            <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
-              We provide a variety of products to suit your requirements. Whether you're looking for custom Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care, or Baby Care, or prefer our ready-made private-label options, we are here to assist you. Our goal is to meet all your needs!
-            </p>
+          {/* Description */}
+          <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
+            Every successful beauty brand needs manufacturing solutions that
+            match its vision, market positioning, and growth ambitions. At The
+            BioGlobal, we provide comprehensive third-party cosmetic
+            manufacturing, private label solutions, and customized formulation
+            development to help businesses bring distinctive beauty and
+            personal care products to market. From concept development and
+            formulation selection to manufacturing and packaging coordination,
+            our approach focuses on quality, collaboration, and commercially
+            practical solutions.
+          </p>
+        </motion.div>
 
-            <div className="pt-4">
-              <button
-                onClick={() => openQuoteModal()}
-                className="px-7 py-3 rounded-md bg-[#1D3C34] hover:bg-[#142B25] text-white text-xs font-semibold tracking-wide transition-colors shadow-xs cursor-pointer"
-              >
-                Discuss Your Project Scope
-              </button>
-            </div>
-          </motion.div>
-
-          {/* Right Column: 4-Card Asymmetric Grid (White & Sage Tint) with Motion */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {SERVICES_LIST.map((srv, idx) => (
-              <motion.div
-                key={srv.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 * (idx + 1) }}
-                whileHover={{
-                  y: -8,
-                  boxShadow: '0 20px 35px rgba(29,60,52,0.12)',
-                }}
-                className={`rounded-2xl p-7 shadow-xs flex flex-col justify-between min-h-[280px] transition-all duration-300 relative group cursor-pointer ${
-                  srv.isTeal
-                    ? 'bg-[#E4EEE3] text-stone-900 border border-[#C5DAC3]'
-                    : 'bg-white border border-stone-200 text-stone-900'
-                }`}
-                onClick={() => setSelectedService(srv)}
-              >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-sans font-normal text-2xl text-stone-900">
-                      {srv.title}
-                    </h3>
-                    <Sparkles className="w-4 h-4 text-[#708E50] opacity-60 group-hover:opacity-100 transition-opacity" />
+        {/* ======================================================== */}
+        {/* BENTO GRID: 3 PRIMARY MANUFACTURING SERVICES             */}
+        {/* ======================================================== */}
+        <div className="space-y-8">
+          
+          {/* Card 1: Featured Third-Party Cosmetic Manufacturing (Full-Width Split Bento) */}
+          {thirdParty && (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.6 }}
+              whileHover={{ y: -4 }}
+              className="bg-[#FAF9F5] border border-stone-200/90 hover:border-[#C5DAC3] rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xs hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                
+                {/* Left Text & Features Content (7 Cols) */}
+                <div className="lg:col-span-7 space-y-5">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1D3C34] text-white text-[10px] font-bold tracking-wider uppercase">
+                      <Factory className="w-3 h-3 text-[#DFBD89]" />
+                      <span>{thirdParty.badge}</span>
+                    </span>
+                    <span className="text-xs font-semibold text-[#708E50] tracking-wide">
+                      {thirdParty.valueProposition}
+                    </span>
                   </div>
 
-                  <p className="text-xs sm:text-sm leading-relaxed font-normal text-stone-600">
-                    {srv.desc}
+                  <div className="space-y-1.5">
+                    <h3 className="font-serif font-semibold text-2xl sm:text-3xl text-stone-900 tracking-tight">
+                      {thirdParty.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm font-medium text-[#708E50]">
+                      {thirdParty.subtitle}
+                    </p>
+                  </div>
+
+                  <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed font-normal">
+                    {thirdParty.description}
                   </p>
-                </div>
 
-                <div className="pt-4 flex items-center justify-between border-t border-black/10 mt-4">
-                  <span className="text-xs font-bold text-[#708E50] underline underline-offset-4 inline-block transition-transform group-hover:translate-x-1">
-                    Read More & Specs
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-[#708E50] transition-transform group-hover:translate-x-1" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Service Detail Modal */}
-      <AnimatePresence>
-        {selectedService && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedService(null)}
-              className="absolute inset-0 bg-stone-900/60 backdrop-blur-xs"
-            />
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="bg-white rounded-3xl p-6 sm:p-8 max-w-lg w-full relative z-10 shadow-2xl border border-stone-200"
-            >
-              <button
-                onClick={() => setSelectedService(null)}
-                className="absolute top-5 right-5 p-2 rounded-full hover:bg-stone-100 text-stone-500 hover:text-stone-800 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-bold border border-[#C5DAC3]">
-                  <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
-                  <span>Manufacturing Service Specification</span>
-                </div>
-
-                <h3 className="font-sans font-normal text-3xl text-stone-900">
-                  {selectedService.title}
-                </h3>
-
-                <p className="text-sm text-stone-600 leading-relaxed font-normal">
-                  {selectedService.desc}
-                </p>
-
-                <div className="pt-2 border-t border-stone-100 space-y-2">
-                  <h4 className="text-xs uppercase font-bold text-stone-900 tracking-wider">
-                    Included Capabilities & Deliverables:
-                  </h4>
-                  <div className="space-y-2">
-                    {selectedService.features.map((feat, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-stone-700">
+                  {/* 4 Service Features */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2">
+                    {thirdParty.features.map((feat, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-stone-200/70 text-xs text-stone-800 font-medium"
+                      >
                         <CheckCircle2 className="w-4 h-4 text-[#708E50] flex-shrink-0" />
-                        <span>{feat}</span>
+                        <span className="leading-snug">{feat}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="pt-3 flex flex-wrap items-center gap-3.5">
+                    <Link
+                      to={thirdParty.ctaLink}
+                      className="px-6 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md group/btn inline-flex items-center gap-2"
+                    >
+                      <span>{thirdParty.ctaText}</span>
+                      <ArrowRight className="w-4 h-4 text-[#86A55B] group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+
+                    <button
+                      type="button"
+                      onClick={() =>
+                        openQuoteModal({
+                          serviceType: 'Third-Party Cosmetic Manufacturing',
+                        })
+                      }
+                      className="px-5 py-3.5 rounded-xl bg-white hover:bg-stone-50 text-stone-800 font-semibold text-xs sm:text-sm transition-colors border border-stone-300 shadow-2xs inline-flex items-center gap-2 cursor-pointer"
+                    >
+                      <span>Request Contract Quotation</span>
+                      <ArrowUpRight className="w-4 h-4 text-[#708E50]" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Right Image Frame (5 Cols) */}
+                <div className="lg:col-span-5 relative">
+                  <div className="relative aspect-4/3 sm:aspect-16/10 lg:aspect-4/3 w-full rounded-2xl overflow-hidden bg-stone-900 shadow-md border border-stone-100">
+                    <img
+                      src={thirdParty.image}
+                      alt={thirdParty.imageAlt}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-transparent pointer-events-none" />
+                    <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-white/80 shadow-md">
+                      <span className="text-[10px] font-bold text-[#708E50] uppercase tracking-wider block">
+                        Manufacturing Environment
+                      </span>
+                      <p className="text-xs font-bold text-stone-900 mt-0.5">
+                        Batch Compounding &amp; Controlled Filling
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+          )}
+
+          {/* Cards 2 & 3: Private Label and Custom R&D (2-Column Grid) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Card 2: Private Label Manufacturing */}
+            {privateLabel && (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                whileHover={{ y: -5 }}
+                className="bg-[#FAF9F5] border border-stone-200/90 hover:border-[#C5DAC3] rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+              >
+                <div className="space-y-5 flex-grow">
+                  {/* Image Banner */}
+                  <div className="relative aspect-16/9 w-full rounded-2xl overflow-hidden bg-stone-900 shadow-sm border border-stone-100">
+                    <img
+                      src={privateLabel.image}
+                      alt={privateLabel.imageAlt}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute top-3.5 left-3.5">
+                      <span className="px-3 py-1 rounded-full bg-[#1D3C34]/90 text-white text-[10px] font-bold tracking-wider uppercase border border-[#DFBD89]/40 backdrop-blur-xs">
+                        {privateLabel.badge}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1.5">
+                    <span className="text-xs font-semibold text-[#708E50] tracking-wide block">
+                      {privateLabel.valueProposition}
+                    </span>
+                    <h3 className="font-serif font-semibold text-2xl text-stone-900 tracking-tight">
+                      {privateLabel.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm font-medium text-[#708E50]">
+                      {privateLabel.subtitle}
+                    </p>
+                  </div>
+
+                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                    {privateLabel.description}
+                  </p>
+
+                  {/* 4 Features */}
+                  <div className="space-y-2 pt-1">
+                    {privateLabel.features.map((feat, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-stone-200/70 text-xs text-stone-800 font-medium"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-[#708E50] flex-shrink-0" />
+                        <span className="leading-snug">{feat}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3 pt-2">
-                  <div className="p-3 rounded-xl bg-stone-50 border border-stone-200">
-                    <span className="text-[10px] uppercase font-bold text-stone-400 block">MOQ</span>
-                    <span className="text-xs font-bold text-stone-900">{selectedService.moq}</span>
+                {/* Card CTA Footer */}
+                <div className="pt-6 mt-6 border-t border-stone-200/70 flex flex-wrap items-center gap-3">
+                  <Link
+                    to={privateLabel.ctaLink}
+                    className="px-6 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md group/btn inline-flex items-center gap-2"
+                  >
+                    <span>{privateLabel.ctaText}</span>
+                    <ArrowRight className="w-4 h-4 text-[#86A55B] group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      openQuoteModal({
+                        serviceType: 'Private Label Manufacturing',
+                      })
+                    }
+                    className="px-4 py-3.5 rounded-xl bg-white hover:bg-stone-50 text-stone-800 font-semibold text-xs transition-colors border border-stone-300 shadow-2xs inline-flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <span>Request Sample Kit</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#708E50]" />
+                  </button>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Card 3: Custom Formulation & R&D */}
+            {customRd && (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                whileHover={{ y: -5 }}
+                className="bg-[#FAF9F5] border border-stone-200/90 hover:border-[#C5DAC3] rounded-3xl p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+              >
+                <div className="space-y-5 flex-grow">
+                  {/* Image Banner */}
+                  <div className="relative aspect-16/9 w-full rounded-2xl overflow-hidden bg-stone-900 shadow-sm border border-stone-100">
+                    <img
+                      src={customRd.image}
+                      alt={customRd.imageAlt}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute top-3.5 left-3.5">
+                      <span className="px-3 py-1 rounded-full bg-[#1D3C34]/90 text-white text-[10px] font-bold tracking-wider uppercase border border-[#DFBD89]/40 backdrop-blur-xs flex items-center gap-1.5">
+                        <FlaskConical className="w-3 h-3 text-[#DFBD89]" />
+                        <span>{customRd.badge}</span>
+                      </span>
+                    </div>
                   </div>
-                  <div className="p-3 rounded-xl bg-stone-50 border border-stone-200">
-                    <span className="text-[10px] uppercase font-bold text-stone-400 block">Typical Lead Time</span>
-                    <span className="text-xs font-bold text-stone-900">{selectedService.leadTime}</span>
+
+                  <div className="space-y-1.5">
+                    <span className="text-xs font-semibold text-[#708E50] tracking-wide block">
+                      {customRd.valueProposition}
+                    </span>
+                    <h3 className="font-serif font-semibold text-2xl text-stone-900 tracking-tight">
+                      {customRd.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm font-medium text-[#708E50]">
+                      {customRd.subtitle}
+                    </p>
+                  </div>
+
+                  <p className="text-stone-600 text-xs sm:text-sm leading-relaxed font-normal">
+                    {customRd.description}
+                  </p>
+
+                  {/* 4 Features */}
+                  <div className="space-y-2 pt-1">
+                    {customRd.features.map((feat, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-2 p-2.5 rounded-xl bg-white border border-stone-200/70 text-xs text-stone-800 font-medium"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-[#708E50] flex-shrink-0" />
+                        <span className="leading-snug">{feat}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
 
-                <div className="pt-4 flex items-center gap-3">
-                  <button
-                    onClick={() => {
-                      const sType = selectedService.serviceType;
-                      setSelectedService(null);
-                      openQuoteModal({ serviceType: sType });
-                    }}
-                    className="flex-1 py-3 px-5 rounded-xl bg-[#708E50] hover:bg-[#5F7A43] text-white font-medium text-xs transition-colors shadow-2xs text-center cursor-pointer"
+                {/* Card CTA Footer */}
+                <div className="pt-6 mt-6 border-t border-stone-200/70 flex flex-wrap items-center gap-3">
+                  <Link
+                    to={customRd.ctaLink}
+                    className="px-6 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md group/btn inline-flex items-center gap-2"
                   >
-                    Request Quotation for {selectedService.title}
+                    <span>{customRd.ctaText}</span>
+                    <ArrowRight className="w-4 h-4 text-[#86A55B] group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      openQuoteModal({
+                        serviceType: 'Skin Care Consultation',
+                      })
+                    }
+                    className="px-4 py-3.5 rounded-xl bg-white hover:bg-stone-50 text-stone-800 font-semibold text-xs transition-colors border border-stone-300 shadow-2xs inline-flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <span>Book Chemist Consultation</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#708E50]" />
                   </button>
-                  {selectedService.link && (
-                    <Link
-                      to={selectedService.link}
-                      className="py-3 px-4 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-medium"
-                      onClick={() => setSelectedService(null)}
-                    >
-                      Full Page
-                    </Link>
-                  )}
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            )}
+
           </div>
-        )}
-      </AnimatePresence>
+        </div>
+
+        {/* ======================================================== */}
+        {/* OPTIONAL SERVICE SECTION CTA CALLOUT                      */}
+        {/* ======================================================== */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="pt-4"
+        >
+          <div className="bg-[#E4EEE3] rounded-3xl p-6 sm:p-8 lg:p-10 border border-[#C5DAC3] shadow-xs flex flex-col lg:flex-row items-center justify-between gap-6 text-center lg:text-left">
+            <div className="space-y-1.5 max-w-2xl">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#708E50] block">
+                Expert Guidance
+              </span>
+              <h3 className="font-serif font-light text-2xl sm:text-3xl text-stone-900 tracking-tight">
+                Not Sure Which Manufacturing Solution Fits Your Brand?
+              </h3>
+              <p className="text-stone-700 text-xs sm:text-sm leading-relaxed font-normal">
+                Share your product concept, target category, and manufacturing
+                requirements with our team. We can help you explore suitable
+                production options and identify a practical next step for your
+                business.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-3 flex-shrink-0">
+              <Link
+                to="/consultation"
+                className="px-6 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl inline-flex items-center gap-2 cursor-pointer"
+              >
+                <span>Discuss Your Project</span>
+                <ArrowRight className="w-4 h-4 text-[#86A55B]" />
+              </Link>
+
+              <Link
+                to="/third-party-manufacturing"
+                className="px-5 py-3.5 rounded-xl bg-white hover:bg-stone-50 text-stone-800 font-semibold text-xs sm:text-sm transition-colors border border-stone-300 shadow-2xs inline-flex items-center gap-2 cursor-pointer"
+              >
+                <span>Explore All Services</span>
+                <ArrowRight className="w-4 h-4 text-[#708E50]" />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
+      </div>
     </section>
   );
 };
