@@ -500,8 +500,8 @@ function b2bApiPlugin(): Plugin {
           return;
         }
 
-        // 5. Existing POST /api/inquiry
-        if (req.url === '/api/inquiry' && req.method === 'POST') {
+        // 5. POST /api/consultation-requests
+        if (url === '/api/consultation-requests' && req.method === 'POST') {
           let body = '';
           req.on('data', (chunk) => {
             body += chunk;
@@ -509,32 +509,176 @@ function b2bApiPlugin(): Plugin {
           req.on('end', () => {
             try {
               const data = JSON.parse(body || '{}');
-              if (!data.fullName?.trim() || !data.email?.trim() || !data.companyName?.trim()) {
+              const fullName = data.fullName?.trim();
+              const email = data.email?.trim();
+              const phone = data.phone?.trim();
+              const category = data.productCategory || data.categoryId;
+              const manufacturingType = data.manufacturingType || data.serviceType;
+              const contactConsent = Boolean(data.contactConsent);
+
+              // Field-specific validation
+              if (!fullName || fullName.length < 2) {
                 res.statusCode = 400;
                 res.setHeader('Content-Type', 'application/json');
-                res.end(JSON.stringify({
-                  success: false,
-                  error: 'Validation failed: Full Name, Company Name, and a valid Email Address are required.'
-                }));
+                res.end(
+                  JSON.stringify({
+                    success: false,
+                    error: 'Full Name is required and must contain meaningful characters.',
+                  })
+                );
                 return;
               }
 
-              const refNumber = 'TBG-' + Math.floor(100000 + Math.random() * 900000);
+              if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(
+                  JSON.stringify({
+                    success: false,
+                    error: 'A valid email address is required for communication.',
+                  })
+                );
+                return;
+              }
+
+              if (!phone || phone.replace(/\D/g, '').length < 7) {
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(
+                  JSON.stringify({
+                    success: false,
+                    error: 'Please enter a valid contact phone or WhatsApp number.',
+                  })
+                );
+                return;
+              }
+
+              if (!category) {
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(
+                  JSON.stringify({
+                    success: false,
+                    error: 'Please select a primary product category.',
+                  })
+                );
+                return;
+              }
+
+              if (!manufacturingType) {
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(
+                  JSON.stringify({
+                    success: false,
+                    error: 'Please select a manufacturing requirement.',
+                  })
+                );
+                return;
+              }
+
+              if (!contactConsent) {
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(
+                  JSON.stringify({
+                    success: false,
+                    error: 'You must acknowledge the Privacy Policy and agree to be contacted.',
+                  })
+                );
+                return;
+              }
+
+              // CRM Lead Record Structure
+              const refId = 'TBG-CR-' + Math.floor(100000 + Math.random() * 900000);
+              const leadRecord = {
+                referenceId: refId,
+                fullName,
+                companyName: data.companyName?.trim() || 'Independent / Startup Brand',
+                email,
+                phone,
+                categoryId: data.categoryId || category,
+                categoryName: category,
+                manufacturingType,
+                estimatedQuantity: data.estimatedQuantity || 'Not Specified',
+                targetLaunchPeriod: data.targetLaunchPeriod || 'Still Planning',
+                productRequirements: (data.productRequirements || data.message || '')
+                  .replace(/<[^>]*>?/gm, '')
+                  .slice(0, 2500),
+                contactConsent: true,
+                source: data.source || 'homepage_consultation',
+                leadStatus: 'New Inquiry',
+                createdAt: new Date().toISOString(),
+              };
+
+              console.info('CRM Lead Logged:', leadRecord.referenceId, leadRecord.fullName, leadRecord.categoryName);
+
               res.statusCode = 200;
               res.setHeader('Content-Type', 'application/json');
-              res.end(JSON.stringify({
-                success: true,
-                referenceId: refNumber,
-                message: `Thank you, ${data.fullName}. Your B2B manufacturing inquiry for ${data.companyName} has been logged under Reference #${refNumber}. A formulation specialist will contact you within 24 business hours.`,
-                timestamp: new Date().toISOString()
-              }));
+              res.end(
+                JSON.stringify({
+                  success: true,
+                  referenceId: refId,
+                  lead: leadRecord,
+                  message: `Thank you, ${fullName}. Your manufacturing consultation request has been submitted successfully. Our team will review the information and contact you using the details provided.`,
+                })
+              );
             } catch {
               res.statusCode = 400;
               res.setHeader('Content-Type', 'application/json');
-              res.end(JSON.stringify({
-                success: false,
-                error: 'Malformed request body. Please ensure your submission is valid.'
-              }));
+              res.end(
+                JSON.stringify({
+                  success: false,
+                  error: 'Malformed request payload. Please verify your submission.',
+                })
+              );
+            }
+          });
+          return;
+        }
+
+        // 6. Existing POST /api/inquiry (Updated for Startup Brand flexibility & compliance)
+        if (url === '/api/inquiry' && req.method === 'POST') {
+          let body = '';
+          req.on('data', (chunk) => {
+            body += chunk;
+          });
+          req.on('end', () => {
+            try {
+              const data = JSON.parse(body || '{}');
+              if (!data.fullName?.trim() || !data.email?.trim()) {
+                res.statusCode = 400;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(
+                  JSON.stringify({
+                    success: false,
+                    error: 'Validation failed: Full Name and a valid Email Address are required.',
+                  })
+                );
+                return;
+              }
+
+              const companyDisplay = data.companyName?.trim() || 'your project';
+              const refNumber = 'TBG-' + Math.floor(100000 + Math.random() * 900000);
+              res.statusCode = 200;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(
+                JSON.stringify({
+                  success: true,
+                  referenceId: refNumber,
+                  message: `Thank you, ${data.fullName}. Your manufacturing consultation request for ${companyDisplay} has been logged under Reference #${refNumber}. Our team will review the information and contact you using the details provided.`,
+                  timestamp: new Date().toISOString(),
+                })
+              );
+            } catch {
+              res.statusCode = 400;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(
+                JSON.stringify({
+                  success: false,
+                  error: 'Malformed request body. Please ensure your submission is valid.',
+                })
+              );
             }
           });
           return;

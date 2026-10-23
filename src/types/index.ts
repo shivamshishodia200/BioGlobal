@@ -100,7 +100,7 @@ export interface TestimonialItem {
 
 export interface B2BInquiryPayload {
   fullName: string;
-  companyName: string;
+  companyName?: string;
   email: string;
   phone: string;
   productCategory: string;
@@ -108,6 +108,31 @@ export interface B2BInquiryPayload {
   serviceType: string;
   message: string;
   targetProduct?: string;
+  contactConsent?: boolean;
+  source?: string;
+}
+
+export interface ConsultationFormData {
+  fullName: string;
+  companyName?: string;
+  email: string;
+  phone: string;
+  categoryId: string;
+  productCategory: string;
+  manufacturingType: string;
+  estimatedQuantity?: string;
+  targetLaunchPeriod?: string;
+  productRequirements?: string;
+  contactConsent: boolean;
+  source?: string;
+  targetProduct?: string;
+}
+
+export interface ConsultationResponse {
+  success: boolean;
+  referenceId?: string;
+  message: string;
+  error?: string;
 }
 
 export interface InquiryResponse {
