@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   HelpCircle, 
   ChevronDown, 
-  ArrowRight,
   Layers,
   Clock,
   FlaskConical,
@@ -13,8 +11,7 @@ import {
   Package,
   ShieldCheck,
   Globe2,
-  Tag,
-  MessageSquare
+  Tag
 } from 'lucide-react';
 import { FAQS } from '../../data/faqs';
 import { FaqItem } from '../../types';
@@ -219,44 +216,7 @@ export const FaqSection: React.FC = () => {
           })}
         </div>
 
-        {/* Part 10 — Consultation CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-14 p-6 sm:p-8 rounded-2xl bg-white border border-stone-200 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-left"
-        >
-          <div className="space-y-2 max-w-xl">
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-[#708E50]">
-              <MessageSquare className="w-3.5 h-3.5" />
-              <span>Project Advisory</span>
-            </div>
-            <h3 className="font-serif text-xl sm:text-2xl text-stone-900 leading-snug">
-              Still Have Questions About Your Project?
-            </h3>
-            <p className="text-xs sm:text-sm text-stone-600 leading-relaxed">
-              Every beauty brand has unique requirements. Share your product concept, manufacturing goals, or formulation questions with our team to explore suitable next steps.
-            </p>
-          </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto flex-shrink-0">
-            <Link
-              to="/consultation"
-              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-all shadow-2xs hover:shadow-md cursor-pointer"
-            >
-              <span>Request a Manufacturing Consultation</span>
-              <ArrowRight className="w-4 h-4 text-[#DFBD89]" />
-            </Link>
-
-            <Link
-              to="/private-label-manufacturing"
-              className="w-full sm:w-auto px-5 py-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer border border-stone-200"
-            >
-              <span>Explore Our Services</span>
-            </Link>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
