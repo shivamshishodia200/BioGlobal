@@ -135,4 +135,84 @@ export interface UniqueFeature {
   iconName: string;
 }
 
+export type ManufacturingSolutionId = 'private_label' | 'custom_formulation' | 'third_party';
+export type PackagingOptionId = 'standard' | 'premium' | 'custom';
+
+export interface ManufacturingOption {
+  id: ManufacturingSolutionId;
+  name: string;
+  tagline: string;
+  description: string;
+  timelineLabel: string;
+  timelineRange: { minDays: number; maxDays: number; isGuaranteed: boolean };
+}
+
+export interface PackagingOptionItem {
+  id: PackagingOptionId;
+  name: string;
+  tagline: string;
+  description: string;
+  ratePerUnit?: number;
+  quotationRequired?: boolean;
+}
+
+export interface EstimateRequestPayload {
+  categoryId: string;
+  productId?: string | null;
+  manufacturingType: ManufacturingSolutionId;
+  quantity: number;
+  packagingOptionId: PackagingOptionId;
+}
+
+export type EstimateResult =
+  | {
+      status: 'estimated';
+      currency: string;
+      quantity: number;
+      unitPrice: number;
+      baseManufacturingAmount: number;
+      packagingAmount: number;
+      additionalCharges: number;
+      subtotal: number;
+      taxAmount: number;
+      taxRatePercent: number;
+      estimatedTotal: number;
+      timeline: {
+        minDays: number;
+        maxDays: number;
+        label: string;
+        isGuaranteed: boolean;
+      };
+      estimateId: string;
+      expiresAt: string;
+    }
+  | {
+      status: 'quotation_required';
+      reason: string;
+      message: string;
+      timeline: {
+        label: string;
+        minDays?: number;
+        maxDays?: number;
+        isGuaranteed: boolean;
+      };
+      estimateId?: string;
+    };
+
+export interface ManufacturingQuoteRequestPayload {
+  fullName: string;
+  companyName: string;
+  email: string;
+  phone: string;
+  country: string;
+  productCategory: string;
+  manufacturingSolution: string;
+  expectedQuantity: number;
+  packagingPreference: string;
+  notes?: string;
+  estimateId?: string;
+  estimatedTotal?: number;
+}
+
+
 
