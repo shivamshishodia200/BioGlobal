@@ -34,10 +34,17 @@ export const HeroSection: React.FC = () => {
   const credentialsRef = useRef<HTMLDivElement>(null);
 
   const bulletPoints = [
-    'Low Minimum Order Quantities (1,000 Units)',
-    'Short 21-28 Day Development Cycle',
-    'Minimal Packaging Inventory Cost',
-    '500+ Happy & Satisfied Global Brands',
+    'Flexible Minimum Orders Starting at 1,000 Units',
+    'Tailored Formulations for Your Beauty Brand',
+    'Complete Manufacturing & Packaging Solutions',
+    'Quality-Focused Production & Technical Support',
+  ];
+
+  const statCards = [
+    { value: '20+ Years', label: 'Manufacturing Expertise' },
+    { value: '1,000 Units', label: 'Starting MOQ' },
+    { value: '2 Lakh', label: 'Monthly Production Capacity' },
+    { value: '5,500 Sq. Ft.', label: 'Manufacturing Facility' },
   ];
 
   useEffect(() => {
@@ -296,17 +303,17 @@ export const HeroSection: React.FC = () => {
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold tracking-wide border border-[#C5DAC3] shadow-2xs"
               >
                 <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
-                <span>20+ Years of Manufacturing Excellence</span>
+                <span>20+ Years of Cosmetic Manufacturing Expertise</span>
               </div>
 
               {/* Primary Main Heading with GSAP Staggered Line Reveal */}
-              <h1 className="font-serif font-light text-4xl sm:text-5xl lg:text-[56px] xl:text-[62px] text-stone-900 leading-[1.08] tracking-tight">
+              <h1 className="font-serif font-light text-3xl sm:text-4xl lg:text-[46px] xl:text-[52px] text-stone-900 leading-[1.14] tracking-tight">
                 <span className="block overflow-hidden py-0.5">
                   <span
                     ref={headingLine1Ref}
                     className="block transform-gpu will-change-transform"
                   >
-                    Create Your Own
+                    Your Beauty Brand Starts With
                   </span>
                 </span>
                 <span className="block overflow-hidden py-0.5">
@@ -314,7 +321,7 @@ export const HeroSection: React.FC = () => {
                     ref={headingLine2Ref}
                     className="block text-[#1D3C34] font-normal transform-gpu will-change-transform"
                   >
-                    Skincare Brand
+                    Better Manufacturing.
                   </span>
                 </span>
               </h1>
@@ -322,11 +329,16 @@ export const HeroSection: React.FC = () => {
               {/* Description */}
               <p
                 ref={descRef}
-                className="text-stone-600 text-sm sm:text-base lg:text-[17px] leading-relaxed font-normal max-w-xl"
+                className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal max-w-xl"
               >
-                Premium Third-Party Cosmetic Manufacturing &amp; Private Label
-                Solutions for Skincare, Haircare, Body Care, Bath Care, and Baby
-                Care.
+                Bring your beauty vision to market with a manufacturing partner
+                that understands formulation, quality, packaging, and commercial
+                scale. At The BioGlobal, we offer comprehensive third-party
+                cosmetic manufacturing and private label solutions across
+                skincare, haircare, cosmetics, bath care, body care, and baby
+                care. From initial product concepts to finished, market-ready
+                formulations, we help beauty brands create distinctive products
+                with confidence.
               </p>
 
               {/* CTA Action Buttons */}
@@ -334,19 +346,19 @@ export const HeroSection: React.FC = () => {
                 ref={ctaContainerRef}
                 className="pt-2 flex flex-wrap items-center gap-3.5"
               >
-                {/* Primary Button: Explore Products */}
+                {/* Primary Button: Explore Our Products */}
                 <Link
                   to="/products"
                   className="px-7 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl relative overflow-hidden group inline-flex items-center gap-2 cursor-pointer"
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    <span>Explore Products</span>
+                    <span>Explore Our Products</span>
                     <ArrowRight className="w-4 h-4 text-[#86A55B] group-hover:translate-x-1 transition-transform" />
                   </span>
                   <span className="absolute inset-0 bg-white/10 -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none" />
                 </Link>
 
-                {/* Secondary Button: Request a Sample Kit */}
+                {/* Secondary Button: Request a Sample */}
                 <button
                   type="button"
                   onClick={() =>
@@ -357,7 +369,7 @@ export const HeroSection: React.FC = () => {
                   }
                   className="px-6 py-3.5 rounded-xl bg-white hover:bg-stone-50 text-stone-800 font-semibold text-xs sm:text-sm transition-colors border border-stone-300/90 shadow-2xs inline-flex items-center gap-2 cursor-pointer group"
                 >
-                  <span>Request a Sample Kit</span>
+                  <span>Request a Sample</span>
                   <ArrowUpRight className="w-4 h-4 text-[#708E50] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </button>
               </div>
@@ -414,12 +426,12 @@ export const HeroSection: React.FC = () => {
                   ref={credentialsRef}
                   className="bg-white/95 backdrop-blur-md rounded-2xl p-4 shadow-xl border border-stone-200/90 relative z-20 space-y-3"
                 >
-                  {/* Card Header: Low MOQ pill on left + Request Sample Kit Button on right */}
+                  {/* Card Header: Low MOQ pill on left + Request a Sample Button on right */}
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-xs font-semibold">
                       <CheckCircle2 className="w-4 h-4 text-emerald-700" />
                       <span>
-                        Low MOQ:{' '}
+                        Starting MOQ:{' '}
                         <strong className="text-emerald-950 font-bold">
                           1,000 Units
                         </strong>
@@ -430,43 +442,32 @@ export const HeroSection: React.FC = () => {
                       type="button"
                       onClick={() =>
                         openQuoteModal({
-                          targetProduct: 'Custom Skincare Formulation Collection',
+                          targetProduct: 'Sample Kit',
                           serviceType: 'Private Label Manufacturing',
                         })
                       }
                       className="px-4 py-2 rounded-xl bg-[#708E50] hover:bg-[#5E7D40] text-white text-xs font-semibold flex items-center gap-1.5 cursor-pointer shadow-md transition-all group/btn"
                     >
-                      <span>Request Sample Kit</span>
+                      <span>Request a Sample</span>
                       <ArrowUpRight className="w-4 h-4 text-white group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
                     </button>
                   </div>
 
-                  {/* 3 Metric Pills */}
-                  <div className="grid grid-cols-3 gap-2 text-center pt-1 border-t border-stone-100">
-                    <div className="p-2 rounded-xl bg-[#FAF9F5] border border-stone-200/80">
-                      <p className="text-[10px] text-stone-500 uppercase font-semibold">
-                        Cleanrooms
-                      </p>
-                      <p className="text-xs font-bold text-[#1D3C34] mt-0.5">
-                        ISO 22716 GMP
-                      </p>
-                    </div>
-                    <div className="p-2 rounded-xl bg-[#FAF9F5] border border-stone-200/80">
-                      <p className="text-[10px] text-stone-500 uppercase font-semibold">
-                        Monthly Vol.
-                      </p>
-                      <p className="text-xs font-bold text-[#1D3C34] mt-0.5">
-                        2 Lac Units
-                      </p>
-                    </div>
-                    <div className="p-2 rounded-xl bg-[#FAF9F5] border border-stone-200/80">
-                      <p className="text-[10px] text-stone-500 uppercase font-semibold">
-                        Plant Area
-                      </p>
-                      <p className="text-xs font-bold text-[#1D3C34] mt-0.5">
-                        5500 Sq. Ft.
-                      </p>
-                    </div>
+                  {/* 4 Stat Cards */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center pt-2 border-t border-stone-100">
+                    {statCards.map((stat, idx) => (
+                      <div
+                        key={idx}
+                        className="p-2 sm:p-2.5 rounded-xl bg-[#FAF9F5] border border-stone-200/80 flex flex-col justify-center min-h-[58px]"
+                      >
+                        <p className="text-[9px] sm:text-[10px] text-stone-500 uppercase font-semibold tracking-wider leading-tight">
+                          {stat.label}
+                        </p>
+                        <p className="text-xs sm:text-sm font-bold text-[#1D3C34] mt-1">
+                          {stat.value}
+                        </p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
