@@ -301,14 +301,14 @@ export const AboutSection: React.FC = () => {
         {/* ======================================================== */}
         <div className="pt-4 border-t border-stone-200/60">
           {/* Section Subheading (Left-Aligned) */}
-          <div className="max-w-3xl mb-6 space-y-2 text-left">
+          <div className="w-full mb-6 space-y-2 text-left">
             <span className="text-xs uppercase tracking-widest text-[#708E50] font-bold block">
               EXPLORE OUR EXPERTISE
             </span>
             <h2 className="font-serif font-light text-2xl sm:text-3xl lg:text-[38px] text-stone-900 tracking-tight">
               You Name It. We Make It.
             </h2>
-            <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed">
+            <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed max-w-4xl">
               From advanced skincare serums to everyday personal care essentials,
               The BioGlobal offers versatile cosmetic manufacturing solutions
               across six specialized product categories. Explore our
@@ -317,12 +317,12 @@ export const AboutSection: React.FC = () => {
             </p>
           </div>
 
-          {/* Six Category Tabs (Accessible Segmented Scroller) */}
-          <div className="flex items-center justify-start mb-6">
+          {/* Six Category Tabs (Full-Width Responsive Segmented Control) */}
+          <div className="w-full mb-8">
             <div
               role="tablist"
               aria-label="Manufacturing product categories"
-              className="inline-flex items-center gap-1.5 sm:gap-2 p-1.5 bg-[#FAF9F5] rounded-full border border-stone-200/90 shadow-inner max-w-full overflow-x-auto no-scrollbar"
+              className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1.5 sm:gap-2 p-1.5 bg-[#FAF9F5] rounded-2xl lg:rounded-full border border-stone-200/90 shadow-inner"
             >
               {CAPABILITY_CATEGORIES.map((cat) => {
                 const isSelected = cat.id === activeTab;
@@ -335,7 +335,7 @@ export const AboutSection: React.FC = () => {
                     aria-controls={`panel-${cat.id}`}
                     type="button"
                     onClick={() => setActiveTab(cat.id)}
-                    className={`relative px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer ${
+                    className={`relative w-full py-3 px-2 sm:px-3 rounded-xl lg:rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer flex items-center justify-center text-center ${
                       isSelected
                         ? 'text-white'
                         : 'text-stone-600 hover:text-stone-900 hover:bg-stone-200/60'
@@ -344,7 +344,7 @@ export const AboutSection: React.FC = () => {
                     {isSelected && (
                       <motion.div
                         layoutId="activeAboutTab"
-                        className="absolute inset-0 bg-[#1D3C34] rounded-full shadow-md"
+                        className="absolute inset-0 bg-[#1D3C34] rounded-xl lg:rounded-full shadow-md"
                         transition={{
                           type: 'spring',
                           stiffness: 450,
@@ -352,13 +352,13 @@ export const AboutSection: React.FC = () => {
                         }}
                       />
                     )}
-                    <span className="relative z-10 flex items-center gap-2">
+                    <span className="relative z-10 flex items-center justify-center gap-1.5 sm:gap-2">
                       <span
-                        className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                        className={`w-1.5 h-1.5 rounded-full shrink-0 transition-colors ${
                           isSelected ? 'bg-[#86A55B]' : 'bg-transparent'
                         }`}
                       />
-                      <span>{cat.name}</span>
+                      <span className="whitespace-nowrap">{cat.name}</span>
                     </span>
                   </button>
                 );
