@@ -11,10 +11,17 @@ export interface CategoryInfo {
   name: ProductCategory;
   slug: string;
   tagline: string;
+  headline?: string;
   description: string;
+  shortDescription?: string;
   image: string;
+  imageAlt?: string;
   itemCount: number;
+  productCount?: number;
   popularFormulations: string[];
+  productExamples?: string[];
+  ctaText?: string;
+  isPublished?: boolean;
 }
 
 export interface Product {
