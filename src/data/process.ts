@@ -1,4 +1,5 @@
 import { ProcessStep } from '../types';
+import cosmeticFacilityImg from '../assets/capabilities/cosmetic_manufacturing_facility.jpg';
 
 export const MANUFACTURING_PROCESS: ProcessStep[] = [
   {
@@ -59,7 +60,7 @@ export const MANUFACTURING_PROCESS: ProcessStep[] = [
     subtitle: 'Controlled Cleanroom Batch Compounding',
     description: 'Production shifts to our ISO 22716 certified cleanrooms. Industrial homogenizers mix the bulk batch under computerized temperature and vacuum parameters, followed by in-line quality assays.',
     timeline: 'Week 4 - 6',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    image: cosmeticFacilityImg,
     details: [
       'De-aeration and high-shear vacuum homogenization',
       'In-process viscosity, specific gravity & pH checks',

@@ -1,4 +1,5 @@
 import { ManufacturingService } from '../types';
+import cosmeticFacilityImg from '../assets/capabilities/cosmetic_manufacturing_facility.jpg';
 
 export const MANUFACTURING_SERVICES: ManufacturingService[] = [
   {
@@ -7,7 +8,7 @@ export const MANUFACTURING_SERVICES: ManufacturingService[] = [
     subtitle: 'End-to-End Contract Production at Scale',
     description: 'We operate state-of-the-art cleanroom manufacturing facilities to manufacture your established proprietary formulas at scale, adhering to strict international quality standards, rigorous stability protocols, and timely delivery schedules.',
     iconName: 'Factory',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    image: cosmeticFacilityImg,
     features: [
       'Industrial-scale vacuum emulsification and compounding',
       'Batch-to-batch consistency with automated PLC controls',

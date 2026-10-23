@@ -11,6 +11,7 @@ import {
   Microscope
 } from 'lucide-react';
 import { useQuoteModal } from '../context/QuoteModalContext';
+import cosmeticFacilityImg from '../assets/capabilities/cosmetic_manufacturing_facility.jpg';
 
 export const AboutPage: React.FC = () => {
   const { openQuoteModal } = useQuoteModal();
@@ -66,8 +67,8 @@ export const AboutPage: React.FC = () => {
           <div className="lg:col-span-6 relative">
             <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-white">
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000&q=80"
-                alt="Automated cosmetic manufacturing line"
+                src={cosmeticFacilityImg}
+                alt="Automated cosmetic manufacturing cleanroom line"
                 className="w-full h-[400px] object-cover"
               />
             </div>
