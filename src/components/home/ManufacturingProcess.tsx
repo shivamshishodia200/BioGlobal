@@ -291,11 +291,11 @@ export const ManufacturingProcess: React.FC = () => {
               {/* Right Column: High-Res Stage Photography & Compact Action Strip */}
               <div className="lg:col-span-5 space-y-3">
                 {/* Photo Frame */}
-                <div className="relative aspect-16/10 w-full rounded-xl overflow-hidden shadow-sm border border-stone-200 group bg-stone-900">
+                <div className="relative aspect-4/3 w-full rounded-2xl overflow-hidden shadow-sm border border-stone-200 group bg-stone-900">
                   <img
                     src={current.image}
                     alt={current.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                    className="manufacturing-step-image transition-transform duration-500 group-hover:scale-103"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-black/20 pointer-events-none" />

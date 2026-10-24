@@ -47,6 +47,7 @@ export interface Product {
   shelfLife: string;
   isFeatured?: boolean;
   isPublished?: boolean;
+  availabilityStatus?: 'available' | 'on_request' | 'unconfirmed';
 }
 
 export interface ManufacturingService {

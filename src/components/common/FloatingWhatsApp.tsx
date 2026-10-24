@@ -13,10 +13,10 @@ export const FloatingWhatsApp: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end pointer-events-none">
       {/* Popover Card */}
       {isOpen && (
-        <div className="mb-3 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200">
+        <div className="mb-3 w-[calc(100vw-32px)] max-w-sm sm:w-96 bg-white rounded-2xl shadow-2xl border border-stone-200 overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-200 pointer-events-auto">
           {/* Header */}
           <div className="bg-[#1D3C34] p-4 text-white flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -102,7 +102,7 @@ export const FloatingWhatsApp: React.FC = () => {
       {/* Floating Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#1D3C34] text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#708E50]/40 cursor-pointer"
+        className="pointer-events-auto group relative flex items-center gap-2.5 p-3 sm:px-4 sm:py-3 rounded-full bg-[#1D3C34] text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border border-[#708E50]/40 cursor-pointer"
         aria-label="Open B2B WhatsApp consultation"
       >
         <div className="w-7 h-7 rounded-full bg-[#25D366] flex items-center justify-center text-white shadow-xs">

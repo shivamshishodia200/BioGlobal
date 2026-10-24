@@ -31,7 +31,10 @@ export default function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/products" element={<ProductsPage />} />
+              <Route path="/products/:categorySlug" element={<CategoryPage />} />
+              <Route path="/products/:categorySlug/:productSlug" element={<CategoryPage />} />
               <Route path="/category/:categorySlug" element={<CategoryPage />} />
+              <Route path="/category/:categorySlug/:productSlug" element={<CategoryPage />} />
               <Route path="/private-label-manufacturing" element={<PrivateLabelPage />} />
               <Route path="/third-party-manufacturing" element={<ThirdPartyPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />

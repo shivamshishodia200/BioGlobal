@@ -15,7 +15,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import { UniqueFeature } from '../../types';
-import cosmeticLabImg from '../../assets/capabilities/cosmetic_lab_rd.jpg';
+const cosmeticLabImg = '/images/bioglobal/about/about-formulation-lab.webp';
 
 // Left Features (Pillars 1 to 4)
 const LEFT_FEATURES: UniqueFeature[] = [

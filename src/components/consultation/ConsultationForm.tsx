@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Send, 
@@ -57,6 +57,20 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState<ConsultationResponse | null>(null);
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      categoryId: initialCategory.toLowerCase().replace(/\s+/g, '-'),
+      productCategory: initialCategory,
+      manufacturingType: initialService,
+      targetProduct: initialProduct,
+      source: source || prev.source,
+      productRequirements: initialProduct
+        ? `Inquiring specifically regarding formulation & batch manufacturing for: ${initialProduct}`
+        : prev.productRequirements,
+    }));
+  }, [initialCategory, initialService, initialProduct, source]);
 
   // Field validation
   const validate = (): boolean => {
@@ -230,21 +244,18 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
 
       {/* Form Introduction Header (Part 3) */}
       {!response?.success && (
-        <div className="mb-6 space-y-1.5 border-b border-stone-100 pb-5">
+        <div className="mb-5 space-y-1 border-b border-stone-100 pb-4">
           <div className="flex items-center justify-between">
             <h3 className="font-serif text-xl sm:text-2xl font-bold text-stone-900 leading-tight">
               Tell Us About Your Project
             </h3>
-            <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold text-[#708E50] bg-[#E4EEE3] px-2.5 py-1 rounded-full">
+            <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold text-[#708E50] bg-[#E4EEE3] px-2.5 py-0.5 rounded-full">
               <Lock className="w-3 h-3" />
               <span>Confidential Brief</span>
             </span>
           </div>
-          <p className="text-xs sm:text-sm font-medium text-stone-700">
-            Share your product idea and manufacturing requirements to help our team understand your needs.
-          </p>
-          <p className="text-xs text-stone-500 font-normal leading-relaxed">
-            Whether you are planning a new beauty brand, expanding your current range, or seeking a manufacturing partner, we welcome the opportunity to learn about your project.
+          <p className="text-xs sm:text-sm text-stone-600 font-normal">
+            Share your requirements so our team can understand your project.
           </p>
         </div>
       )}

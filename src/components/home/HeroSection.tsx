@@ -9,7 +9,6 @@ import {
   ArrowUpRight,
 } from 'lucide-react';
 import { useQuoteModal } from '../../context/QuoteModalContext';
-import heroPackagingImg from '../../assets/herosection_image.png';
 
 // Register GSAP plugins safely
 if (typeof window !== 'undefined') {
@@ -410,12 +409,12 @@ export const HeroSection: React.FC = () => {
                 className="relative group space-y-3.5 will-change-transform"
                 style={{ transformStyle: 'preserve-3d' }}
               >
-                {/* Main Hero Skincare Product Bottles PNG with Clinical Grade and MOQ */}
+                {/* Main Hero Skincare Product Bottles Showcase with Luxury Styling */}
                 <div className="relative z-10 flex items-center justify-center pt-2 pb-2">
                   <img
-                    src={heroPackagingImg}
-                    alt="The BioGlobal Clinical Grade Private Label Cosmetic Packaging Collection - Amber Droppers & Dispensers"
-                    className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_24px_38px_rgba(29,60,52,0.18)] transition-transform duration-500 group-hover:scale-[1.02]"
+                    src="/images/bioglobal/hero/homepage-luxury-cosmetics-hero.webp"
+                    alt="The BioGlobal Clinical Grade Private Label Cosmetic Packaging Collection - Luxury Ivory Bottles & Golden Dispensers"
+                    className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_35px_rgba(29,60,52,0.18)] transition-transform duration-500 group-hover:scale-[1.02]"
                     loading="eager"
                     decoding="async"
                   />

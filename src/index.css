@@ -129,3 +129,39 @@
   }
 }
 
+/* ======================================================== */
+/* Standardized Aspect Ratios & Image Sizing (Prompt Spec)   */
+/* ======================================================== */
+.product-category-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.product-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.manufacturing-step-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-product-image {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+

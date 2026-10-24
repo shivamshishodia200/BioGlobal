@@ -47,6 +47,7 @@ export const QuoteModal: React.FC = () => {
             initialCategory={initialData.productCategory || 'Skin Care'}
             initialService={initialData.serviceType || 'Private Label Manufacturing'}
             initialProduct={initialData.targetProduct || ''}
+            source={initialData.source || 'Product Category Page'}
             compact={true}
             onSuccessCallback={closeQuoteModal}
           />

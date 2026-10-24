@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, ShieldCheck, CheckCircle2, FlaskConical, Award, Eye, ArrowUpRight } from 'lucide-react';
 import { useQuoteModal } from '../../context/QuoteModalContext';
-import haircareImg from '../../assets/capabilities/haircare.jpg';
 
 interface ProductDisplay {
   id: string;
@@ -24,7 +23,7 @@ const REALISTIC_PREVIEWS: ProductDisplay[] = [
     name: 'Clinical Niacinamide & Peptide Elixir',
     bottleType: '30ml Frosted Amber Glass with Pipette Dropper',
     moq: '1,000 units',
-    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=1000&q=85',
+    image: '/images/bioglobal/hero/homepage-luxury-cosmetics-hero.webp',
     badge: 'Best-Seller B2B Formulation',
     features: ['High-Viscosity Dropper', 'Silk-Screen Gold Foil', 'Sterile Cleanroom Filled'],
   },
@@ -35,7 +34,7 @@ const REALISTIC_PREVIEWS: ProductDisplay[] = [
     name: 'Ceramide Barrier Restorative Cream',
     bottleType: '50ml Heavy-Wall Frosted Jar with Gold Lid',
     moq: '1,000 units',
-    image: 'https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=1000&q=85',
+    image: '/images/bioglobal/process/step-04-sampling-approval.webp',
     badge: 'Luxury Finish',
     features: ['Double-Wall Acrylic', 'Inner Seal Disc', '72-Hour Moisture Lock'],
   },
@@ -46,7 +45,7 @@ const REALISTIC_PREVIEWS: ProductDisplay[] = [
     name: 'Rosemary & Biotin Scalp Density Oil',
     bottleType: '50ml Amber PET with Precision Dropper',
     moq: '1,000 units',
-    image: haircareImg,
+    image: '/images/bioglobal/categories/haircare.webp',
     badge: 'High D2C Demand',
     features: ['Cold-Pressed Extraction', 'IFRA Natural Notes', 'Tamper-Evident Ring'],
   },
@@ -57,7 +56,7 @@ const REALISTIC_PREVIEWS: ProductDisplay[] = [
     name: 'Botanical Foaming Gentle Wash',
     bottleType: '150ml Matte White Cylinder with Gold Pump',
     moq: '1,500 units',
-    image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1000&q=85',
+    image: '/images/bioglobal/categories/bodycare.webp',
     badge: 'Eco-Friendly Pack',
     features: ['Locking Dispenser Pump', 'Sulfate-Free pH 5.5', 'Recyclable PCR Option'],
   },

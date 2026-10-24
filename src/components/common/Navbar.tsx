@@ -45,13 +45,6 @@ export const Navbar: React.FC = () => {
     return location.pathname.startsWith(path);
   };
 
-  const handleWhatsAppClick = () => {
-    window.open(
-      'https://wa.me/918800996540?text=Hi%20The%20BioGlobal%20team%2C%20I%20would%20like%20to%20inquire%20about%20third-party%20cosmetic%20manufacturing%20and%20private%20label%20solutions.',
-      '_blank',
-      'noopener,noreferrer'
-    );
-  };
 
   return (
     <>
@@ -272,23 +265,8 @@ export const Navbar: React.FC = () => {
               )}
             </Link>
           </nav>
-
-          {/* Right Actions: WhatsApp + Animated Inquiry Button */}
+          {/* Right Actions: Animated Inquiry Button */}
           <div className="flex items-center gap-3">
-            {/* WhatsApp Quick Direct Trigger */}
-            <motion.button
-              onClick={handleWhatsAppClick}
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.94 }}
-              className="relative w-10 h-10 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] text-white flex items-center justify-center transition-colors shadow-2xs group cursor-pointer"
-              aria-label="Direct WhatsApp contact"
-              title="Chat with our manufacturing director on WhatsApp"
-            >
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-400 rounded-full animate-ping pointer-events-none" />
-              <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.588-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.179.18-.077.355.101.173.452.746.97 1.208.667.594 1.229.779 1.403.866.173.086.275.072.376-.044.101-.116.433-.506.549-.679.116-.174.231-.145.39-.087.159.058 1.011.477 1.184.564.173.086.289.13.332.202.043.072.043.419-.101.824z" />
-              </svg>
-            </motion.button>
 
             {/* Inquiry Now Button in Logo Leaf Green (#708E50) */}
             <motion.button

@@ -12,7 +12,6 @@ import { BatchEstimatorSection } from '../components/home/BatchEstimatorSection'
 import { CategoriesShowcase } from '../components/home/CategoriesShowcase';
 import { FeaturedProductsSection } from '../components/home/FeaturedProductsSection';
 import { ConsultationSection } from '../components/home/ConsultationSection';
-import { TestimonialsSection } from '../components/home/TestimonialsSection';
 import { FaqSection } from '../components/home/FaqSection';
 
 export const HomePage: React.FC = () => {
@@ -57,10 +56,7 @@ export const HomePage: React.FC = () => {
       {/* 13. Consultation Briefing Form (Let's Build Your Next Beauty Product Together) */}
       <ConsultationSection />
 
-      {/* 15. Testimonials: Our Customer Says */}
-      <TestimonialsSection />
-
-      {/* 16. Frequently Asked Questions (Framer Motion Animated Accordion) */}
+      {/* 14. Frequently Asked Questions (Framer Motion Animated Accordion) */}
       <FaqSection />
     </div>
   );

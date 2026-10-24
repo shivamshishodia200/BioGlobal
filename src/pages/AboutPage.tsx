@@ -21,8 +21,8 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { useQuoteModal } from '../context/QuoteModalContext';
-import cosmeticFacilityImg from '../assets/capabilities/cosmetic_manufacturing_facility.jpg';
-import cosmeticLabImg from '../assets/capabilities/cosmetic_lab_rd.jpg';
+const cosmeticFacilityImg = '/images/bioglobal/about/about-facility-infrastructure.webp';
+const cosmeticLabImg = '/images/bioglobal/about/about-formulation-lab.webp';
 import { CATEGORIES } from '../data/categories';
 import {
   ABOUT_HERO,

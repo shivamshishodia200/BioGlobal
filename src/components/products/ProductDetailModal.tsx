@@ -2,12 +2,12 @@ import React from 'react';
 import { 
   X, 
   Sparkles, 
-  ShieldCheck, 
   Clock, 
   Package, 
   CheckCircle, 
   Layers, 
-  Send 
+  Send,
+  Tag
 } from 'lucide-react';
 import { Product } from '../../types';
 import { useQuoteModal } from '../../context/QuoteModalContext';
@@ -28,6 +28,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
       productCategory: product.category,
       targetProduct: product.name,
       serviceType: 'Private Label Manufacturing',
+      source: 'Product Category Page',
     });
   };
 
@@ -42,7 +43,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-stone-900/60 text-white hover:bg-stone-900 flex items-center justify-center transition-colors"
+          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-stone-900/60 text-white hover:bg-stone-900 flex items-center justify-center transition-colors cursor-pointer"
           aria-label="Close product view"
         >
           <X className="w-5 h-5" />
@@ -54,14 +55,14 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
             <img 
               src={product.image} 
               alt={product.name} 
-              className="w-full h-full object-cover max-h-[420px] rounded-xl shadow-md"
+              className="w-full h-full object-contain max-h-[420px] rounded-xl drop-shadow-md"
             />
             <div className="absolute top-6 left-6 flex flex-col gap-2">
               <span className="px-3 py-1 rounded-md bg-[#1D3C34] text-white text-xs font-semibold tracking-wider uppercase shadow-xs">
                 {product.category}
               </span>
               <span className="px-3 py-1 rounded-md bg-white/90 backdrop-blur-xs text-stone-800 text-xs font-semibold border border-stone-200 shadow-xs">
-                MOQ: {product.minOrderQuantity}
+                MOQ: {product.minOrderQuantity || `${product.minimumOrderQuantity || 1000} units`}
               </span>
             </div>
           </div>
@@ -71,7 +72,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
             <div className="space-y-4">
               <div>
                 <span className="text-[11px] font-bold tracking-widest text-[#708E50] uppercase">
-                  B2B Cosmeceutical Profile
+                  B2B Formulation Specification
                 </span>
                 <h3 id="product-title" className="font-serif text-xl sm:text-2xl font-bold text-stone-900 mt-1 leading-snug">
                   {product.name}
@@ -120,13 +121,21 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
               </div>
 
               {/* Specifications Grid */}
-              <div className="pt-2 border-t border-stone-100 grid grid-cols-2 gap-3 text-xs">
+              <div className="pt-2 border-t border-stone-100 grid grid-cols-3 gap-2 text-xs">
+                <div className="p-2.5 rounded-lg bg-[#FAF9F5] border border-stone-200">
+                  <div className="flex items-center gap-1 text-stone-500 font-medium">
+                    <Tag className="w-3.5 h-3.5 text-[#DFBD89]" />
+                    <span>Pricing</span>
+                  </div>
+                  <p className="font-semibold text-[#1D3C34] mt-0.5 text-[11px]">Request Pricing</p>
+                </div>
+
                 <div className="p-2.5 rounded-lg bg-[#FAF9F5] border border-stone-200">
                   <div className="flex items-center gap-1 text-stone-500 font-medium">
                     <Clock className="w-3.5 h-3.5 text-stone-400" />
                     <span>Lead Time</span>
                   </div>
-                  <p className="font-semibold text-stone-800 mt-0.5">{product.leadTime}</p>
+                  <p className="font-semibold text-stone-800 mt-0.5 text-[11px]">{product.leadTime || '4-6 weeks'}</p>
                 </div>
 
                 <div className="p-2.5 rounded-lg bg-[#FAF9F5] border border-stone-200">
@@ -134,15 +143,15 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
                     <Layers className="w-3.5 h-3.5 text-stone-400" />
                     <span>Shelf Life</span>
                   </div>
-                  <p className="font-semibold text-stone-800 mt-0.5">{product.shelfLife}</p>
+                  <p className="font-semibold text-stone-800 mt-0.5 text-[11px]">{product.shelfLife || '24 Months'}</p>
                 </div>
               </div>
 
               {/* Packaging Options */}
               <div className="pt-2">
-                <div className="flex items-center gap-1.5 text-xs text-stone-600">
-                  <Package className="w-3.5 h-3.5 text-stone-400 flex-shrink-0" />
-                  <span><strong>Packaging Options:</strong> {product.packagingOptions.join(', ')}</span>
+                <div className="flex items-start gap-1.5 text-xs text-stone-600">
+                  <Package className="w-3.5 h-3.5 text-stone-400 flex-shrink-0 mt-0.5" />
+                  <span><strong>Packaging Options:</strong> {product.packagingOptions ? product.packagingOptions.join(', ') : 'Custom jars, bottles, tubes, and pumps'}</span>
                 </div>
               </div>
             </div>
@@ -151,14 +160,14 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({ product,
             <div className="pt-6 mt-6 border-t border-stone-200 flex flex-col sm:flex-row gap-3">
               <button
                 onClick={handleInquireThisProduct}
-                className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#1D3C34] to-[#142B25] hover:from-[#142B25] hover:to-[#0D1A13] text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all"
+                className="flex-1 py-3 px-4 rounded-xl bg-gradient-to-r from-[#1D3C34] to-[#142B25] hover:from-[#142B25] hover:to-[#0D1A13] text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm transition-all cursor-pointer"
               >
                 <Send className="w-4 h-4 text-[#DFBD89]" />
                 <span>Request Quotation for This Formula</span>
               </button>
               <button
                 onClick={onClose}
-                className="py-3 px-4 rounded-xl border border-stone-300 text-stone-700 hover:bg-stone-50 font-medium text-xs sm:text-sm"
+                className="py-3 px-4 rounded-xl border border-stone-300 text-stone-700 hover:bg-stone-50 font-medium text-xs sm:text-sm cursor-pointer"
               >
                 Close
               </button>

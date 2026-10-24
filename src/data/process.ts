@@ -1,10 +1,4 @@
 import { ProcessStep } from '../types';
-import skincareImg from '../assets/capabilities/skincare.jpg';
-import haircareImg from '../assets/capabilities/haircare.jpg';
-import cosmeticLabImg from '../assets/capabilities/cosmetic_lab_rd.jpg';
-import bodycareImg from '../assets/capabilities/bodycare.jpg';
-import cosmeticFacilityImg from '../assets/capabilities/cosmetic_manufacturing_facility.jpg';
-import soapcareImg from '../assets/capabilities/soapcare.jpg';
 
 export const MANUFACTURING_PROCESS: ProcessStep[] = [
   {
@@ -29,7 +23,7 @@ export const MANUFACTURING_PROCESS: ProcessStep[] = [
       'Review Preliminary Order Requirements',
     ],
     output: 'Initial Product & Manufacturing Brief',
-    image: skincareImg,
+    image: '/images/bioglobal/process/step-01-initial-consultation.webp',
     imageCaption: 'Brand Vision & Scoping',
     iconName: 'MessageSquare',
   },
@@ -55,7 +49,7 @@ export const MANUFACTURING_PROCESS: ProcessStep[] = [
       'Review Target Cost Requirements',
     ],
     output: 'Product Concept & Development Requirements',
-    image: haircareImg,
+    image: '/images/bioglobal/process/step-02-concept-planning.webp',
     imageCaption: 'Product Specification Architecture',
     iconName: 'ClipboardList',
   },
@@ -81,7 +75,7 @@ export const MANUFACTURING_PROCESS: ProcessStep[] = [
       'Technical Formulation Review',
     ],
     output: 'Product Formulation Prototype',
-    image: cosmeticLabImg,
+    image: '/images/bioglobal/process/step-03-formulation-research.webp',
     imageCaption: 'Prototype Formulation Lab',
     iconName: 'FlaskConical',
   },
@@ -107,7 +101,7 @@ export const MANUFACTURING_PROCESS: ProcessStep[] = [
       'Final Specification Approval',
     ],
     output: 'Approved Product Sample & Specifications',
-    image: bodycareImg,
+    image: '/images/bioglobal/process/step-04-sampling-approval.webp',
     imageCaption: 'Sensory Evaluation & Sign-Off',
     iconName: 'PackageCheck',
   },
@@ -133,7 +127,7 @@ export const MANUFACTURING_PROCESS: ProcessStep[] = [
       'Applicable Quality Checks',
     ],
     output: 'Manufactured Product Batch',
-    image: cosmeticFacilityImg,
+    image: '/images/bioglobal/process/step-05-manufacturing-quality.webp',
     imageCaption: 'Controlled Batch Compounding',
     iconName: 'Factory',
   },
@@ -159,7 +153,7 @@ export const MANUFACTURING_PROCESS: ProcessStep[] = [
       'Dispatch Coordination',
     ],
     output: 'Finished Products Prepared for Dispatch',
-    image: soapcareImg,
+    image: '/images/bioglobal/process/step-06-packaging-dispatch.webp',
     imageCaption: 'Filling, Packing & Dispatch Logistics',
     iconName: 'Truck',
   },

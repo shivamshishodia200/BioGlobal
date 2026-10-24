@@ -5,6 +5,7 @@ interface QuoteModalInitialData {
   serviceType?: string;
   targetProduct?: string;
   quantityRange?: string;
+  source?: string;
 }
 
 interface QuoteModalContextType {

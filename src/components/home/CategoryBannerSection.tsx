@@ -12,12 +12,12 @@ import {
 import { ShowcaseItem, ManufacturingHighlight } from '../../types';
 
 // High-resolution cosmetic manufacturing photography
-import skincareImg from '../../assets/capabilities/skincare.jpg';
-import haircareImg from '../../assets/capabilities/haircare.jpg';
-import soapcareImg from '../../assets/capabilities/soapcare.jpg';
-import bodycareImg from '../../assets/capabilities/bodycare.jpg';
-import babycareImg from '../../assets/capabilities/babycare.jpg';
-import cosmeticsImg from '../../assets/capabilities/cosmetics.jpg';
+const skincareImg = '/images/bioglobal/categories/skincare.webp';
+const haircareImg = '/images/bioglobal/categories/haircare.webp';
+const soapcareImg = '/images/bioglobal/categories/bathcare.webp';
+const bodycareImg = '/images/bioglobal/categories/bodycare.webp';
+const babycareImg = '/images/bioglobal/categories/babycare.webp';
+const cosmeticsImg = '/images/bioglobal/categories/cosmetics.webp';
 
 // Three verified manufacturing highlights
 const MANUFACTURING_HIGHLIGHTS: ManufacturingHighlight[] = [

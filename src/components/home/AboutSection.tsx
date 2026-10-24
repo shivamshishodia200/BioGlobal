@@ -14,12 +14,12 @@ import {
 import { useQuoteModal } from '../../context/QuoteModalContext';
 
 // High-resolution luxury product showcase images
-import skincareImg from '../../assets/capabilities/skincare.jpg';
-import haircareImg from '../../assets/capabilities/haircare.jpg';
-import bodycareImg from '../../assets/capabilities/bodycare.jpg';
-import babycareImg from '../../assets/capabilities/babycare.jpg';
-import soapcareImg from '../../assets/capabilities/soapcare.jpg';
-import cosmeticsImg from '../../assets/capabilities/cosmetics.jpg';
+const skincareImg = '/images/bioglobal/categories/skincare.webp';
+const haircareImg = '/images/bioglobal/categories/haircare.webp';
+const bodycareImg = '/images/bioglobal/categories/bodycare.webp';
+const babycareImg = '/images/bioglobal/categories/babycare.webp';
+const soapcareImg = '/images/bioglobal/categories/bathcare.webp';
+const cosmeticsImg = '/images/bioglobal/categories/cosmetics.webp';
 
 interface CapabilityCategory {
   id: string;
@@ -530,7 +530,7 @@ export const AboutSection: React.FC = () => {
                       <img
                         src={currentCategory.image}
                         alt={currentCategory.imageAlt}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="product-category-image transition-transform duration-700 group-hover:scale-105"
                         loading="eager"
                       />
 

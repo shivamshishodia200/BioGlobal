@@ -1,7 +1,4 @@
 import { ManufacturingService } from '../types';
-import cosmeticFacilityImg from '../assets/capabilities/cosmetic_manufacturing_facility.jpg';
-import skincareImg from '../assets/capabilities/skincare.jpg';
-import cosmeticLabImg from '../assets/capabilities/cosmetic_lab_rd.jpg';
 
 export const MANUFACTURING_SERVICES: ManufacturingService[] = [
   {
@@ -18,7 +15,7 @@ export const MANUFACTURING_SERVICES: ManufacturingService[] = [
       'Quality Checks & Production Documentation',
       'Filling, Packaging & Labeling Support',
     ],
-    image: cosmeticFacilityImg,
+    image: '/images/bioglobal/services/service-third-party-manufacturing.webp',
     imageAlt: 'Cosmetic contract manufacturing and production process',
     ctaText: 'Explore Third-Party Manufacturing',
     ctaLink: '/third-party-manufacturing',
@@ -38,7 +35,7 @@ export const MANUFACTURING_SERVICES: ManufacturingService[] = [
       'Packaging, Labeling & Presentation Support',
       'Flexible Order Quantities for Eligible Products',
     ],
-    image: skincareImg,
+    image: '/images/bioglobal/services/service-private-label.webp',
     imageAlt: 'Private label skincare and cosmetic packaging collection',
     ctaText: 'Explore Private Label Solutions',
     ctaLink: '/private-label-manufacturing',
@@ -58,7 +55,7 @@ export const MANUFACTURING_SERVICES: ManufacturingService[] = [
       'Prototype Sampling & Refinement',
       'Formulation Evaluation & Technical Guidance',
     ],
-    image: cosmeticLabImg,
+    image: '/images/bioglobal/services/service-custom-rd.webp',
     imageAlt: 'Cosmetic formulation and product development laboratory',
     ctaText: 'Discuss Custom Formulation',
     ctaLink: '/consultation',
