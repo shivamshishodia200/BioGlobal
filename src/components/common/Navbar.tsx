@@ -60,19 +60,19 @@ export const Navbar: React.FC = () => {
           {/* Left Details */}
           <div className="flex items-center gap-6 text-[11px] tracking-wide">
             <a
-              href="tel:+918800996540"
+              href="tel:+919795000351"
               className="flex items-center gap-1.5 hover:text-[#86A55B] transition-colors"
             >
               <Phone className="w-3.5 h-3.5 text-[#86A55B]" />
-              <span>+91 88009 96540 / 1800 102 8585</span>
+              <span>+91 97950 00351</span>
             </a>
 
             <a
-              href="mailto:info@thebioglobal.com"
+              href="mailto:thebioglobal@gmail.com"
               className="flex items-center gap-1.5 hover:text-[#86A55B] transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-[#86A55B]" />
-              <span>info@thebioglobal.com</span>
+              <span>thebioglobal@gmail.com</span>
             </a>
 
             <div className="hidden xl:flex items-center gap-1.5 text-stone-300">

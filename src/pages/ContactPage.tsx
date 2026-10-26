@@ -65,8 +65,8 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div className="text-xs sm:text-sm text-stone-600 space-y-1">
                   <h4 className="font-bold text-stone-900 text-sm">Telephone Support</h4>
-                  <p>Toll-Free B2B: <a href="tel:+18004562464" className="text-[#1D3C34] font-semibold hover:underline">+1 (800) 456-2464</a></p>
-                  <p>Direct Lab Desk: <a href="tel:+18004562464" className="text-[#1D3C34] font-semibold hover:underline">+1 (800) 456-BIO-GLBL</a></p>
+                  <p>Direct B2B Hotline: <a href="tel:+919795000351" className="text-[#1D3C34] font-semibold hover:underline">+91 97950 00351</a></p>
+                  <p>WhatsApp Inquiries: <a href="https://wa.me/919795000351" target="_blank" rel="noopener noreferrer" className="text-[#708E50] font-semibold hover:underline">+91 97950 00351</a></p>
                 </div>
               </div>
 
@@ -77,8 +77,7 @@ export const ContactPage: React.FC = () => {
                 </div>
                 <div className="text-xs sm:text-sm text-stone-600 space-y-1">
                   <h4 className="font-bold text-stone-900 text-sm">Email Inquiries</h4>
-                  <p>Quotations & RFPs: <a href="mailto:manufacturing@thebioglobal.com" className="text-[#1D3C34] font-semibold hover:underline">manufacturing@thebioglobal.com</a></p>
-                  <p>General Inquiries: <a href="mailto:info@thebioglobal.com" className="text-[#1D3C34] font-semibold hover:underline">info@thebioglobal.com</a></p>
+                  <p>Inquiries & RFPs: <a href="mailto:thebioglobal@gmail.com" className="text-[#1D3C34] font-semibold hover:underline">thebioglobal@gmail.com</a></p>
                 </div>
               </div>
 

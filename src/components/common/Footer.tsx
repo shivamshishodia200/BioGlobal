@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Phone, Mail } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 import { useQuoteModal } from '../../context/QuoteModalContext';
 
@@ -15,15 +15,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
   return (
     <footer className="bg-[#E4EEE3] text-stone-800 pt-16 pb-8 border-t border-[#C5DAC3]/70">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-stone-800/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-stone-800/10">
           {/* Col 1: White Logo Box + Description + Socials */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-4 space-y-6">
             {/* White Logo Card from Proveda style */}
             <div className="bg-white rounded-2xl p-4 inline-block shadow-2xs border border-stone-200/80">
               <BrandLogo size="md" />
             </div>
 
-            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal max-w-lg">
+            <p className="text-xs sm:text-sm text-stone-700 leading-relaxed font-normal max-w-sm">
               The BioGlobal is a leading cosmetic products manufacturer. With an expertise of over 20+ years and a legacy of building trust, we provide internationally accredited cosmetic solutions that suit the best for your brand.
             </p>
 
@@ -76,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
             <ul className="space-y-2 text-xs sm:text-sm text-stone-800 font-normal">
               <li><Link to="/" className="hover:underline">Home</Link></li>
               <li><Link to="/about" className="hover:underline">About Us</Link></li>
-              <li><Link to="/third-party-manufacturing" className="hover:underline">Solutions</Link></li>
+              <li><Link to="/third-party-manufacturing" className="hover:underline">International Business</Link></li>
               <li><Link to="/products" className="hover:underline">Products</Link></li>
               <li><Link to="/contact" className="hover:underline">Contact Us</Link></li>
               <li>
@@ -88,7 +88,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
           </div>
 
           {/* Col 3: POLICIES */}
-          <div className="lg:col-span-3 space-y-4">
+          <div className="lg:col-span-2 space-y-4">
             <h4 className="text-xs uppercase font-medium tracking-[0.25em] text-stone-600">
               POLICIES
             </h4>
@@ -114,6 +114,34 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
                 </button>
               </li>
             </ul>
+          </div>
+
+          {/* Col 4: CONTACT US */}
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="text-xs uppercase font-medium tracking-[0.25em] text-stone-600">
+              CONTACT US
+            </h4>
+            <div className="space-y-3 text-xs sm:text-sm text-stone-800 font-normal">
+              <a
+                href="tel:+919795000351"
+                className="flex items-center gap-2.5 text-stone-700 hover:text-[#1D3C34] transition-colors group"
+              >
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#708E50] shadow-2xs group-hover:bg-[#708E50] group-hover:text-white transition-colors flex-shrink-0">
+                  <Phone className="w-3.5 h-3.5" />
+                </div>
+                <span className="font-medium">+91 97950 00351</span>
+              </a>
+
+              <a
+                href="mailto:thebioglobal@gmail.com"
+                className="flex items-center gap-2.5 text-stone-700 hover:text-[#1D3C34] transition-colors group"
+              >
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-[#708E50] shadow-2xs group-hover:bg-[#708E50] group-hover:text-white transition-colors flex-shrink-0">
+                  <Mail className="w-3.5 h-3.5" />
+                </div>
+                <span className="font-medium break-all">thebioglobal@gmail.com</span>
+              </a>
+            </div>
           </div>
         </div>
 

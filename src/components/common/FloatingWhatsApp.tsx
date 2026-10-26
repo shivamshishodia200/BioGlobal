@@ -3,7 +3,7 @@ import { MessageSquare, X, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export const FloatingWhatsApp: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const phoneNumber = '18004562464'; // Configurable business WhatsApp number
+  const phoneNumber = '919795000351'; // Configurable business WhatsApp number
   const defaultMessage = 'Hello The BioGlobal team, I am interested in cosmetic manufacturing services and would like to request product information.';
 
   const handleWhatsAppRedirect = (customMsg?: string) => {
