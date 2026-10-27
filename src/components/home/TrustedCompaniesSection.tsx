@@ -9,6 +9,7 @@ interface BrandItem {
 }
 
 const BRANDS: BrandItem[] = [
+  { name: 'COTX', subtitle: 'Luxury Skincare', category: 'Turnkey Brand Partnership' },
   { name: 'Lia HiCare', subtitle: 'Personal Care', category: 'Third-Party Manufacturing' },
   { name: 'Sanfe', subtitle: 'Feminine Wellness', category: 'Formulation Partner' },
   { name: 'sattvik', subtitle: 'pure • fresh • divine', category: 'Botanical Skincare' },

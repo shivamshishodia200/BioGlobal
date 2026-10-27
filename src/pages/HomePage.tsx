@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeroSection } from '../components/home/HeroSection';
 import { TrustedCompaniesSection } from '../components/home/TrustedCompaniesSection';
-import { AboutSection } from '../components/home/AboutSection';
 import { WhyChooseSection } from '../components/home/WhyChooseSection';
 import { BenefitsSection } from '../components/home/BenefitsSection';
 import { ServicesSection } from '../components/home/ServicesSection';
@@ -23,16 +22,13 @@ export const HomePage: React.FC = () => {
       {/* 2. Trusted by thousands of companies around the world (Smooth Marquee) */}
       <TrustedCompaniesSection />
 
-      {/* 3. Our Story & You name it we make it (Interactive Category Formulation Switcher) */}
-      <AboutSection />
+      {/* 3. A Manufacturing Partnership Built Around Your Growth (COTX Real Brand Showcase) */}
+      <BenefitsSection />
 
       {/* 4. Why us? With 6 White Stat Cards on Harmonious Botanical Sage Background */}
       <WhyChooseSection />
 
-      {/* 5. Benefits from partnering with us (4 White Cards on Sage Background) */}
-      <BenefitsSection />
-
-      {/* 6. Personalized Solutions Just for You (Asymmetric Bento Grid Cards) */}
+      {/* 5. Personalized Solutions Just for You (Asymmetric Bento Grid Cards) */}
       <ServicesSection />
 
       {/* 7. Transform Your Business with Innovative Solutions (Staggered Photo Cards) */}
