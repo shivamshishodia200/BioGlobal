@@ -17,7 +17,6 @@ const haircareImg = '/images/bioglobal/categories/haircare.webp';
 const soapcareImg = '/images/bioglobal/categories/bathcare.webp';
 const bodycareImg = '/images/bioglobal/categories/bodycare.webp';
 const babycareImg = '/images/bioglobal/categories/babycare.webp';
-const cosmeticsImg = '/images/bioglobal/categories/cosmetics.webp';
 
 // Three verified manufacturing highlights
 const MANUFACTURING_HIGHLIGHTS: ManufacturingHighlight[] = [
@@ -44,7 +43,7 @@ const MANUFACTURING_HIGHLIGHTS: ManufacturingHighlight[] = [
   },
 ];
 
-// Column 1 cards (auto-scrolling UPWARDS): Skin Care, Cosmetic Products, Body Care
+// Column 1 cards (auto-scrolling UPWARDS): Skin Care, Body Care
 const COLUMN_1_CARDS: ShowcaseItem[] = [
   {
     id: 'showcase-skincare',
@@ -64,25 +63,6 @@ const COLUMN_1_CARDS: ShowcaseItem[] = [
     slug: 'skin-care',
     moq: 'From 1,000 Units',
     tag: 'Skin Care Solutions',
-  },
-  {
-    id: 'showcase-cosmetics',
-    categoryId: 'cosmetic-products',
-    categoryName: 'Cosmetic Products',
-    tagline: 'Makeup That Reflects Your Brand Identity',
-    description:
-      'Explore customizable color cosmetic and hybrid makeup product concepts created for modern beauty brands.',
-    productExamples: [
-      'Liquid Foundation',
-      'BB & CC Cream',
-      'Makeup Primer',
-      'Setting Spray',
-    ],
-    image: cosmeticsImg,
-    imageAlt: 'Color cosmetic products and makeup manufacturing',
-    slug: 'cosmetic-products',
-    moq: 'From 1,000 Units',
-    tag: 'Color Cosmetics',
   },
   {
     id: 'showcase-bodycare',
@@ -221,7 +201,7 @@ export const CategoryBannerSection: React.FC = () => {
               to help emerging and established brands build distinctive beauty
               and personal care collections.
               <span className="block mt-2">
-                From skincare and haircare to color cosmetics, bath care, body
+                From facial care and skincare to haircare, bath care, body
                 care, and baby care, our versatile manufacturing capabilities
                 support a wide range of product concepts and market requirements.
               </span>

@@ -16,7 +16,7 @@ const BRANDS: BrandItem[] = [
   { name: 'SMR', subtitle: 'Life Sciences', category: 'Clinical Cosmeceuticals' },
   { name: 'Janatra', subtitle: 'Health Care', category: 'Personal Care Solutions' },
   { name: 'VYEDA', subtitle: 'HERBALS', category: 'Ayurvedic Compounding' },
-  { name: 'Blue Buzz', subtitle: 'Cosmetics', category: 'Color Cosmetics' },
+  { name: 'Blue Buzz', subtitle: 'Cosmetics', category: 'Facial & Skin Care' },
   { name: 'AURA', subtitle: 'Botanicals', category: 'Clean Beauty Formulations' },
   { name: 'CHIC', subtitle: 'Beauty Labs', category: 'Private Label Solutions' },
 ];

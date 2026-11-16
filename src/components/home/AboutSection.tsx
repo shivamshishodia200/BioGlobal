@@ -19,7 +19,6 @@ const haircareImg = '/images/bioglobal/categories/haircare.webp';
 const bodycareImg = '/images/bioglobal/categories/bodycare.webp';
 const babycareImg = '/images/bioglobal/categories/babycare.webp';
 const soapcareImg = '/images/bioglobal/categories/bathcare.webp';
-const cosmeticsImg = '/images/bioglobal/categories/cosmetics.webp';
 
 interface CapabilityCategory {
   id: string;
@@ -40,35 +39,6 @@ interface CapabilityCategory {
 }
 
 const CAPABILITY_CATEGORIES: CapabilityCategory[] = [
-  {
-    id: 'cosmetic-products',
-    name: 'Cosmetic Products',
-    slug: 'cosmetic-products',
-    headline: 'Color Cosmetics Crafted for Modern Beauty Brands',
-    description:
-      'Create makeup collections that combine beautiful finishes, comfortable textures, and contemporary cosmetic innovation. Our manufacturing solutions support beauty brands seeking distinctive color cosmetics, hybrid makeup formulations, and customizable product experiences. From everyday beauty essentials to premium makeup collections, we help develop formulations aligned with your desired product positioning, packaging preferences, and target audience.',
-    formulations: [
-      'Liquid & Cream Foundations',
-      'Hydrating Makeup Primers',
-      'Setting Sprays & Mists',
-      'BB & CC Creams',
-    ],
-    ingredients: [
-      'Hyaluronic Acid',
-      'Vitamin E',
-      'Niacinamide',
-      'Glycerin',
-    ],
-    packaging:
-      'Airless Pumps, Cosmetic Tubes, Glass Bottles, Compact Containers, and Custom Makeup Packaging.',
-    image: cosmeticsImg,
-    imageAlt: 'Color cosmetics and hybrid makeup manufacturing by The BioGlobal',
-    ctaText: 'Explore Cosmetic Products',
-    ctaLink: '/category/cosmetic-products',
-    moq: '1,000 Units',
-    leadTime: '21 - 28 Days',
-    highlightTag: 'Hybrid Makeup Formulations',
-  },
   {
     id: 'skincare',
     name: 'Skin Care',
@@ -217,7 +187,7 @@ const CAPABILITY_CATEGORIES: CapabilityCategory[] = [
 ];
 
 export const AboutSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('cosmetic-products');
+  const [activeTab, setActiveTab] = useState('skincare');
   const { openQuoteModal } = useQuoteModal();
 
   const currentCategory =
@@ -284,9 +254,9 @@ export const AboutSection: React.FC = () => {
               distinctive, competitive product portfolios.
             </p>
             <p className="pt-2 border-t border-stone-200/70 text-xs sm:text-sm text-stone-500">
-              Our capabilities cover six essential categories:{' '}
+              Our capabilities cover five essential categories:{' '}
               <em className="text-stone-700 font-medium">
-                Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care,
+                Skin Care, Hair Care, Bath Care, Body Care,
                 and Baby Care
               </em>
               . Whether developing a completely new formulation or expanding an
@@ -309,11 +279,11 @@ export const AboutSection: React.FC = () => {
               You Name It. We Make It.
             </h2>
             <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed max-w-5xl lg:max-w-6xl">
-              From advanced skincare serums to everyday personal care essentials, The BioGlobal offers versatile cosmetic manufacturing solutions across six specialized categories. Explore our formulation capabilities to help transform your product ideas into market-ready beauty collections.
+              From advanced skincare serums to everyday personal care essentials, The BioGlobal offers versatile cosmetic manufacturing solutions across five specialized categories. Explore our formulation capabilities to help transform your product ideas into market-ready beauty collections.
             </p>
           </div>
 
-          {/* Six Category Tabs (Full-Width Responsive Segmented Control) */}
+          {/* Five Category Tabs (Full-Width Responsive Segmented Control) */}
           <div className="w-full mb-8">
             <div
               role="tablist"

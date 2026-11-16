@@ -45,7 +45,7 @@ export const ProductsPage: React.FC = () => {
           </h1>
 
           <p className="text-stone-300 text-sm sm:text-base max-w-2xl mx-auto font-light leading-relaxed">
-            Browse our comprehensive formulation library across cosmetic, skincare, haircare, bath, body, and baby care. Every product is scalable from low MOQs to industrial volume.
+            Browse our comprehensive formulation library across skincare, haircare, bath, body, and baby care. Every product is scalable from low MOQs to industrial volume.
           </p>
         </div>
       </div>

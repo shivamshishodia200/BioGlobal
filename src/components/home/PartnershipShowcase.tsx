@@ -6,7 +6,6 @@ import {
   CheckCircle2,
   ArrowRight,
   ShieldCheck,
-  Package,
   FlaskConical,
   ArrowUpRight,
   ChevronRight,
@@ -19,7 +18,6 @@ export const PartnershipShowcase: React.FC = () => {
   const [selectedProduct, setSelectedProduct] = useState<PartnershipProduct>(
     COTX_PARTNERSHIP.products[0]
   );
-  const [viewMode, setViewMode] = useState<'poster' | 'packshot'>('poster');
   const { openQuoteModal } = useQuoteModal();
 
   return (
@@ -106,11 +104,7 @@ export const PartnershipShowcase: React.FC = () => {
               <div className="lg:col-span-5 flex flex-col items-center">
                 <div className="relative w-full aspect-4/5 sm:aspect-1/1 lg:aspect-4/5 rounded-2xl overflow-hidden bg-white border border-stone-200 shadow-md group flex items-center justify-center p-3">
                   <img
-                    src={
-                      viewMode === 'poster'
-                        ? selectedProduct.image
-                        : selectedProduct.packshotImage
-                    }
+                    src={selectedProduct.image}
                     alt={selectedProduct.name}
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                   />
@@ -118,32 +112,6 @@ export const PartnershipShowcase: React.FC = () => {
                   {/* Net Qty Badge */}
                   <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#1D3C34]/90 text-white text-[11px] font-bold tracking-wider backdrop-blur-xs border border-white/20 shadow-xs">
                     {selectedProduct.netQty}
-                  </div>
-
-                  {/* View Mode Toggle Switch (Full Showcase vs Packshot) */}
-                  <div className="absolute bottom-3 right-3 flex items-center gap-1 bg-white/95 p-1 rounded-xl border border-stone-200 shadow-sm backdrop-blur-xs">
-                    <button
-                      type="button"
-                      onClick={() => setViewMode('poster')}
-                      className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                        viewMode === 'poster'
-                          ? 'bg-[#1D3C34] text-white'
-                          : 'text-stone-600 hover:text-stone-900'
-                      }`}
-                    >
-                      Showcase
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setViewMode('packshot')}
-                      className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all cursor-pointer ${
-                        viewMode === 'packshot'
-                          ? 'bg-[#1D3C34] text-white'
-                          : 'text-stone-600 hover:text-stone-900'
-                      }`}
-                    >
-                      Packshot
-                    </button>
                   </div>
                 </div>
 
@@ -218,21 +186,6 @@ export const PartnershipShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Packaging Details */}
-                <div className="p-3 rounded-xl bg-white border border-stone-200/80 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-[#E4EEE3] flex items-center justify-center flex-shrink-0">
-                    <Package className="w-4 h-4 text-[#1D3C34]" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] uppercase font-bold text-stone-600 block tracking-wider">
-                      Turnkey Packaging &amp; Labeling:
-                    </span>
-                    <p className="text-xs font-medium text-stone-800">
-                      {selectedProduct.packagingDescription}
-                    </p>
-                  </div>
-                </div>
-
                 {/* Quality Badges */}
                 <div className="flex flex-wrap items-center gap-2 pt-1">
                   {selectedProduct.badges.map((badge, bIdx) => (
@@ -294,7 +247,7 @@ export const PartnershipShowcase: React.FC = () => {
                   >
                     <div className="w-full aspect-1/1 rounded-xl overflow-hidden bg-stone-50 flex items-center justify-center p-1">
                       <img
-                        src={item.packshotImage}
+                        src={item.image}
                         alt={item.name}
                         className="w-full h-full object-contain group-hover:scale-105 transition-transform"
                       />

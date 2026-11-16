@@ -16,7 +16,6 @@ export const FeaturedProductsSection: React.FC = () => {
 
   const categories: Array<'All' | ProductCategory> = [
     'All',
-    'Cosmetic Products',
     'Skin Care',
     'Hair Care',
     'Bath Care',

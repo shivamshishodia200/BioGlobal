@@ -44,7 +44,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onViewDetails
         {/* Product Visual Container with Hover Zoom & Gradient Vignette */}
         <div className="relative aspect-4/3 w-full bg-stone-100 overflow-hidden">
           <img
-            src={imgError ? '/images/bioglobal/categories/cosmetic-products.webp' : product.image}
+            src={imgError ? '/images/bioglobal/categories/skincare.webp' : product.image}
             alt={`${product.name} — ${product.category} packaging`}
             onError={() => setImgError(true)}
             className="product-card-image transition-transform duration-500 group-hover:scale-105"

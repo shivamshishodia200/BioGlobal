@@ -2,38 +2,6 @@ import { CategoryInfo } from '../types';
 
 export const CATEGORIES: CategoryInfo[] = [
   {
-    id: 'cosmetic-products',
-    name: 'Cosmetic Products',
-    slug: 'cosmetic-products',
-    tagline: 'Color Cosmetics That Bring Your Brand Vision to Life',
-    headline: 'Color Cosmetics That Bring Your Brand Vision to Life',
-    description:
-      'Explore color cosmetic product concepts designed for modern beauty brands. Discover makeup essentials with opportunities to discuss suitable formulations, packaging, and brand-specific product presentation.',
-    shortDescription:
-      'Explore color cosmetic product concepts designed for modern beauty brands with customizable formulations.',
-    image: '/images/bioglobal/categories/cosmetic-products.webp',
-    imageAlt: 'Color cosmetic products and makeup manufacturing category',
-    itemCount: 8,
-    popularFormulations: [
-      'Foundation',
-      'Makeup Primer',
-      'BB Cream & CC Cream',
-      'Concealer',
-    ],
-    productExamples: [
-      'Foundation',
-      'Makeup Primer',
-      'BB Cream & CC Cream',
-      'Concealer',
-      'Compact Powder',
-      'Lipstick & Lip Gloss',
-      'Blush & Highlighter',
-      'Makeup Setting Spray',
-    ],
-    ctaText: 'Explore Cosmetic Products',
-    isPublished: true,
-  },
-  {
     id: 'skin-care',
     name: 'Skin Care',
     slug: 'skin-care',

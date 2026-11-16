@@ -22,7 +22,7 @@ interface CredentialCard {
 const CREDENTIALS: CredentialCard[] = [
   {
     id: 'brand-partnerships',
-    value: '500+',
+    value: '250+',
     title: 'Brand Partnerships',
     description: 'Supporting emerging & established beauty brands.',
     icon: Users,
@@ -43,7 +43,7 @@ const CREDENTIALS: CredentialCard[] = [
   },
   {
     id: 'monthly-capacity',
-    value: '2 Lakh',
+    value: '1 Lakh',
     unit: 'Units / Mo',
     title: 'Production Capacity',
     description: 'Automated lines for bottles, tubes & jars.',

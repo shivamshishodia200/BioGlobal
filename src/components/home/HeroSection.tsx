@@ -9,6 +9,7 @@ import {
   ArrowUpRight,
 } from 'lucide-react';
 import { useQuoteModal } from '../../context/QuoteModalContext';
+import heroPackagingImg from '../../assets/herosection image.jpeg';
 
 // Register GSAP plugins safely
 if (typeof window !== 'undefined') {
@@ -42,7 +43,7 @@ export const HeroSection: React.FC = () => {
   const statCards = [
     { value: '20+ Years', label: 'Manufacturing Expertise' },
     { value: '1,000 Units', label: 'Starting MOQ' },
-    { value: '2 Lakh', label: 'Monthly Production Capacity' },
+    { value: '1 Lakh', label: 'Monthly Production Capacity' },
     { value: '5,500 Sq. Ft.', label: 'Manufacturing Facility' },
   ];
 
@@ -412,9 +413,9 @@ export const HeroSection: React.FC = () => {
                 {/* Main Hero Skincare Product Bottles Showcase with Luxury Styling */}
                 <div className="relative z-10 flex items-center justify-center pt-2 pb-2">
                   <img
-                    src="/images/bioglobal/hero/homepage-luxury-cosmetics-hero.webp"
+                    src={heroPackagingImg}
                     alt="The BioGlobal Clinical Grade Private Label Cosmetic Packaging Collection - Luxury Ivory Bottles & Golden Dispensers"
-                    className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_35px_rgba(29,60,52,0.18)] transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="w-full h-auto max-h-[460px] object-contain drop-shadow-[0_20px_35px_rgba(29,60,52,0.18)] transition-transform duration-500 group-hover:scale-[1.02] mix-blend-multiply"
                     loading="eager"
                     decoding="async"
                   />

@@ -45,7 +45,7 @@ export const CategoriesShowcase: React.FC = () => {
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3] shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
-              <span>SIX SPECIALIZED CATEGORIES. ENDLESS OPPORTUNITIES FOR YOUR BRAND.</span>
+              <span>FIVE SPECIALIZED CATEGORIES. ENDLESS OPPORTUNITIES FOR YOUR BRAND.</span>
             </div>
 
             {/* Main Heading (H2) */}
@@ -58,7 +58,7 @@ export const CategoriesShowcase: React.FC = () => {
 
             {/* Description */}
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed font-normal">
-              Explore six specialized beauty and personal care categories, with product concepts and manufacturing solutions tailored to your brand vision.
+              Explore five specialized beauty and personal care categories, with product concepts and manufacturing solutions tailored to your brand vision.
             </p>
           </motion.div>
 

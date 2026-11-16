@@ -28,7 +28,7 @@ function b2bApiPlugin(): Plugin {
               tagline: 'An Antioxidant-Inspired Addition to Your Skincare Collection',
               shortDescription: 'Explore a vitamin C-based facial serum concept for beauty brands seeking lightweight textures, contemporary skincare ingredients, and customizable packaging options.',
               description: 'A vitamin C-based facial serum offers beauty brands an opportunity to develop a differentiated skincare product aligned with consumer interest in antioxidant ingredients and refined daily care routines. The formulation concept can be explored with suitable vitamin C derivatives, moisturizing ingredients, and texture preferences, subject to technical assessment and formulation testing.',
-              image: '/src/assets/capabilities/skincare.jpg',
+              image: '/images/bioglobal/products/facial-serum.webp',
               ingredients: ['Vitamin C Derivative (Sodium Ascorbyl Phosphate)', 'Hyaluronic Acid', 'Vegetable Glycerin', 'Vitamin E (Tocopherol)'],
               keyActives: ['Vitamin C Derivative (Sodium Ascorbyl Phosphate)', 'Hyaluronic Acid', 'Vegetable Glycerin', 'Vitamin E (Tocopherol)'],
               benefits: ['Antioxidant cosmetic daily support', 'Lightweight fast-absorbing fluid base', 'Balanced humectant hydration matrix', 'Customizable viscosity and fragrance profile'],
@@ -51,7 +51,7 @@ function b2bApiPlugin(): Plugin {
               tagline: 'A Moisturizing Cream Concept for Modern Skincare Brands',
               shortDescription: 'Discover a ceramide-based moisturizing cream concept suitable for premium skincare collections focused on daily moisturizing care.',
               description: 'A ceramide-based cream can support a skincare product portfolio designed around everyday moisturization and a comfortable sensory experience. With appropriate formulation development, brands can explore combinations of ceramides, emollients, humectants, and complementary cosmetic ingredients to create products aligned with their target audience.',
-              image: '/src/assets/capabilities/skincare.jpg',
+              image: '/images/bioglobal/products/moisturizing-cream.webp',
               ingredients: ['Ceramide Complex (NP, AP, EOP)', 'Vegetable Glycerin', 'Panthenol (Pro-Vitamin B5)', 'Fair-Trade Shea Butter'],
               keyActives: ['Ceramide Complex (NP, AP, EOP)', 'Vegetable Glycerin', 'Panthenol (Pro-Vitamin B5)', 'Fair-Trade Shea Butter'],
               benefits: ['Rich emollient daily moisturization', 'Skin-comforting protective barrier feel', 'Velvety non-greasy absorption', 'Adaptable for fragrance-free or subtle scented formulations'],
@@ -74,7 +74,7 @@ function b2bApiPlugin(): Plugin {
               tagline: 'Botanical-Inspired Hair & Scalp Care Formulation',
               shortDescription: 'Explore a rosemary and biotin-inspired hair care serum concept for brands creating contemporary scalp care and hair wellness collections.',
               description: 'Hair and scalp care products are an important part of modern beauty portfolios. This formulation concept brings together botanical-inspired ingredients and suitable cosmetic conditioning components to help brands explore differentiated scalp serum products with customizable textures and packaging.',
-              image: '/src/assets/capabilities/haircare.jpg',
+              image: '/images/bioglobal/products/hair-serum.webp',
               ingredients: ['Rosemary Leaf Extract (Rosmarinus Officinalis)', 'Biotin (Vitamin B7)', 'Panthenol (Pro-Vitamin B5)', 'Botanical Glycerin'],
               keyActives: ['Rosemary Leaf Extract (Rosmarinus Officinalis)', 'Biotin (Vitamin B7)', 'Panthenol (Pro-Vitamin B5)', 'Botanical Glycerin'],
               benefits: ['Conditioning botanical scalp care', 'Lightweight non-greasy application', 'Supports refreshed feeling at root zone', 'Versatile oil-blend or aqueous serum formats'],
@@ -97,7 +97,7 @@ function b2bApiPlugin(): Plugin {
               tagline: 'A Distinctive Cleansing Concept for Personal Care Brands',
               shortDescription: 'Discover a charcoal-based cleansing bar concept designed for bath and personal care collections seeking distinctive appearance, fragrance options, and packaging formats.',
               description: 'Activated charcoal cleansing bars offer brands an opportunity to introduce visually distinctive products within bath and body care ranges. Formulation options may include suitable cleansing ingredients, moisturizing components, fragrances, and packaging finishes tailored to the intended product concept.',
-              image: '/src/assets/capabilities/soapcare.jpg',
+              image: '/images/bioglobal/products/bathing-soap.webp',
               ingredients: ['Activated Bamboo Charcoal', 'Vegetable Glycerin Base', 'Gentle Botanical Cleansing Base', 'Cold-Pressed Botanical Oils'],
               keyActives: ['Activated Bamboo Charcoal', 'Vegetable Glycerin Base', 'Gentle Botanical Cleansing Base', 'Cold-Pressed Botanical Oils'],
               benefits: ['Visually distinctive artisan black bar aesthetic', 'Gentle daily lather without excessive dryness', 'Customizable botanical scent or unscented base', 'Sustainable zero-plastic packaging compatibility'],
@@ -882,4 +882,3 @@ export default defineConfig(() => {
     },
   };
 });
-

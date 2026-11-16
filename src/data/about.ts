@@ -13,7 +13,7 @@ export const ABOUT_STORY = {
   heading: 'Building Beauty Brands Through Expertise & Innovation',
   paragraphs: [
     'At The BioGlobal, we believe every successful beauty brand begins with a distinctive vision and the right manufacturing partnership. With over two decades of experience reflected in our company profile, we support emerging entrepreneurs and established businesses with cosmetic formulation, private label development, and third-party manufacturing solutions.',
-    'Our manufacturing expertise spans six essential beauty and personal care categories: Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care, and Baby Care. From contemporary skincare formulations to everyday personal care products, we focus on understanding the specific requirements of each brand and helping translate product ideas into commercially practical manufacturing solutions.',
+    'Our manufacturing expertise spans five essential beauty and personal care categories: Skin Care, Hair Care, Bath Care, Body Care, and Baby Care. From contemporary skincare formulations to everyday personal care products, we focus on understanding the specific requirements of each brand and helping translate product ideas into commercially practical manufacturing solutions.',
     'We recognize that every product brings its own formulation challenges, packaging considerations, quality requirements, and market expectations. That is why our approach emphasizes collaboration, clear communication, and carefully considered product development throughout the manufacturing journey.',
     'Whether you are preparing your first private label launch or expanding an established product portfolio, The BioGlobal aims to be a dependable manufacturing partner that supports your vision, product requirements, and long-term business objectives.',
   ],
@@ -58,17 +58,17 @@ export const ABOUT_STATISTICS: AboutStatistic[] = [
   },
   {
     id: 'stat-capacity',
-    value: '2 Lakh Units',
+    value: '1 Lakh Units',
     label: 'Monthly Production Capacity',
     description:
       'Reported monthly production capability across applicable product categories.',
   },
   {
     id: 'stat-categories',
-    value: '6 Categories',
+    value: '5 Categories',
     label: 'Beauty & Personal Care Expertise',
     description:
-      'Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care, and Baby Care.',
+      'Skin Care, Hair Care, Bath Care, Body Care, and Baby Care.',
   },
 ];
 

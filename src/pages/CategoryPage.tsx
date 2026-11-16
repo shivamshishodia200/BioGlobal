@@ -18,7 +18,6 @@ import { Product } from '../types';
 import { useQuoteModal } from '../context/QuoteModalContext';
 
 const SEO_TITLES: Record<string, string> = {
-  'cosmetic-products': 'Color Cosmetics & Makeup Product Manufacturing | The BioGlobal',
   'skin-care': 'Private Label Skincare Products | The BioGlobal',
   'hair-care': 'Hair Care Product Manufacturing | The BioGlobal',
   'bath-care': 'Bath & Cleansing Product Solutions | The BioGlobal',
@@ -27,7 +26,6 @@ const SEO_TITLES: Record<string, string> = {
 };
 
 const SEO_DESCRIPTIONS: Record<string, string> = {
-  'cosmetic-products': 'Explore custom color cosmetic and makeup formulations, from foundations to setting sprays with The BioGlobal manufacturing solutions.',
   'skin-care': 'Partner with The BioGlobal for private label skincare serums, creams, cleansers, and masks manufactured under ISO 22716 GMP standards.',
   'hair-care': 'Manufacture professional shampoos, conditioners, hair masks, and scalp care formulations customized for your beauty brand.',
   'bath-care': 'Discover contract manufacturing for luxury bathing soaps, shower gels, liquid hand washes, bath scrubs, and bath salts.',
@@ -68,6 +66,10 @@ export const CategoryPage: React.FC = () => {
       }
     }
   }, [category, productSlug]);
+
+  if (categorySlug === 'cosmetic-products') {
+    return <Navigate to="/category/skin-care" replace />;
+  }
 
   if (!category) {
     return <Navigate to="/products" replace />;
@@ -266,11 +268,11 @@ export const CategoryPage: React.FC = () => {
               Explore Related Beauty Categories
             </h3>
             <p className="text-xs sm:text-sm text-stone-500 mt-1">
-              Expand your product collection across our six specialized manufacturing verticals.
+              Expand your product collection across our five specialized manufacturing verticals.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {relatedCategories.map((rel) => (
               <Link
                 key={rel.id}

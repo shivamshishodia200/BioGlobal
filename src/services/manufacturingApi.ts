@@ -69,7 +69,6 @@ export const PACKAGING_OPTIONS: PackagingOptionItem[] = [
 // Used ONLY for Private Label standard catalog formulations
 const BASELINE_RATES: Record<string, { baseRate1k: number; baseRate25k: number }> = {
   'skin-care': { baseRate1k: 145, baseRate25k: 95 },
-  'cosmetic-products': { baseRate1k: 165, baseRate25k: 110 },
   'hair-care': { baseRate1k: 125, baseRate25k: 82 },
   'bath-care': { baseRate1k: 95, baseRate25k: 60 },
   'body-care': { baseRate1k: 135, baseRate25k: 88 },

@@ -1,1 +1,16 @@
-/*    /index.html   200
+# 301 Redirects for removed Color Cosmetics category & products
+/category/cosmetic-products       /category/skin-care       301
+/category/cosmetic-products/*     /category/skin-care       301
+/products/cosmetic-products       /category/skin-care       301
+/products/cosmetic-products/*     /category/skin-care       301
+/product/prod-foundation          /products                 301
+/product/prod-makeup-primer       /products                 301
+/product/prod-bb-cc-cream         /products                 301
+/product/prod-concealer           /products                 301
+/product/prod-compact-powder      /products                 301
+/product/prod-lipstick-lip-gloss  /products                 301
+/product/prod-blush-highlighter   /products                 301
+/product/prod-makeup-setting-spray /products                301
+
+# SPA fallback
+/*                                /index.html               200

@@ -426,11 +426,11 @@ export const AboutPage: React.FC = () => {
 
             <h2 className="font-serif text-3xl sm:text-4xl text-stone-900 leading-tight">
               Manufacturing Solutions Across{' '}
-              <span className="italic text-[#708E50]">Six Beauty Categories</span>
+              <span className="italic text-[#708E50]">Five Beauty Categories</span>
             </h2>
 
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              From specialized cosmetic formulations to everyday personal care essentials, our capabilities support diverse beauty product requirements across six core categories.
+              From advanced skincare formulations to everyday personal care essentials, our capabilities support diverse beauty product requirements across five core categories.
             </p>
           </div>
 

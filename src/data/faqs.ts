@@ -47,7 +47,7 @@ export const FAQS: FaqItem[] = [
     id: 'faq-custom-formulation',
     question: 'Do you offer custom formulations for private label beauty brands?',
     answer:
-      'Yes. The BioGlobal supports custom cosmetic formulation development for businesses seeking products tailored to their brand identity, target audience, and product requirements.\n\nOur formulation services cover product concepts across Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care, and Baby Care.\n\nDepending on the project, customization may involve ingredient selection, product texture, fragrance preferences, formulation refinement, and packaging considerations.\n\nThe development approach and scope are determined through consultation and technical review.',
+      'Yes. The BioGlobal supports custom cosmetic formulation development for businesses seeking products tailored to their brand identity, target audience, and product requirements.\n\nOur formulation services cover product concepts across Skin Care, Hair Care, Bath Care, Body Care, and Baby Care.\n\nDepending on the project, customization may involve ingredient selection, product texture, fragrance preferences, formulation refinement, and packaging considerations.\n\nThe development approach and scope are determined through consultation and technical review.',
     category: 'Custom Formulation & R&D',
     keywords: [
       'Custom Cosmetic Formulation',

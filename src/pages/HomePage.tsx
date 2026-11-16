@@ -1,8 +1,6 @@
 import React from 'react';
 import { HeroSection } from '../components/home/HeroSection';
-import { TrustedCompaniesSection } from '../components/home/TrustedCompaniesSection';
 import { WhyChooseSection } from '../components/home/WhyChooseSection';
-import { BenefitsSection } from '../components/home/BenefitsSection';
 import { ServicesSection } from '../components/home/ServicesSection';
 import { CategoryBannerSection } from '../components/home/CategoryBannerSection';
 import { UniqueFeaturesSection } from '../components/home/UniqueFeaturesSection';
@@ -18,12 +16,6 @@ export const HomePage: React.FC = () => {
     <div className="w-full bg-white selection:bg-[#708E50] selection:text-white">
       {/* 1. Hero Section (Multi-Slide Carousel + 3D Floating Cosmetic Mockup) */}
       <HeroSection />
-
-      {/* 2. Trusted by thousands of companies around the world (Smooth Marquee) */}
-      <TrustedCompaniesSection />
-
-      {/* 3. A Manufacturing Partnership Built Around Your Growth (COTX Real Brand Showcase) */}
-      <BenefitsSection />
 
       {/* 4. Why us? With 6 White Stat Cards on Harmonious Botanical Sage Background */}
       <WhyChooseSection />
