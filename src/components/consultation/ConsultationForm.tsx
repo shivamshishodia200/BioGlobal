@@ -180,25 +180,11 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
         });
       }
     } catch {
-      // Graceful fallback for static hosting
-      const ref = 'TBG-CR-' + Math.floor(100000 + Math.random() * 900000);
-      try {
-        const stored = JSON.parse(localStorage.getItem('tbg_consultations') || '[]');
-        stored.push({ ...payload, referenceId: ref, date: new Date().toISOString() });
-        localStorage.setItem('tbg_consultations', JSON.stringify(stored));
-      } catch {
-        // Ignore localStorage quota errors
-      }
-
       setResponse({
-        success: true,
-        referenceId: ref,
-        message:
-          'Your manufacturing consultation request has been submitted successfully. Our team will review the information and contact you using the details provided.',
+        success: false,
+        message: "We couldn't submit your request at this time. Please check your connection and try again.",
+        error: 'Network connection failure',
       });
-      if (onSuccessCallback) {
-        setTimeout(() => onSuccessCallback(), 3500);
-      }
     } finally {
       setLoading(false);
     }
@@ -455,8 +441,8 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
                 onChange={handleChange}
                 className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 bg-white text-sm text-stone-900 focus:outline-hidden focus:ring-2 focus:ring-[#1D3C34]"
               >
+                <option value="Cosmetic Products">Cosmetic Products</option>
                 <option value="Skin Care">Skin Care</option>
-                <option value="Facial Treatments">Facial Treatments</option>
                 <option value="Hair Care">Hair Care</option>
                 <option value="Bath Care">Bath Care</option>
                 <option value="Body Care">Body Care</option>

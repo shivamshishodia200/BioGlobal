@@ -67,7 +67,7 @@ export const FaqSection: React.FC = () => {
   return (
     <section 
       id="faqs"
-      className="py-14 sm:py-18 lg:py-24 bg-[#0B1B17] border-b border-[#1A3830] overflow-hidden relative"
+      className="py-12 sm:py-14 lg:py-16 bg-[#FAF9F5] border-b border-stone-200/60 overflow-hidden relative"
       aria-labelledby="faq-section-heading"
     >
       {/* Inject Structured Data */}
@@ -85,24 +85,24 @@ export const FaqSection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-left w-full mb-8 space-y-2.5 sm:space-y-3"
         >
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#132B25] text-[#DFBD89] text-xs font-semibold uppercase tracking-wider border border-[#254A3E]">
-            <HelpCircle className="w-3.5 h-3.5 text-[#DFBD89]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E4EEE3] text-[#1D3C34] text-xs font-semibold uppercase tracking-wider border border-[#C5DAC3]">
+            <HelpCircle className="w-3.5 h-3.5 text-[#708E50]" />
             <span>Frequently Asked Questions</span>
           </div>
 
           <h2 
             id="faq-section-heading"
-            className="font-serif text-2xl sm:text-3xl lg:text-[40px] text-white leading-tight"
+            className="font-serif text-2xl sm:text-3xl lg:text-[40px] text-stone-900 leading-tight"
           >
             Everything You Need to Know About{' '}
-            <span className="italic text-[#DFBD89]">Manufacturing With Us</span>
+            <span className="italic text-[#708E50]">Manufacturing With Us</span>
           </h2>
 
-          <p className="text-stone-300 text-xs sm:text-sm sm:leading-relaxed max-w-5xl lg:max-w-6xl">
+          <p className="text-stone-600 text-xs sm:text-sm sm:leading-relaxed max-w-5xl lg:max-w-6xl">
             Explore concise answers to common questions about our cosmetic manufacturing services, minimum order quantities, and custom formulation development. Whether launching your first private label SKU or expanding an existing beauty range, these answers help you plan your next production steps.
           </p>
 
-          <p className="text-xs sm:text-sm font-semibold tracking-wide uppercase text-[#DFBD89] pt-1">
+          <p className="text-xs sm:text-sm font-semibold tracking-wide uppercase text-[#708E50] pt-1">
             Clear Answers. Better Decisions. Confident Partnerships.
           </p>
         </motion.div>
@@ -122,10 +122,10 @@ export const FaqSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.04, duration: 0.35 }}
-                className={`bg-[#112520] rounded-2xl border transition-all duration-200 overflow-hidden ${
+                className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden ${
                   isOpen
-                    ? 'border-[#DFBD89]/60 shadow-lg ring-1 ring-[#DFBD89]/30'
-                    : 'border-[#1F3F36] shadow-md hover:border-[#2A4F44]'
+                    ? 'border-[#708E50]/50 shadow-md ring-1 ring-[#708E50]/20'
+                    : 'border-stone-200 shadow-2xs hover:border-stone-300'
                 }`}
               >
                 <h3>
@@ -135,22 +135,22 @@ export const FaqSection: React.FC = () => {
                     onClick={() => toggleItem(index)}
                     aria-expanded={isOpen}
                     aria-controls={panelId}
-                    className="w-full p-5 sm:p-6 text-left flex items-start sm:items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#DFBD89] focus-visible:ring-offset-2 cursor-pointer transition-colors"
+                    className="w-full p-5 sm:p-6 text-left flex items-start sm:items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1D3C34] focus-visible:ring-offset-2 cursor-pointer transition-colors"
                   >
                     <div className="flex items-start sm:items-center gap-3.5 sm:gap-4 pr-2">
                       {/* Numeric Order Badge */}
-                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#0B1B17] border border-[#254A3E] text-[#DFBD89] font-mono text-xs font-bold flex items-center justify-center mt-0.5 sm:mt-0">
+                      <span className="flex-shrink-0 w-8 h-8 rounded-lg bg-[#E4EEE3]/60 border border-[#C5DAC3]/70 text-[#1D3C34] font-mono text-xs font-bold flex items-center justify-center mt-0.5 sm:mt-0">
                         {String(faq.sortOrder || index + 1).padStart(2, '0')}
                       </span>
 
                       <div className="space-y-1">
                         {faq.category && (
-                          <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#DFBD89] uppercase tracking-wider">
-                            <IconComponent className="w-3 h-3 text-[#DFBD89]" />
+                          <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#708E50] uppercase tracking-wider">
+                            <IconComponent className="w-3 h-3 text-[#708E50]" />
                             <span>{faq.category}</span>
                           </div>
                         )}
-                        <span className="font-sans font-medium text-base sm:text-lg text-white leading-snug block">
+                        <span className="font-sans font-medium text-base sm:text-lg text-stone-900 leading-snug block">
                           {faq.question}
                         </span>
                       </div>
@@ -160,8 +160,8 @@ export const FaqSection: React.FC = () => {
                     <div
                       className={`w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? 'bg-[#0B1B17] text-[#DFBD89] rotate-180 border border-[#DFBD89]/40'
-                          : 'bg-[#0B1B17] text-stone-400 border border-[#254A3E]'
+                          ? 'bg-[#1D3C34] text-[#DFBD89] rotate-180 shadow-xs'
+                          : 'bg-stone-100 text-stone-500 hover:bg-stone-200'
                       }`}
                       aria-hidden="true"
                     >
@@ -182,9 +182,9 @@ export const FaqSection: React.FC = () => {
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 sm:px-6 pb-6 pt-3 border-t border-[#1F3F36] bg-[#0E201B]/80">
+                      <div className="px-5 sm:px-6 pb-6 pt-3 border-t border-stone-100 bg-[#FAF9F5]/50">
                         {/* Multi-paragraph answer text */}
-                        <div className="text-stone-300 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
+                        <div className="text-stone-600 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
                           {faq.answer.split('\n\n').map((paragraph, pIdx) => (
                             <p key={pIdx}>{paragraph}</p>
                           ))}
@@ -192,15 +192,15 @@ export const FaqSection: React.FC = () => {
 
                         {/* Keyword Topics */}
                         {faq.keywords && faq.keywords.length > 0 && (
-                          <div className="mt-5 pt-3.5 border-t border-[#1F3F36] flex flex-wrap items-center gap-2">
+                          <div className="mt-5 pt-3.5 border-t border-stone-200/70 flex flex-wrap items-center gap-2">
                             <span className="text-[11px] font-semibold text-stone-400 uppercase tracking-wider flex items-center gap-1">
-                              <Tag className="w-3 h-3 text-[#DFBD89]" />
+                              <Tag className="w-3 h-3 text-[#708E50]" />
                               Keywords:
                             </span>
                             {faq.keywords.map((keyword, kIdx) => (
                               <span
                                 key={kIdx}
-                                className="text-[11px] px-2.5 py-0.5 rounded-full bg-[#0B1B17] border border-[#254A3E] text-stone-300 font-medium"
+                                className="text-[11px] px-2.5 py-0.5 rounded-full bg-white border border-stone-200 text-stone-700 font-medium"
                               >
                                 {keyword}
                               </span>
@@ -215,6 +215,7 @@ export const FaqSection: React.FC = () => {
             );
           })}
         </div>
+
 
       </div>
     </section>

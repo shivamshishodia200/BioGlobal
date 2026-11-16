@@ -173,11 +173,11 @@ export const CategoryBannerSection: React.FC = () => {
   return (
     <section
       aria-labelledby="manufacturing-solutions-heading"
-      className="bg-[#0E201B] py-14 sm:py-18 lg:py-24 border-b border-[#1A3830] overflow-hidden relative"
+      className="bg-[#E4EEE3]/80 py-12 sm:py-14 lg:py-16 overflow-hidden border-b border-[#C5DAC3]/70 relative"
     >
       {/* Background Soft Pattern Elements */}
-      <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#86A55B]/10 rounded-full blur-3xl pointer-events-none -z-0" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#DFBD89]/10 rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#86A55B]/15 rounded-full blur-3xl pointer-events-none -z-0" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/40 rounded-full blur-3xl pointer-events-none -z-0" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -190,24 +190,24 @@ export const CategoryBannerSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-50px' }}
             transition={{ duration: 0.7 }}
-            className="lg:col-span-6 space-y-6 text-left"
+            className="lg:col-span-6 space-y-5 text-left"
           >
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#132B25] text-[#DFBD89] text-xs font-semibold tracking-wider uppercase border border-[#254A3E] shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5 text-[#DFBD89]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/85 text-[#1D3C34] text-xs font-semibold tracking-wider uppercase border border-[#C5DAC3] shadow-2xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#708E50]" />
               <span>MANUFACTURING EXPERTISE</span>
             </div>
 
             {/* Main Heading */}
             <h2
               id="manufacturing-solutions-heading"
-              className="font-serif font-light text-3xl sm:text-4xl lg:text-[44px] text-white tracking-tight leading-[1.18]"
+              className="font-serif font-light text-3xl sm:text-4xl lg:text-[44px] text-stone-900 tracking-tight leading-[1.18]"
             >
               Transform Your Vision into Exceptional Beauty Products
             </h2>
 
             {/* Description */}
-            <p className="text-stone-300 text-xs sm:text-sm sm:leading-relaxed font-normal">
+            <p className="text-stone-700 text-xs sm:text-sm sm:leading-relaxed font-normal">
               At The BioGlobal, we provide contract manufacturing, private label
               customization, manufacturing support, and packaging coordination
               to help emerging and established brands build distinctive beauty
@@ -231,21 +231,21 @@ export const CategoryBannerSection: React.FC = () => {
                 return (
                   <div
                     key={hl.id}
-                    className="p-3 sm:p-3.5 rounded-2xl bg-[#112520] border border-[#1F3F36] shadow-md flex items-start gap-3 sm:gap-3.5"
+                    className="p-3 sm:p-3.5 rounded-2xl bg-white/90 border border-stone-200/80 shadow-2xs flex items-start gap-3 sm:gap-3.5"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-[#0B1B17] text-[#DFBD89] flex items-center justify-center flex-shrink-0 mt-0.5 border border-[#254A3E]">
+                    <div className="w-9 h-9 rounded-xl bg-[#E4EEE3] text-[#1D3C34] flex items-center justify-center flex-shrink-0 mt-0.5 border border-[#C5DAC3]">
                       <IconComponent className="w-4 h-4" />
                     </div>
                     <div className="space-y-0.5">
                       <div className="flex flex-wrap items-baseline gap-2">
-                        <span className="text-xs sm:text-sm font-bold text-white tracking-tight">
+                        <span className="text-xs sm:text-sm font-bold text-stone-900 tracking-tight">
                           {hl.displayText}
                         </span>
-                        <span className="text-[11px] font-medium text-[#DFBD89]">
+                        <span className="text-[11px] font-medium text-[#708E50]">
                           ({hl.title})
                         </span>
                       </div>
-                      <p className="text-xs text-stone-300 leading-relaxed font-normal">
+                      <p className="text-xs text-stone-600 leading-relaxed font-normal">
                         {hl.text}
                       </p>
                     </div>
@@ -258,17 +258,17 @@ export const CategoryBannerSection: React.FC = () => {
             <div className="pt-2 flex flex-wrap items-center gap-3.5">
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-[#DFBD89] hover:bg-[#C8A46E] text-[#0B1B17] font-bold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl group"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl bg-[#1D3C34] hover:bg-[#142B25] text-white font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-xl group"
               >
                 <span>Explore All Categories</span>
-                <ArrowRight className="w-4 h-4 text-[#0B1B17] group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 text-[#86A55B] group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <Link
                 to="/consultation?source=homepage-category-banner"
-                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-[#142C25] hover:bg-[#1C3D34] text-white font-semibold text-xs sm:text-sm transition-colors border border-[#254A3E] shadow-sm group cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-white hover:bg-stone-50 text-stone-800 font-semibold text-xs sm:text-sm transition-colors border border-stone-200/90 shadow-2xs group cursor-pointer"
               >
-                <FlaskConical className="w-4 h-4 text-[#DFBD89]" />
+                <FlaskConical className="w-4 h-4 text-[#708E50]" />
                 <span>Request Custom Formulation</span>
               </Link>
             </div>
@@ -279,8 +279,8 @@ export const CategoryBannerSection: React.FC = () => {
           {/* ======================================================== */}
           <div className="lg:col-span-6 relative h-[480px] sm:h-[520px] lg:h-[540px] overflow-hidden rounded-3xl">
             {/* Top and Bottom Smooth Fade Gradients */}
-            <div className="absolute top-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-b from-[#0E201B] via-[#0E201B]/90 to-transparent z-20 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-t from-[#0E201B] via-[#0E201B]/90 to-transparent z-20 pointer-events-none" />
+            <div className="absolute top-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-b from-[#E4EEE3] via-[#E4EEE3]/90 to-transparent z-20 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-20 bg-gradient-to-t from-[#E4EEE3] via-[#E4EEE3]/90 to-transparent z-20 pointer-events-none" />
 
             <div className="grid grid-cols-2 gap-4 sm:gap-5 h-full marquee-container">
               
@@ -291,23 +291,23 @@ export const CategoryBannerSection: React.FC = () => {
                     <Link
                       key={`${item.id}-${idx}`}
                       to={`/category/${item.slug}`}
-                      className="group block bg-[#112520] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-[#1F3F36] hover:border-[#DFBD89]/60 relative"
+                      className="group block bg-white rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-stone-200/90 relative"
                     >
-                      <div className="aspect-4/3 w-full overflow-hidden bg-stone-900 relative">
+                      <div className="aspect-4/3 w-full overflow-hidden bg-stone-100 relative">
                         <img
                           src={item.image}
                           alt={item.imageAlt}
                           className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#112520] via-black/20 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent pointer-events-none" />
 
                         {/* Top Badges */}
-                        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0B1B17]/90 backdrop-blur-md text-[#DFBD89] text-[10px] font-bold tracking-wider uppercase border border-[#254A3E]">
+                        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#1D3C34] text-[10px] font-bold tracking-wider uppercase border border-stone-200 shadow-2xs">
                           {item.tag}
                         </div>
 
-                        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#0B1B17]/90 backdrop-blur-xs text-[10px] font-bold text-stone-200 shadow-2xs border border-[#254A3E]">
+                        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-stone-900/80 backdrop-blur-xs text-[10px] font-bold text-white shadow-2xs border border-white/20">
                           MOQ: {item.moq}
                         </div>
 
@@ -316,18 +316,18 @@ export const CategoryBannerSection: React.FC = () => {
                           <span className="text-[11px] font-medium text-stone-200">
                             View Formulations
                           </span>
-                          <ArrowUpRight className="w-3.5 h-3.5 text-[#DFBD89] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                          <ArrowUpRight className="w-3.5 h-3.5 text-[#86A55B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </div>
                       </div>
 
-                      <div className="p-3.5 sm:p-4 bg-[#112520] space-y-1">
-                        <h3 className="font-serif font-semibold text-sm sm:text-base text-white group-hover:text-[#DFBD89] transition-colors leading-snug">
+                      <div className="p-3.5 sm:p-4 bg-white space-y-1">
+                        <h3 className="font-serif font-semibold text-sm sm:text-base text-stone-900 group-hover:text-[#708E50] transition-colors leading-snug">
                           {item.categoryName}
                         </h3>
-                        <p className="text-[11px] sm:text-xs text-[#DFBD89] font-medium leading-snug line-clamp-1">
+                        <p className="text-[11px] sm:text-xs text-[#708E50] font-medium leading-snug line-clamp-1">
                           {item.tagline}
                         </p>
-                        <p className="text-[11px] text-stone-400 font-normal truncate pt-0.5">
+                        <p className="text-[11px] text-stone-500 font-normal truncate pt-0.5">
                           {item.productExamples.slice(0, 3).join(' • ')}
                         </p>
                       </div>
@@ -343,23 +343,23 @@ export const CategoryBannerSection: React.FC = () => {
                     <Link
                       key={`${item.id}-${idx}`}
                       to={`/category/${item.slug}`}
-                      className="group block bg-[#112520] rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-[#1F3F36] hover:border-[#DFBD89]/60 relative"
+                      className="group block bg-white rounded-3xl overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 border border-stone-200/90 relative"
                     >
-                      <div className="aspect-4/3 w-full overflow-hidden bg-stone-900 relative">
+                      <div className="aspect-4/3 w-full overflow-hidden bg-stone-100 relative">
                         <img
                           src={item.image}
                           alt={item.imageAlt}
                           className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-700"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#112520] via-black/20 to-transparent pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent pointer-events-none" />
 
                         {/* Top Badges */}
-                        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0B1B17]/90 backdrop-blur-md text-[#DFBD89] text-[10px] font-bold tracking-wider uppercase border border-[#254A3E]">
+                        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#1D3C34] text-[10px] font-bold tracking-wider uppercase border border-stone-200 shadow-2xs">
                           {item.tag}
                         </div>
 
-                        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#0B1B17]/90 backdrop-blur-xs text-[10px] font-bold text-stone-200 shadow-2xs border border-[#254A3E]">
+                        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-stone-900/80 backdrop-blur-xs text-[10px] font-bold text-white shadow-2xs border border-white/20">
                           MOQ: {item.moq}
                         </div>
 
@@ -368,18 +368,18 @@ export const CategoryBannerSection: React.FC = () => {
                           <span className="text-[11px] font-medium text-stone-200">
                             View Formulations
                           </span>
-                          <ArrowUpRight className="w-3.5 h-3.5 text-[#DFBD89] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                          <ArrowUpRight className="w-3.5 h-3.5 text-[#86A55B] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                         </div>
                       </div>
 
-                      <div className="p-3.5 sm:p-4 bg-[#112520] space-y-1">
-                        <h3 className="font-serif font-semibold text-sm sm:text-base text-white group-hover:text-[#DFBD89] transition-colors leading-snug">
+                      <div className="p-3.5 sm:p-4 bg-white space-y-1">
+                        <h3 className="font-serif font-semibold text-sm sm:text-base text-stone-900 group-hover:text-[#708E50] transition-colors leading-snug">
                           {item.categoryName}
                         </h3>
-                        <p className="text-[11px] sm:text-xs text-[#DFBD89] font-medium leading-snug line-clamp-1">
+                        <p className="text-[11px] sm:text-xs text-[#708E50] font-medium leading-snug line-clamp-1">
                           {item.tagline}
                         </p>
-                        <p className="text-[11px] text-stone-400 font-normal truncate pt-0.5">
+                        <p className="text-[11px] text-stone-500 font-normal truncate pt-0.5">
                           {item.productExamples.slice(0, 3).join(' • ')}
                         </p>
                       </div>

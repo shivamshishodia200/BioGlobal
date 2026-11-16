@@ -1,6 +1,8 @@
 import React from 'react';
 import { HeroSection } from '../components/home/HeroSection';
+import { TrustedCompaniesSection } from '../components/home/TrustedCompaniesSection';
 import { WhyChooseSection } from '../components/home/WhyChooseSection';
+import { BenefitsSection } from '../components/home/BenefitsSection';
 import { ServicesSection } from '../components/home/ServicesSection';
 import { CategoryBannerSection } from '../components/home/CategoryBannerSection';
 import { UniqueFeaturesSection } from '../components/home/UniqueFeaturesSection';
@@ -13,7 +15,7 @@ import { FaqSection } from '../components/home/FaqSection';
 
 export const HomePage: React.FC = () => {
   return (
-    <div className="w-full bg-[#0B1B17] text-[#F3F4F1] selection:bg-[#DFBD89] selection:text-[#0B1B17]">
+    <div className="w-full bg-[#FAF9F5] text-stone-800 selection:bg-[#708E50] selection:text-white">
       {/* 1. Hero Section (Multi-Slide Carousel + 3D Floating Cosmetic Mockup) */}
       <HeroSection />
 

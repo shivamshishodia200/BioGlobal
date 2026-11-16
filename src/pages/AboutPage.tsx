@@ -74,7 +74,7 @@ export const AboutPage: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-[#0B1B17] min-h-screen text-stone-200 font-sans selection:bg-[#DFBD89] selection:text-[#0B1B17]">
+    <div className="w-full bg-[#FAF9F5] min-h-screen text-stone-800 font-sans selection:bg-[#E4EEE3] selection:text-[#1D3C34]">
       {/* Structured Data Script */}
       <script
         type="application/ld+json"
@@ -84,7 +84,7 @@ export const AboutPage: React.FC = () => {
       {/* =========================================================================
           PART 1 — PAGE HERO SECTION
       ========================================================================= */}
-      <section className="bg-[#0E201B] text-white pt-20 pb-24 sm:pt-28 sm:pb-32 px-4 sm:px-6 lg:px-8 border-b border-[#1A3830] relative overflow-hidden">
+      <section className="bg-[#1D3C34] text-white pt-20 pb-24 sm:pt-28 sm:pb-32 px-4 sm:px-6 lg:px-8 border-b border-[#142B25] relative overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#708E50]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-80 h-80 bg-[#DFBD89]/10 rounded-full blur-3xl pointer-events-none" />
@@ -426,11 +426,11 @@ export const AboutPage: React.FC = () => {
 
             <h2 className="font-serif text-3xl sm:text-4xl text-stone-900 leading-tight">
               Manufacturing Solutions Across{' '}
-              <span className="italic text-[#708E50]">Five Beauty Categories</span>
+              <span className="italic text-[#708E50]">Six Beauty Categories</span>
             </h2>
 
             <p className="text-stone-600 text-sm sm:text-base leading-relaxed">
-              From advanced skincare formulations to everyday personal care essentials, our capabilities support diverse beauty product requirements across five core categories.
+              From specialized cosmetic formulations to everyday personal care essentials, our capabilities support diverse beauty product requirements across six core categories.
             </p>
           </div>
 
