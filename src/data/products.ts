@@ -1840,5 +1840,365 @@ export const PRODUCTS: Product[] = [
     "shelfLife": "30 Months",
     "isFeatured": false,
     "isPublished": true
+  },
+  {
+    "id": "prod-skin-brightening-cream",
+    "name": "Skin Brightening Cream",
+    "slug": "skin-brightening-cream",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "Advanced Radiance & Spot Correction Complex",
+    "shortDescription": "Formulated with Alpha Arbutin, Kojic Dipalmitate, and Niacinamide to enhance skin radiance, reduce dark spots, and even out skin tone.",
+    "description": "Formulated with Alpha Arbutin, Kojic Dipalmitate, and Niacinamide to enhance skin radiance, reduce dark spots, and even out skin tone for modern skincare brands.",
+    "image": "/images/bioglobal/products/moisturizing-cream.webp",
+    "keyActives": [
+      "Alpha Arbutin 2%",
+      "Kojic Dipalmitate",
+      "Niacinamide 5%",
+      "Glutathione"
+    ],
+    "ingredients": [
+      "Alpha Arbutin",
+      "Kojic Dipalmitate",
+      "Niacinamide",
+      "Glutathione",
+      "Hyaluronic Acid",
+      "Licorice Extract"
+    ],
+    "benefits": [
+      "Reduces dark spots & hyperpigmentation",
+      "Boosts radiant and even luminous skin tone",
+      "Provides long-lasting barrier hydration",
+      "Dermatologically tested gentle formulation"
+    ],
+    "idealFor": "Dullness, uneven skin tone, and pigmentation repair",
+    "minOrderQuantity": "1,000 units",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "3-5 weeks from approval",
+    "packagingOptions": [
+      "50g Frosted Glass Luxury Jar with Gold Cap",
+      "50ml Airless Treatment Pump",
+      "Acrylic Double Wall Jar"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility",
+      "Dermatologist Tested"
+    ],
+    "shelfLife": "24 Months",
+    "isFeatured": true,
+    "isPublished": true
+  },
+  {
+    "id": "prod-facial-kit",
+    "name": "Professional Facial Kit",
+    "slug": "facial-kit",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "6-Step Complete Salon-Grade Facial Protocol",
+    "shortDescription": "A comprehensive turnkey 6-step professional facial kit including Cleanser, Exfoliating Scrub, Massage Gel, Massage Cream, Face Pack, and Post-Facial Serum.",
+    "description": "A comprehensive turnkey 6-step professional facial kit designed for salons, spas, and consumer brands featuring active botanical extracts and derma nutrients.",
+    "image": "/images/bioglobal/categories/facial-treatments.webp",
+    "keyActives": [
+      "Glycolic Acid",
+      "24K Colloidal Gold",
+      "Botanical Enzymes",
+      "Vitamin C Ester"
+    ],
+    "ingredients": [
+      "Glycolic Acid",
+      "Colloidal Gold",
+      "Papain Enzyme",
+      "Vitamin C Ester",
+      "Aloe Vera Gel",
+      "Shea Butter"
+    ],
+    "benefits": [
+      "Complete 6-step salon facial solution",
+      "Deeply exfoliates, nourishes and rejuvenates",
+      "Instant luminous glow and plumping effect",
+      "Customizable fragrance and active profiles"
+    ],
+    "idealFor": "Professional salon use and retail skincare sets",
+    "minOrderQuantity": "1,000 sets",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "4-6 weeks from approval",
+    "packagingOptions": [
+      "6-Jar Rigid Luxury Gift Box",
+      "Mono-Carton Multi-Tube Kit (6 x 50g)",
+      "Single-Use 6-Sachet Blister Pack"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility",
+      "Clinical Safety Assessed"
+    ],
+    "shelfLife": "24 Months",
+    "isFeatured": true,
+    "isPublished": true
+  },
+  {
+    "id": "prod-night-cream",
+    "name": "Restorative Night Cream",
+    "slug": "night-cream",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "Cellular Regeneration & Overnight Barrier Repair",
+    "shortDescription": "Intense nighttime restorative treatment formulated with Retinol alternative Bakuchiol, Ceramides, and Peptides to repair skin overnight.",
+    "description": "Intense nighttime restorative treatment formulated with Retinol alternative Bakuchiol, Ceramides, and Peptides to repair skin barrier and promote cellular rejuvenation while sleeping.",
+    "image": "/images/bioglobal/products/eye-cream.webp",
+    "keyActives": [
+      "Bakuchiol 1%",
+      "Triple Ceramide Complex (NP, AP, EOP)",
+      "Matrixyl 3000 Peptides",
+      "Squalane"
+    ],
+    "ingredients": [
+      "Bakuchiol",
+      "Ceramide Complex",
+      "Palmitoyl Tripeptide-1",
+      "Squalane",
+      "Centella Asiatica",
+      "Niacinamide"
+    ],
+    "benefits": [
+      "Repairs skin barrier overnight",
+      "Diminishes fine lines and improves firmness",
+      "Replenishes cellular hydration levels",
+      "Non-greasy, velvety fast-absorbing texture"
+    ],
+    "idealFor": "Overnight anti-aging and barrier restoration",
+    "minOrderQuantity": "1,000 units",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "3-5 weeks from approval",
+    "packagingOptions": [
+      "50g Amber / Emerald Glass Jar",
+      "50ml Airless Press-Pump Jar",
+      "Eco-Friendly Aluminium Tube"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility",
+      "Paraben & Sulphate Free"
+    ],
+    "shelfLife": "24 Months",
+    "isFeatured": true,
+    "isPublished": true
+  },
+  {
+    "id": "prod-sleeping-mask",
+    "name": "Hydrating Peptide Sleeping Mask",
+    "slug": "hydrating-peptide-sleeping-mask",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "Overnight Moisture Lock & Elasticity Infusion",
+    "shortDescription": "Gel-cream sleeping pack that locks in moisture and infuses multi-molecular weight hyaluronic acid and copper peptides for bouncy skin.",
+    "description": "Gel-cream sleeping pack that locks in moisture and infuses multi-molecular weight hyaluronic acid and copper peptides for bouncy, rejuvenated skin by morning.",
+    "image": "/images/bioglobal/products/face-mask.webp",
+    "keyActives": [
+      "Copper Tripeptide-1",
+      "5D Hyaluronic Acid",
+      "Beta-Glucan",
+      "Snow Mushroom Extract"
+    ],
+    "ingredients": [
+      "Copper Tripeptide-1",
+      "Hyaluronic Acid",
+      "Beta-Glucan",
+      "Tremella Fuciformis Extract",
+      "Panthenol"
+    ],
+    "benefits": [
+      "Locks in hydration up to 72 hours",
+      "Visibly plumps and restores firmness",
+      "Cooling, lightweight pillow-proof finish"
+    ],
+    "idealFor": "Dehydrated, fatigued, and dull facial skin",
+    "minOrderQuantity": "1,000 units",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "3-5 weeks",
+    "packagingOptions": [
+      "75g PET Jar with Spatula",
+      "100ml Squeeze Tube"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility"
+    ],
+    "shelfLife": "24 Months",
+    "isFeatured": false,
+    "isPublished": true
+  },
+  {
+    "id": "prod-gold-facial-kit",
+    "name": "24K Gold Radiance Facial Kit",
+    "slug": "gold-radiance-facial-kit",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "Opulent Luxury Facial Protocol with 24K Gold Foil",
+    "shortDescription": "Salon luxury facial kit infused with colloidal gold flakes, saffron extract, and hydrolyzed collagen for wedding and bridal radiance.",
+    "description": "Salon luxury facial kit infused with colloidal gold flakes, saffron extract, and hydrolyzed collagen for bridal and event glow.",
+    "image": "/images/bioglobal/categories/facial-treatments.webp",
+    "keyActives": [
+      "24K Gold Bhasma / Colloidal Gold",
+      "Kashmiri Saffron Extract",
+      "Hydrolyzed Marine Collagen",
+      "Sweet Almond Oil"
+    ],
+    "ingredients": [
+      "Colloidal Gold",
+      "Crocus Sativus Flower Extract",
+      "Hydrolyzed Collagen",
+      "Prunus Amygdalus Dulcis Oil"
+    ],
+    "benefits": [
+      "Bridal instant gold radiance",
+      "Improves skin elasticity and glow",
+      "Premium luxury salon positioning"
+    ],
+    "idealFor": "Bridal treatments and luxury beauty salons",
+    "minOrderQuantity": "1,000 sets",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "4-6 weeks",
+    "packagingOptions": [
+      "Gold Foil Embossed Rigid Box (6 Jars)"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility"
+    ],
+    "shelfLife": "24 Months",
+    "isFeatured": false,
+    "isPublished": true
+  },
+  {
+    "id": "prod-derma-repair-cream",
+    "name": "Derma Barrier Repair Cream",
+    "slug": "derma-barrier-repair-cream",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "Clinical Skin Recovery & Cica Soothing Formulation",
+    "shortDescription": "Formulated with Madecassoside, Allantoin, and Ectoin to relieve redness, soothe post-procedure irritation, and rebuild delicate facial skin.",
+    "description": "Formulated with Madecassoside, Allantoin, and Ectoin to relieve redness, soothe post-procedure irritation, and rebuild delicate facial skin.",
+    "image": "/images/bioglobal/products/moisturizing-cream.webp",
+    "keyActives": [
+      "Madecassoside 1%",
+      "Ectoin 2%",
+      "Panthenol 5%",
+      "Oat Kernel Colloidal Flour"
+    ],
+    "ingredients": [
+      "Madecassoside",
+      "Ectoin",
+      "Panthenol",
+      "Avena Sativa",
+      "Allantoin"
+    ],
+    "benefits": [
+      "Fast soothing for sensitive & irritated skin",
+      "Reconstructs broken skin lipid barrier",
+      "Fragrance-free, hypoallergenic formula"
+    ],
+    "idealFor": "Sensitive, sensitized, or post-laser skin care",
+    "minOrderQuantity": "1,000 units",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "3-5 weeks",
+    "packagingOptions": [
+      "50ml Aluminium Barrier Tube",
+      "50ml Airless Pump Bottle"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility",
+      "Dermatologically Tested"
+    ],
+    "shelfLife": "30 Months",
+    "isFeatured": false,
+    "isPublished": true
+  },
+  {
+    "id": "prod-papaya-facial-kit",
+    "name": "Papaya Fruit Enzyme Facial Kit",
+    "slug": "papaya-facial-kit",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "Natural Blemish Clearing & Pigmentation Control",
+    "shortDescription": "Natural enzyme-rich papaya facial kit specially formulated to diminish tan, clear superficial blemishes, and revitalize dull complexions.",
+    "description": "Natural enzyme-rich papaya facial kit specially formulated to diminish tan, clear superficial blemishes, and revitalize dull complexions.",
+    "image": "/images/bioglobal/categories/facial-treatments.webp",
+    "keyActives": [
+      "Papain Enzyme",
+      "AHA Multi-Fruit Complex",
+      "Niacinamide",
+      "Turmeric Extract"
+    ],
+    "ingredients": [
+      "Carica Papaya Fruit Extract",
+      "Vaccinium Myrtillus Fruit Extract",
+      "Niacinamide",
+      "Curcuma Longa Extract"
+    ],
+    "benefits": [
+      "Gently digests dead surface keratinocytes",
+      "Reduces appearance of acne spots and tan",
+      "Leaves skin feeling silky smooth and clarified"
+    ],
+    "idealFor": "Blemish-prone and sun-tanned skin",
+    "minOrderQuantity": "1,000 sets",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "4-6 weeks",
+    "packagingOptions": [
+      "Eco Carton 5-Step Facial Kit"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility"
+    ],
+    "shelfLife": "24 Months",
+    "isFeatured": false,
+    "isPublished": true
+  },
+  {
+    "id": "prod-anti-aging-facial-elixir",
+    "name": "Brightening Peptide Night Cream",
+    "slug": "brightening-peptide-night-cream",
+    "category": "Facial Treatments",
+    "categoryId": "facial-treatments",
+    "categorySlug": "facial-treatments",
+    "tagline": "Dual Action Radiance & Collagen Boosting Emulsion",
+    "shortDescription": "Concentrated brightening night cream with Palmitoyl Tetrapeptide-7 and Tranexamic Acid to reduce age spots and promote youthful elasticity.",
+    "description": "Concentrated brightening night cream with Palmitoyl Tetrapeptide-7 and Tranexamic Acid to reduce age spots and promote youthful elasticity.",
+    "image": "/images/bioglobal/products/eye-cream.webp",
+    "keyActives": [
+      "Tranexamic Acid 3%",
+      "Palmitoyl Tetrapeptide-7",
+      "N-Acetyl Glucosamine",
+      "Rosehip Seed Oil"
+    ],
+    "ingredients": [
+      "Tranexamic Acid",
+      "Palmitoyl Tetrapeptide-7",
+      "Acetyl Glucosamine",
+      "Rosa Canina Fruit Oil"
+    ],
+    "benefits": [
+      "Targets stubborn dark spots and discoloration",
+      "Enhances skin density and firmness",
+      "Deep nourishing botanical hydration"
+    ],
+    "idealFor": "Mature skin and persistent hyperpigmentation",
+    "minOrderQuantity": "1,000 units",
+    "minimumOrderQuantity": 1000,
+    "leadTime": "3-5 weeks",
+    "packagingOptions": [
+      "50g Heavy Base Acrylic Jar",
+      "50ml Airless Dispenser"
+    ],
+    "certifications": [
+      "ISO 22716 GMP Facility"
+    ],
+    "shelfLife": "24 Months",
+    "isFeatured": false,
+    "isPublished": true
   }
 ];

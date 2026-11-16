@@ -3,7 +3,8 @@ export type ProductCategory =
   | 'Hair Care'
   | 'Bath Care'
   | 'Body Care'
-  | 'Baby Care';
+  | 'Baby Care'
+  | 'Facial Treatments';
 
 export interface CategoryInfo {
   id: string;

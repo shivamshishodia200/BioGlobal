@@ -161,4 +161,36 @@ export const CATEGORIES: CategoryInfo[] = [
     ctaText: 'Explore Baby Care Products',
     isPublished: true,
   },
+  {
+    id: 'facial-treatments',
+    name: 'Facial Treatments',
+    slug: 'facial-treatments',
+    tagline: 'Advanced Facial Care & Professional Derma Formulations',
+    headline: 'High-Performance Facial Treatments & Derma Formulations',
+    description:
+      'Formulate professional-grade facial care products engineered for visible luminosity, restorative nourishment, and deep barrier repair. Tailored for modern skincare and clinical beauty brands.',
+    shortDescription:
+      'Professional facial treatments featuring brightening complexes, rejuvenating facial kits, and restorative night formulations.',
+    image: '/images/bioglobal/categories/facial-treatments.webp',
+    imageAlt: 'Luxury facial care treatments, brightening cream and facial kit',
+    itemCount: 8,
+    popularFormulations: [
+      'Skin Brightening Cream',
+      'Facial Kit',
+      'Night Cream',
+      'Derma Repair Complex',
+    ],
+    productExamples: [
+      'Skin Brightening Cream',
+      'Facial Kit',
+      'Night Cream',
+      'Professional Glow Facial Kit',
+      'Restorative Night Cream',
+      'Collagen Firming Cream',
+      'Papaya Radiance Facial Kit',
+      'Brightening Peptide Night Cream',
+    ],
+    ctaText: 'Explore Facial Treatments',
+    isPublished: true,
+  },
 ];

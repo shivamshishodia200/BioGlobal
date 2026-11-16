@@ -32,35 +32,35 @@
 
   body {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    color: #1D3C34;
-    background-color: #FAF9F5;
+    color: #F3F4F1;
+    background-color: #0B1B17;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     letter-spacing: -0.02em;
-    color: #1D3C34;
+    color: #FFFFFF;
   }
 
   ::selection {
-    background-color: #708E50;
-    color: #ffffff;
+    background-color: #DFBD89;
+    color: #0B1B17;
   }
 }
 
-/* Custom scrollbars matching Brand Logo colors */
+/* Custom scrollbars matching Luxury Dark Brand colors */
 ::-webkit-scrollbar {
   width: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #E4EEE3;
+  background: #0B1B17;
 }
 ::-webkit-scrollbar-thumb {
-  background: #708E50;
+  background: #254A3E;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #5E7D40;
+  background: #DFBD89;
 }
 
 /* Stamp seal look */

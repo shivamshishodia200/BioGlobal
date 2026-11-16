@@ -13,7 +13,7 @@ import { FaqSection } from '../components/home/FaqSection';
 
 export const HomePage: React.FC = () => {
   return (
-    <div className="w-full bg-white selection:bg-[#708E50] selection:text-white">
+    <div className="w-full bg-[#0B1B17] text-[#F3F4F1] selection:bg-[#DFBD89] selection:text-[#0B1B17]">
       {/* 1. Hero Section (Multi-Slide Carousel + 3D Floating Cosmetic Mockup) */}
       <HeroSection />
 

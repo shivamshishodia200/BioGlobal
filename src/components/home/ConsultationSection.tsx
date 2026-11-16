@@ -15,7 +15,7 @@ export const ConsultationSection: React.FC = () => {
   return (
     <section 
       id="consultation-section" 
-      className="py-14 sm:py-16 lg:py-18 bg-[#1D3C34] text-white relative overflow-hidden scroll-mt-24"
+      className="py-14 sm:py-18 lg:py-20 bg-[#0E201B] border-b border-[#1A3830] text-white relative overflow-hidden scroll-mt-24"
       aria-labelledby="consultation-heading"
     >
       {/* Background Decorative Ambient Halos */}

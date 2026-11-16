@@ -456,6 +456,7 @@ export const ConsultationForm: React.FC<ConsultationFormProps> = ({
                 className="w-full px-3.5 py-2.5 rounded-lg border border-stone-300 bg-white text-sm text-stone-900 focus:outline-hidden focus:ring-2 focus:ring-[#1D3C34]"
               >
                 <option value="Skin Care">Skin Care</option>
+                <option value="Facial Treatments">Facial Treatments</option>
                 <option value="Hair Care">Hair Care</option>
                 <option value="Bath Care">Bath Care</option>
                 <option value="Body Care">Body Care</option>

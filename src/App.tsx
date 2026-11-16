@@ -22,7 +22,7 @@ export default function App() {
 
   return (
     <QuoteModalProvider>
-      <div className="flex flex-col min-h-screen bg-[#FAF9F5] text-stone-800 font-sans selection:bg-[#E4EEE3] selection:text-[#1D3C34]">
+      <div className="flex flex-col min-h-screen bg-[#0B1B17] text-[#F3F4F1] font-sans selection:bg-[#DFBD89] selection:text-[#0B1B17]">
         <ScrollToTop />
         <Navbar />
 
