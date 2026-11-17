@@ -9,7 +9,7 @@ import {
   ArrowUpRight,
 } from 'lucide-react';
 import { useQuoteModal } from '../../context/QuoteModalContext';
-import heroPackagingImg from '../../assets/herosection image.jpeg';
+import heroPackagingImg from '../../assets/herosection_image copy.png';
 
 // Register GSAP plugins safely
 if (typeof window !== 'undefined') {

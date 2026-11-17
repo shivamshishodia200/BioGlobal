@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Phone, Mail } from 'lucide-react';
+import { Facebook, Twitter, Youtube, Linkedin, Phone, Mail } from 'lucide-react';
 import { BrandLogo } from './BrandLogo';
 import { useQuoteModal } from '../../context/QuoteModalContext';
 
@@ -48,13 +48,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPrivacy, onOpenTerms }) =>
                 <Twitter className="w-4 h-4 fill-current" />
               </a>
               <a
-                href="https://vimeo.com"
+                href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-white text-stone-800 flex items-center justify-center shadow-2xs hover:bg-[#708E50] hover:text-white transition-colors font-bold text-xs"
-                aria-label="Vimeo"
+                className="w-9 h-9 rounded-full bg-white text-stone-800 flex items-center justify-center shadow-2xs hover:bg-[#708E50] hover:text-white transition-colors"
+                aria-label="YouTube"
               >
-                v
+                <Youtube className="w-4 h-4 fill-current" />
               </a>
               <a
                 href="https://linkedin.com"
