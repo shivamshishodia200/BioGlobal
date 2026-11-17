@@ -295,7 +295,7 @@ export const AboutPage: React.FC = () => {
             <span className="text-xs uppercase font-bold tracking-widest text-[#DFBD89]">
               OUR MANUFACTURING STRENGTH
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl text-white leading-tight font-light">
+            <h2 className="font-serif text-2xl sm:text-3xl text-white leading-tight font-light">
               Experience and Infrastructure <span className="italic text-[#DFBD89]">Supporting Your Ambitions</span>
             </h2>
             <p className="text-stone-300 text-sm sm:text-base leading-relaxed font-light">
@@ -311,9 +311,9 @@ export const AboutPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.08, duration: 0.4 }}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-2 hover:bg-white/10 transition-colors"
+                className="p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm space-y-2 hover:bg-white/10 transition-colors"
               >
-                <div className="font-serif text-3xl sm:text-4xl font-bold text-[#DFBD89]">
+                <div className="font-serif text-2xl sm:text-[26px] font-bold text-[#DFBD89] tracking-tight leading-snug whitespace-nowrap">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm font-semibold text-white tracking-wide">

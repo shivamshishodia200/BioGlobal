@@ -65,10 +65,10 @@ export const ABOUT_STATISTICS: AboutStatistic[] = [
   },
   {
     id: 'stat-categories',
-    value: '5 Categories',
+    value: '6 Categories',
     label: 'Beauty & Personal Care Expertise',
     description:
-      'Skin Care, Hair Care, Bath Care, Body Care, and Baby Care.',
+      'Cosmetic Products, Skin Care, Hair Care, Bath Care, Body Care, and Baby Care.',
   },
 ];
 
