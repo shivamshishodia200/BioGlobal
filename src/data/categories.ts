@@ -2,6 +2,37 @@ import { CategoryInfo } from '../types';
 
 export const CATEGORIES: CategoryInfo[] = [
   {
+    id: 'cosmetic-products',
+    name: 'Cosmetic Products',
+    slug: 'cosmetic-products',
+    tagline: 'Cosmetic Products That Bring Your Brand Vision to Life',
+    headline: 'Cosmetic Products That Bring Your Brand Vision to Life',
+    description:
+      'Explore high-performance cosmetic product concepts designed for modern beauty brands. Discover skin brightening creams, professional facial kits, and restorative night formulations with customizable packaging.',
+    shortDescription:
+      'Advanced cosmetic product formulations featuring skin brightening creams, professional facial kits, and restorative night creams.',
+    image: '/images/bioglobal/categories/cosmetic-products.webp',
+    imageAlt: 'Cosmetic products manufacturing, skin brightening cream and facial kits',
+    itemCount: 8,
+    popularFormulations: [
+      'Skin brightening cream',
+      'Facial kit',
+      'Night cream',
+    ],
+    productExamples: [
+      'Skin brightening cream',
+      'Facial kit',
+      'Night cream',
+      'Professional Glow Facial Kit',
+      'Restorative Night Cream',
+      'Collagen Firming Cream',
+      'Papaya Radiance Facial Kit',
+      'Brightening Peptide Night Cream',
+    ],
+    ctaText: 'Explore Cosmetic Products',
+    isPublished: true,
+  },
+  {
     id: 'skin-care',
     name: 'Skin Care',
     slug: 'skin-care',
@@ -159,38 +190,6 @@ export const CATEGORIES: CategoryInfo[] = [
       'Diaper Rash Cream',
     ],
     ctaText: 'Explore Baby Care Products',
-    isPublished: true,
-  },
-  {
-    id: 'facial-treatments',
-    name: 'Facial Treatments',
-    slug: 'facial-treatments',
-    tagline: 'Advanced Facial Care & Professional Derma Formulations',
-    headline: 'High-Performance Facial Treatments & Derma Formulations',
-    description:
-      'Formulate professional-grade facial care products engineered for visible luminosity, restorative nourishment, and deep barrier repair. Tailored for modern skincare and clinical beauty brands.',
-    shortDescription:
-      'Professional facial treatments featuring brightening complexes, rejuvenating facial kits, and restorative night formulations.',
-    image: '/images/bioglobal/categories/facial-treatments.webp',
-    imageAlt: 'Luxury facial care treatments, brightening cream and facial kit',
-    itemCount: 8,
-    popularFormulations: [
-      'Skin Brightening Cream',
-      'Facial Kit',
-      'Night Cream',
-      'Derma Repair Complex',
-    ],
-    productExamples: [
-      'Skin Brightening Cream',
-      'Facial Kit',
-      'Night Cream',
-      'Professional Glow Facial Kit',
-      'Restorative Night Cream',
-      'Collagen Firming Cream',
-      'Papaya Radiance Facial Kit',
-      'Brightening Peptide Night Cream',
-    ],
-    ctaText: 'Explore Facial Treatments',
     isPublished: true,
   },
 ];

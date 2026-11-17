@@ -18,7 +18,8 @@ import { Product } from '../types';
 import { useQuoteModal } from '../context/QuoteModalContext';
 
 const SEO_TITLES: Record<string, string> = {
-  'facial-treatments': 'Facial Treatments & Derma Care Formulations | The BioGlobal',
+  'cosmetic-products': 'Cosmetic Products & Formulations | The BioGlobal',
+  'facial-treatments': 'Cosmetic Products & Formulations | The BioGlobal',
   'skin-care': 'Private Label Skincare Products | The BioGlobal',
   'hair-care': 'Hair Care Product Manufacturing | The BioGlobal',
   'bath-care': 'Bath & Cleansing Product Solutions | The BioGlobal',
@@ -27,7 +28,8 @@ const SEO_TITLES: Record<string, string> = {
 };
 
 const SEO_DESCRIPTIONS: Record<string, string> = {
-  'facial-treatments': 'Explore custom facial treatment formulations, professional facial kits, skin brightening creams, and restorative night creams with The BioGlobal manufacturing solutions.',
+  'cosmetic-products': 'Explore custom cosmetic product formulations, skin brightening creams, professional facial kits, and restorative night creams with The BioGlobal manufacturing solutions.',
+  'facial-treatments': 'Explore custom cosmetic product formulations, skin brightening creams, professional facial kits, and restorative night creams with The BioGlobal manufacturing solutions.',
   'skin-care': 'Partner with The BioGlobal for private label skincare serums, creams, cleansers, and masks manufactured under ISO 22716 GMP standards.',
   'hair-care': 'Manufacture professional shampoos, conditioners, hair masks, and scalp care formulations customized for your beauty brand.',
   'bath-care': 'Discover contract manufacturing for luxury bathing soaps, shower gels, liquid hand washes, bath scrubs, and bath salts.',

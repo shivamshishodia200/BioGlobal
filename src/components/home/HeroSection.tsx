@@ -326,7 +326,7 @@ export const HeroSection: React.FC = () => {
                 that understands formulation, quality, packaging, and commercial
                 scale. At The BioGlobal, we offer comprehensive third-party
                 cosmetic manufacturing and private label solutions across
-                skincare, facial treatments, haircare, bath care, and body care.
+                skincare, cosmetics, haircare, bath care, and body care.
                 From initial product concepts to finished, market-ready
                 formulations, we help beauty brands create distinctive products
                 with confidence.

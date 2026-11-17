@@ -1,4 +1,5 @@
 export type ProductCategory = 
+  | 'Cosmetic Products'
   | 'Skin Care'
   | 'Hair Care'
   | 'Bath Care'

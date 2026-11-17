@@ -16,12 +16,12 @@ export const FeaturedProductsSection: React.FC = () => {
 
   const categories: Array<'All' | ProductCategory> = [
     'All',
+    'Cosmetic Products',
     'Skin Care',
     'Hair Care',
     'Bath Care',
     'Body Care',
     'Baby Care',
-    'Facial Treatments',
   ];
 
   const loadProducts = useCallback(async () => {

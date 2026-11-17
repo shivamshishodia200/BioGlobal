@@ -66,23 +66,23 @@ const COLUMN_1_CARDS: ShowcaseItem[] = [
     tag: 'Skin Care Solutions',
   },
   {
-    id: 'showcase-facial',
-    categoryId: 'facial-treatments',
-    categoryName: 'Facial Treatments',
-    tagline: 'Advanced Facial Care & Professional Derma Formulations',
+    id: 'showcase-cosmetics',
+    categoryId: 'cosmetic-products',
+    categoryName: 'Cosmetic Products',
+    tagline: 'Cosmetic Products That Bring Your Brand Vision to Life',
     description:
-      'Formulate salon-grade facial kits, skin brightening creams, and restorative night repair treatments.',
+      'Formulate professional cosmetic products, salon-grade facial kits, skin brightening creams, and restorative night repair treatments.',
     productExamples: [
       'Skin Brightening Cream',
-      'Professional Facial Kit',
-      'Restorative Night Cream',
+      'Facial Kit',
+      'Night Cream',
       'Hydrating Peptide Mask',
     ],
-    image: facialImg,
-    imageAlt: 'Facial care treatments and cosmetic manufacturing',
-    slug: 'facial-treatments',
+    image: '/images/bioglobal/categories/cosmetic-products.webp',
+    imageAlt: 'Cosmetic products and skincare manufacturing',
+    slug: 'cosmetic-products',
     moq: 'From 1,000 Units',
-    tag: 'Facial Treatments',
+    tag: 'Cosmetic Products',
   },
   {
     id: 'showcase-bodycare',
@@ -213,7 +213,7 @@ export const CategoryBannerSection: React.FC = () => {
               to help emerging and established brands build distinctive beauty
               and personal care collections.
               <span className="block mt-2">
-                From facial treatments and skincare to haircare, bath care, body
+                From cosmetics and skincare to haircare, bath care, body
                 care, and baby care, our versatile manufacturing capabilities
                 support a wide range of product concepts and market requirements.
               </span>
